@@ -102,3 +102,15 @@
 .container4 {
     display: flex;  
 }
+
+/* 레이아웃 유형3: 가로+세로 */
+.header {
+    width: 200px;
+    height: 700px;
+    background: indigo;
+}
+.contents {
+    width: 1000px;
+    height: 700px;
+    background: khaki;
+}
