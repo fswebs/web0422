@@ -107,10 +107,44 @@
 .header {
     width: 200px;
     height: 700px;
-    background: indigo;
+    background: indianred;
 }
 .contents {
     width: 1000px;
     height: 700px;
     background: khaki;
+}
+
+
+/* 
+    사용한 클래스명
+    .container1~4
+    .boxSize
+    .div1~7 
+    .header
+    .contents
+
+    .section
+    .footer
+*/
+
+.header2 {
+    width:200px;
+    height:850px;
+    background: olive;
+}
+.contents2 {
+    width: 1000px;
+    height: 850px;
+    background: palegreen;
+}
+.section {
+    width: 1200px;
+    height: 850px;
+    background: lavender;
+}
+.footer {
+    width: 1200px;
+    height: 100px;
+    background: navy;
 }
