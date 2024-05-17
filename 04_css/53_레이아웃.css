@@ -99,7 +99,7 @@
 
 /* 레이아웃 유형2: flexible */
 /* display:flex는 부모 요소에만 지정할 수 있다. */
-.container4 {
+.df {
     display: flex;  
 }
 
@@ -118,7 +118,8 @@
 
 /* 
     사용한 클래스명
-    .container1~4
+    .container1~3
+    .df -> display:flex;
     .boxSize
     .div1~7 
     .header
@@ -128,23 +129,43 @@
     .footer
 */
 
-.header2 {
+/* 
+    선택자
+    1. 요소(태그, 타입)
+    2. 클래스
+    3. 하위(자손:자식+손자): 부모요소 자손요소
+        예> .container4 .seciton
+        예> .container4 .notice
+*/
+
+.container4 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container4 .header {
     width:200px;
     height:850px;
     background: olive;
 }
-.contents2 {
+.container4 .contents {
     width: 1000px;
-    height: 850px;
-    background: palegreen;
 }
-.section {
-    width: 1200px;
-    height: 850px;
-    background: lavender;
+
+.container4 .slide {
+    height: 400px;
+    background: maroon;
 }
-.footer {
-    width: 1200px;
-    height: 100px;
+.container4 .banner {
+    height: 200px;
     background: navy;
+}
+.container4 .notice {
+    height: 250px;
+    background: red;
+}
+
+.container4 .footer {
+    height: 100px;
+    background: gray;
 }
