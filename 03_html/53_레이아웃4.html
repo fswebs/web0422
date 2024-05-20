@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./../04_css/53_레이아웃.css">
+    <link rel="stylesheet" href="./../04_css/53_레이아웃4.css">
 </head>
 <body>
     <!-- 세로 배치 -->
-    <!-- container4의 가로 크기가 1200px이다. -->
+    <!-- wrap의 가로 크기가 1200px이다. -->
     <!-- 
-        1. 가로 중앙 배치(margin:0 auto;) 한 번만 기록
-        2. 콘텐츠를 하나로 그룹핑
-        3. 부모 크기와 같은 자식 요소는 생략
+        .wrap의 역할
+        1. 가로 중앙 배치를 한 번에 처리(margin:0 auto;)한다.
+        2. 전체 콘텐츠를 하나로 그룹핑한다.
+        3. 부모의 가로 크기와 같은 자식 요소의 width는 생략할 수 있다.
     -->
-    <div class="container4">
+    <div class="wrap">
         <!-- 블록레벨요소의 가로 크기는 부모 크기의 100%이다. -->
         <!-- .seciton과 .footer의 가로 크기는 부모 크기의 100%이다. -->
-        <div class="df section">
-            <!-- 가로 배치: 부모 요소에 display:flex; -->
+        <div class="section">
+            <!-- 가로 배치: 부모 요소(.section)에 display:flex; -->
             <div class="header">헤더</div>
             <div class="contents">
                 <!-- 세로 배치 -->
