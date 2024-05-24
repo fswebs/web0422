@@ -1,18 +1,46 @@
 @charset "utf-8";
 
-/* layout */
-body * {outline: 1px solid lime;}
-
-body {margin:0;}
-nav {height: 100px;}
-header {
-    height: 200px;
-    background: url(../assets/bg-light.png);
+/* reset(초기화) */
+body,ul,h1,h2 {margin:0;}
+ul {padding:0; list-style-type: none;}
+a {
+    /* 텍스트 밑줄 제거 */
+    text-decoration: none;
 }
-section {width: 940px; margin: 0 auto;}
-.home-card {display: flex;}
+
+/* layout(배치) */
+/* 박스모델 속성, display */
+nav {
+    /* height: 100px;  */
+    line-height:100px;
+}
+nav section {
+    display: flex;
+    justify-content: flex-end;
+    /* align-items: center;
+    height: 100px; */
+}
+nav ul {display: flex;}
+/* nav li {display: inline-block;} */
+header {
+    /* height: 200px;  */
+    line-height: 200px;
+}
+section {width: 940px; margin: auto;}
+.home-card {
+    display: flex;
+    justify-content: space-between;
+}
 .home-icon {width: 100px; height: 100px;}
 .home-description {width:790px; height: 140px;}
+
+/* header */
+header {
+    background: url(../assets/bg-light.png);
+}
+/* section */
+/* footer */
+
 
 /* 
     style guide(스타일 가이드)
