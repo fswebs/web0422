@@ -1,20 +1,50 @@
 @charset "utf-8";
 
-/* 
-    요소 선택자: 태그명
-    그룹 선택자: ,
-
-    전체 선택자: *
-    *는 모든 요소를 가리킨다.
-*/
-
-/* body 안의 모든 요소 */
+/* layout */
 body * {outline: 1px solid lime;}
 
 body {margin:0;}
 nav {height: 100px;}
-header {height: 200px;}
-section {width:940px; margin: auto;}
+header {
+    height: 200px;
+    background: url(../assets/bg-light.png);
+}
+section {width: 940px; margin: 0 auto;}
 .home-card {display: flex;}
 .home-icon {width: 100px; height: 100px;}
 .home-description {width:790px; height: 140px;}
+
+/* 
+    style guide(스타일 가이드)
+        h1~h3, Nav a: Georgia, italic
+        body, p, Section a: Arial
+
+        단위: rem, em, px, %
+
+        h1: 50px, lh60px
+        h2: 30px, lh36px
+        h3: 22.5px, h33.75px
+        h3 span: 22.5px, 400, lh33.75px
+        nav a: 20px, lh100px
+        body: 15px, 1.5 -> 150~200% 가독성이 좋다.
+*/
+
+/* font */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+h1,h2,h3,nav a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+h1 {font-size: 50px; color: #fff}
+h2 {font-size: 30px;}
+h3 {font-size: 22.5px;}
+nav a {font-size: 20px; color: #444;}
+
+
+/* bg-color */
+nav { background: #eee;}
+.home-icon {background: #eee;}
+.home-description {background: #ccc;}
