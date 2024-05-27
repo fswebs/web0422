@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Br Architects</title>
+    <style>
+
+/* temp */
+header{background:#cccccc;}
+a{color:black}
+.s1{background:#96a4b7}
+.s2 li{background: rgb(188, 139, 155);}
+.s3 li {background: #7e6464;}
+.contact{background: #b9a9a9;}
+.s4 .div1{background: #333;}
+.s4 .div2{background: #777;}
+footer{background:#b3acac;}
+
+/* layout (header>section1>section2>section3>section4>footer) */
+/* 헤더 */
+.logo b{
+    margin-right: 10px;
+}
+
+header{
+    line-height: 56px;
+    display: flex;
+    height: 56px;
+    justify-content: space-between;
+    padding:0 36px;
+}
+
+nav li{
+    display:inline-block;
+    padding-left:36px;
+}
+
+/* 섹션의 공통 */
+section{width: 1500px; margin: 0 auto;}
+
+/* 섹션1 */
+h2{
+    margin-bottom: 24px;
+    padding-bottom: 15px;
+    border-bottom:1px solid black
+}
+
+.s1{
+    display: flex;
+    width: 1488px;
+    height: 745px;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.s1 h2{
+    border:none;
+    margin-top:0;
+}
+/* 섹션2 */
+.s2{
+    margin-bottom: 40px;
+}
+.s2 ul{
+    display:flex;
+    flex-wrap: wrap;
+}
+.s2 li{
+    width: 360px;
+    height: 240px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.s2 li:nth-of-type(4n){
+    margin:0;
+}
+
+.s2 h2{
+    margin-bottom:50px;
+    margin-top:30px
+}
+
+.s2 h3{
+    font-size:20px;
+    padding-left: 136px;
+    display: flex;
+    align-items: center;   
+}
+
+.s2 ul{
+    
+    line-height:240px;
+    justify-content: center;
+    
+}
+
+/* 섹션3 */
+.s3{
+    margin-bottom: 60px;
+}
+.s3 div{
+    display:inline-block;
+}
+
+.s3 ul{
+    justify-content: baseline;
+}
+
+
+.s3 li{
+    display:flex;
+    width: 360px;
+    height: 240px;
+    margin-right: 11px;
+    
+    }
+
+
+.s3 .name{
+    font-weight: 10;
+    border-bottom:0;
+    padding-top: 0;
+    margin-top: 10px;
+}
+
+.contact{
+    width: 360px;
+    height: 50px;
+
+}
+
+.contact p{
+    
+    text-align: center
+    
+}
+
+/* 섹션4 */
+.s4 .div1{
+    width: 1488px;
+    height: 280px;
+
+    margin-bottom: 30px;
+}
+
+.s4 .div2{
+    width: 1488px;
+    height: 845px;
+
+    margin-bottom: 15px;
+    
+}
+
+/* 푸터 */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+
+}
+
+/* reset*/ 
+body,h1,h2,h3,ul {margin:0;}
+
+ul{
+    padding:0;
+    list-style:none;
+}
+
+a{text-decoration: none;}
+
+/* typo */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3 {
+  font-family: 'NanumSquareNeo-Variable', sans-serif;
+
+}
+
+h1,h3{
+  font-size: 15px;
+}
+
+h2{
+  font-size: 24px;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+
+</style>
+</head>
+
+<body>
+    
+    <header>
+        <h1 class="logo"><a href="#"><b>BR</b>Architects</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section s1">
+            <h2>
+                BR
+                <span>Architects</span>
+            </h2>
+        </section>
+        <section class="section s2">
+            <h2>Projects</h2>
+            <ul>
+                <li><h3>projects1</h3></li>
+                <li><h3>projects2</h3></li>
+                <li><h3>projects3</h3></li>
+                <li><h3>projects4</h3></li>
+                <li><h3>projects5</h3></li>
+                <li><h3>projects6</h3></li>
+                <li><h3>projects7</h3></li>
+                <li><h3>projects8</h3></li>
+            </ul>
+        </section>
+        <section class="section s3">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eos hic unde accusantium, consequuntur odit provident doloremque, consequatur reiciendis facilis, nostrum culpa qui veritatis ut voluptates sed mollitia omnis. Debitis vel nemo eveniet delectus. Eaque perferendis reprehenderit maiores, corrupti, aut expedita repellendus placeat aspernatur dolore libero alias, itaque autem impedit hic ad dignissimos fuga accusantium dolorum quasi. Nesciunt dignissimos deserunt, tempore illum architecto voluptatibus facilis ipsum eum quod commodi nostrum.</p>
+            <ul>
+                <div>
+                    <li><h3></h3></li>
+                    <h2 class="name">John Doe</h2>
+                    <P>CEO & Founder</P>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing<br> 
+                        elit. In tenetur nesciunt optio adipisci natus vel<br>
+                        laudantium recusandae deserunt.</p>
+                        <div class="contact"><p>contact</p></div>
+                </div>
+                <div>
+                    <li><h3></h3></li>
+                    <h2 class="name">Jane Doe</h2>
+                    <p>Architect</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing<br> 
+                        elit. In tenetur nesciunt optio adipisci natus vel<br>
+                        laudantium recusandae deserunt.</p>
+                        <div class="contact"><p>contact</p></div>
+                </div>
+                <div>
+                    <li><h3></h3></li>
+                    <h2 class="name">Mike Ross</h2>
+                    <p>Architect</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing<br> 
+                        elit. In tenetur nesciunt optio adipisci natus vel<br>
+                        laudantium recusandae deserunt ajfns!</p>
+                        <div class="contact"><p>contact</p></div>
+                </div>
+                <div>
+                    <li><h3></h3></li>
+                    <h2 class="name">Dan star</h2>
+                    <p>Architect</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing<br> 
+                        elit. In tenetur nesciunt optio adipisci natus vel<br>
+                        laudantium recusandae deserunt.</p>
+                        <div class="contact"><p>contact</p></div>
+                </div>
+            </ul>
+        </section>
+
+        <section class="section s4">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nihil praesentium ea sed cumque iure hic aliquid.</p>
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </section>
+    </main>
+
+    <footer>Copyright 2024 Baskin Robbins. All right reversed.</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        /* 페이지 왼쪽에 세로로 긴 박스와 나머지 가로 정렬 */
+        .main {
+            display: flex;
+            height: 858px;
+            margin-bottom: 4px;
+        }
+
+        .leftBox {
+            width: 200px;
+            height: 858px;
+            margin-right: 4px;
+            background: #b6b6b6;
+        }
+
+        .R1 {
+            width: 1000px;
+            height: 400px;
+            background: #b6b6b6;
+        }
+        .R2 {
+            width: 1000px;
+            height: 200px;
+            margin: 4px 0;
+            background: #b6b6b6;
+        }
+        .R3 {
+            height: 250px;
+            display: flex;
+        }
+
+        /* R3의 박스 설정 */
+        .box1 {
+            width: 496px;
+            margin-right: 4px;
+            background: #b6b6b6;
+        }
+        .box2 {
+            width: 500px;
+            background: #b6b6b6;
+        }
+
+        /* 맨 밑에 3개의 박스 배치 */
+        .footer {
+            height: 100px;
+            display: flex;
+        }
+
+        .footer div {
+            margin-right: 4px;
+        }
+
+        .box3 {
+            width: 200px;
+            background: #b6b6b6;
+        }
+        .box4 {
+            width: 796px;
+            background: #b6b6b6;
+        }
+        .box5 {
+            width: 200px;
+            background: #b6b6b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="leftBox"></div>
+        <div class="rightBox">
+            <div class="R1"></div>
+            <div class="R2"></div>
+            <div class="R3">
+                <div class="box1"></div>
+                <div class="box2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </div>
+</body>
+</html>

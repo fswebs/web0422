@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 영어만 나와서 en으로 표기함 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR_Architects</title>
+    <!-- style 시작 -->
+    <style>
+        /* reset */
+
+        body,
+        h1,
+        h2,
+        h3,
+        p {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* layout 시작 */
+        /* 공통 부분 */
+        section {
+            display: flex;
+            width: 1488px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 26px;
+            margin-bottom: 24px;
+        }
+
+        header,
+        .s1,
+        footer {
+            border: 1px solid #000;
+        }
+
+        /* header 시작 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 52px;
+            padding: 8px 24px;
+        }
+
+        .main li {
+            display: inline-block;
+            line-height: 52px;
+            padding-left: 32px;
+        }
+
+        /* Section_1 */
+        .s1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            height: 745px;
+            margin-bottom: 32px;
+        }
+
+        /* 메인부분 문구 */
+        .s1 b {
+            background: #ccc;
+            padding: 8px 16px;
+        }
+
+        /* Section_2 */
+        .s2 {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .project ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
+            margin-bottom: 80px;
+        }
+
+        .project li {
+            width: 360px;
+            height: 240px;
+            border: 1px solid #000;
+            margin: 0 8px 8px 0;
+        }
+
+        .project li:nth-of-type(4n) {
+            margin: 0;
+            padding: 0;
+        }
+
+        .project li h3 {
+            text-align: center;
+            line-height: 240px;
+        }
+
+        .s2 h2 {
+            margin-bottom: 40px;
+        }
+
+
+        /* Section_3 */
+        .s3 {
+            display: block;
+        }
+
+        .about_2 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about_2 li,
+        img,
+        button {
+            width: 360px;
+        }
+
+        .about_2 img {
+            display: inline-block;
+            height: 240px;
+            border: 1px solid #000;
+        }
+
+        .about_2 img,
+        h3,
+        p {
+            margin-bottom: 16px;
+        }
+
+        button {
+            height: 40px;
+            margin-bottom: 80px;
+            line-height: 35px;
+        }
+
+        /* Section_4 */
+        .s4 {
+            display: block;
+        }
+
+        .box_1 h3 {
+            height: 280px;
+            line-height: 280px;
+        }
+
+        .box_2 h3 {
+            height: 845px;
+            line-height: 845px;
+        }
+
+        .container h3 {
+            text-align: center;
+            border: 1px solid #000;
+        }
+
+        /* footer */
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85px;
+        }
+
+        /* text */
+        /* 구글 폰트 / Noto Sans 영어 */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+        body * {
+            font-family: "Noto Sans", sans-serif;
+            font-size: 24px;
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .main a {
+            font-size: 16px;
+        }
+
+        h3 {
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .job {
+            color: #ccc;
+        }
+    </style>
+    <!-- style 끝 -->
+</head>
+
+<body>
+    <!-- header 시작 -->
+    <!--  BR 원본 사이트 참고해서 진행 -->
+    <header>
+        <h1><a href="#">BR<b> Architects</b></a></h1>
+        <ul class="main">
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <!-- header 끝 -->
+    <!-- main 시작 -->
+    <main>
+        <!-- Section 1 -->
+        <section class="section s1">
+            <span>
+                <h1><b>BR</b> Architects</h1>
+            </span>
+            </div>
+        </section>
+        <!-- Section 2 -->
+        <section class="section s2">
+            <h2>Projects</h2>
+            <div class="project">
+                <ul>
+                    <li>
+                        <h3>Projects1</h3>
+                    </li>
+                    <li>
+                        <h3>Projects2</h3>
+                    </li>
+                    <li>
+                        <h3>Projects3</h3>
+                    </li>
+                    <li>
+                        <h3>Projects4</h3>
+                    </li>
+                    <li>
+                        <h3>Projects5</h3>
+                    </li>
+                    <li>
+                        <h3>Projects6</h3>
+                    </li>
+                    <li>
+                        <h3>Projects7</h3>
+                    </li>
+                    <li>
+                        <h3>Projects8</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Section 3 -->
+        <section class="section s3">
+            <div class="about_1">
+                <h2>Content</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                </p>
+            </div>
+            <ul class="about_2">
+                <li>
+                    <img src="#" alt="image">
+                    <h3>John Doe</h3>
+                    <p class="job">CEO & Founder</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <button>
+                        <p>Conact</p>
+                    </button>
+                </li>
+                <li>
+                    <img src="#" alt="image">
+                    <h3>Jane Doe</h3>
+                    <p class="job">Architect</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <button>
+                        <p>Conact</p>
+                    </button>
+                </li>
+                <li>
+                    <img src="#" alt="image">
+                    <h3>Mike Ross</h3>
+                    <p class="job">Architect</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <button>
+                        <p>Conact</p>
+                    </button>
+                </li>
+                <li>
+                    <img src="#" alt="image">
+                    <h3>Dan Star</h3>
+                    <p class="job">Architect</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                    <button>
+                        <p>Conact</p>
+                    </button>
+                </li>
+            </ul>
+        </section>
+        <!-- Section 3 끝 / 길어서 끝 부분 표기 -->
+        <!-- Section 4 -->
+        <section class="section s4">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet</p>
+            <div class="container">
+                <div class="box_1">
+                    <h3>Box_1</h3>
+                </div>
+                <div class="box_2">
+                    <h3>Box_2</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main 끝 -->
+    <!-- footer 시작 -->
+    <footer>Copyight 2024 BR Architects. All rights reserved.</footer>
+    <!-- footer 끝 -->
+</body>
+
+</html>
