@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        .wrap {
+            width: 1200px;
+            height: 950px;
+        }
+        .section1 {
+            display: flex;
+        }
+        .box1 {
+            width: 200px;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            background: #eee;
+        }
+        .box2 {
+            height: 400px;
+            margin-bottom: 4px;
+            background: #ddd;
+        }
+        .box3 {
+            height: 200px;
+            margin-bottom: 4px;
+            background: #ccc;
+        }
+        .box4 {
+            width: 500px;
+            height: 250px;
+            margin-right: 4px;
+            background: #bbb;
+        }
+        .content {
+            display: flex;
+            margin-bottom: 4px;
+            height: 250px;
+        }
+        .box4 {
+            width: 500px;
+            background: #aaa;
+        }
+        .box5 {
+            width: 500px;
+            background: #7c7c7c;
+        }
+        .section2{
+            display: flex;
+            width: 1200px;
+            height: 100px;
+        }
+        .box6 {
+            width: 200px;
+            margin-right: 4px;
+            background: #3b3b3b;
+        }
+        .box7 {
+            width: 800px;
+            margin-right: 4px;
+            background: #2e2e2e;
+        }
+        .box8 {
+            width: 200px;
+            background: #161616;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="section1">
+            <div class="box1">box1</div>
+            <div class="main">
+                <div class="box2">box2</div>
+                <div class="box3">box3</div>
+                <div class="content">
+                    <div class="box4">box4</div>
+                    <div class="box5">box5</div>
+                </div>
+            </div>
+        </div>
+        <div class="section2">
+            <div class="box6">box6</div>
+            <div class="box7">box7</div>
+            <div class="box8">box8</div>
+        </div>
+    </div>
+</body>
+</html>

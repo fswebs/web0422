@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <!-- 내부 CSS 시작 -->
+    <style>
+        body * {
+            margin: 0;
+        }
+
+        /* 전체 적용 */
+
+        /* header 시작 */
+        header {
+            display: flex;
+        }
+
+        /* header 끝 */
+        .main1 {
+            width: 200px;
+            height: 860px;
+            margin: 0 4px 4px 0;
+            background: #707070;
+        }
+
+        /* main 끝 */
+        /* layout 시작 */
+        .layout1 {
+            display: block;
+            width: 1000px;
+            margin-bottom: 4px;
+        }
+
+        .layout2-1 {
+            height: 400px;
+            background: #707070;
+            margin-bottom: 4px;
+        }
+
+        .layout2-2 {
+            height: 200px;
+            background: #707070;
+            margin-bottom: 4px;
+        }
+
+        .layout2-3 {
+            display: flex;
+            margin-bottom: 4px;
+            width: 1004px;
+            height: 250px;
+        }
+
+        .layout3-1,
+        .layout3-2 {
+            width: 500px;
+            background: #707070;
+        }
+
+        .layout3-1 {
+            margin-right: 4px;
+        }
+
+        /* layout 끝 */
+        /* footer 시작 */
+        .f1 {
+            display: flex;
+            height: 100px;
+        }
+
+        .f1-1,
+        .f1-3 {
+            width: 200px;
+            background: #707070;
+        }
+
+        .f1-1,
+        .f1-2 {
+            margin-right: 4px;
+        }
+
+        .f1-2 {
+            width: 800px;
+            background: #707070;
+        }
+
+        /* footer 끝 */
+    </style>
+    <!-- 내부 CSS 종료 -->
+</head>
+
+<body>
+    <!-- Header 시작 -->
+    <header>
+        <div class="h1 main1">헤더</div>
+        <div class="layout1">
+            <div class="layout2-1">1</div>
+            <div class="layout2-2">2</div>
+            <div class="layout2-3">
+                <div class="layout3-1">1</div>
+                <div class="layout3-2">2</div>
+            </div>
+        </div>
+    </header>
+    <!-- header 끝 -->
+    <!-- footer 시작 -->
+    <footer>
+        <div class="f1">
+            <div class="f1-1">1</div>
+            <div class="f1-2">2</div>
+            <div class="f1-3">3</div>
+        </div>
+    </footer>
+</body>
+
+</html>

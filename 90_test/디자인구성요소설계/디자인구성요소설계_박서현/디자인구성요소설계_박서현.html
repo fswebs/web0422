@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+
+        .wrap {
+            width: 1200px;
+            display:flex;
+        }
+        /* header */
+        .header {
+            width: 200px;
+            height: 858px;
+            background: #3992b5;
+            
+        }
+        
+        /* contents = slide + banner + notice */
+        /* contents 너비 */
+        .contents{
+            width: 1000px;
+        }
+
+        /* header와 contents 가로 배치 */
+        .section {
+            display:flex;
+        }
+        
+        /* slide */
+        .slide{
+            height: 400px;
+            background:rgb(110, 110, 174);
+            margin:0 0 4px  4px;
+        }
+        /* banner */
+        .banner{
+            height: 200px;
+            background:pink;
+            margin:0 0 4px 4px;
+            
+        
+        }
+        /* notice */
+        .notice{
+            display:flex;
+        }
+        
+        .n1{
+            width: 500px;
+            height: 250px;
+            background: #ac7373;
+            margin-left: 4px;
+            margin-bottom: 4px;
+            
+        }
+
+        .n2{
+            width: 500px;
+            height: 250px;
+            background: #ac7373;
+            margin:0 0 4px 4px;
+        }
+
+        /* footer */
+        .footer{
+            display:flex;
+            width: 1200px;
+            height: 100px;
+        }
+
+        .f1{
+            width: 200px;
+            height: 100px;
+            background: rgb(49, 87, 49);
+            margin-right: 4px;
+        }
+        .f2{
+            width: 800px;
+            height: 100px;
+            background: rgb(49, 87, 49);
+            margin-right: 4px;
+        }
+        .f3{
+            width: 200px;
+            height: 100px;
+            background: rgb(49, 87, 49);
+        }
+
+        
+        </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <div class="section">
+
+            
+            <div class="header">header</div>
+
+                <div class="contents">
+
+                   
+                    <div class="slide">slide</div>
+
+                    
+                    <div class="banner">banner</div>
+                    
+                    
+                    <div class="notice">
+                        <div class="n1">n1</div>
+                        <div class="n2">n2</div>
+                    </div>
+        
+                </div>
+
+        </div>
+
+    </div> 
+
+    <div class="footer">
+        <div class="f1">f1</div>
+        <div class="f2">f2</div>
+        <div class="f3">f3</div>
+    </div>
+</body>
+</html>

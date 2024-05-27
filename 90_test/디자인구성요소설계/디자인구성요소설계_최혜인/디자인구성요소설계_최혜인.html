@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        .wrap {
+            width: 1208px;
+        }
+
+        .section1 {
+            display: flex;
+        }
+        
+        .box1 {
+            width: 200px;
+            background: #888;
+            margin: 0 4px 4px 0;
+        }
+
+        .section2 {
+            width: 1000px;
+        }
+
+        .box2 {
+            height: 400px;
+            background: #777;
+            margin: 0 0 4px 0;
+            
+        }
+
+        .box3 {
+            height: 200px;
+            background: #666;
+            margin: 0 0 4px 0;
+        }
+
+        .section3 {
+            display: flex;
+        }
+
+        .box4 {
+            width: 500px;
+            height: 250px;
+            background: #555;
+            margin: 0 4px 4px 0;
+        }
+
+        .box5 {
+            width: 500px;
+            height: 250px;
+            background: #444;
+            margin: 0 0 4px 0;
+        }
+
+        .box6 {
+            width: 200px;
+            height: 100px;
+            background: #333;
+            margin: 0 4px 0 0;
+        }
+
+        .box7 {
+            width: 800px;
+            height: 100px;
+            background: #222;
+            margin: 0 4px 0 0;
+        }
+
+        .box8 {
+            width: 200px;
+            height: 100px;
+            background: #111;
+            margin: 0 4px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section1">
+            <div class="box1">1</div>
+            <!-- 세로 정렬 -->
+            <div class="section2">
+                <div class="box2">2</div>
+                <div class="box3">3</div>
+                <!-- 가로 정렬 -->
+                <div class="section3">
+                    <div class="box4">4</div>
+                    <div class="box5">5</div>
+                </div>
+            </div>
+        </div>
+        <!-- 하단 가로 정렬 -->
+        <div class="section3">
+            <div class="box6">6</div>
+            <div class="box7">7</div>
+            <div class="box8">8</div>
+        </div>
+    </div>
+</body>
+
+</html>

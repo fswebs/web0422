@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+
+        .wrap1{
+            display: flex;
+            width: 1200px;
+
+        }
+
+        /* A를 가, 나로 분할 */
+        .A {
+            width: 200px;
+            height: 950px;
+            background: ffffff;
+            padding: 4px;
+            margin: 4px;
+
+        }
+  
+        /* B를 다, 라, 마, 바로 분할 */
+        .B {
+            width: 1000px;
+            height: 950px;
+            background: ffffff;
+            padding: 4px;
+            margin: 4px;
+        }
+
+        .가{
+            width: 200px;
+            height: 850px;
+            background: lightpink;
+            margin: 4px;
+        }
+
+        .나 {
+            width: 200px;
+            height: 100px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        .다 {
+            width: 1000px;
+            height: 400px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        .라 {
+            width: 1000px;
+            height: 200px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        /* 마를 사, 아로 분할 */
+        .마 {
+            width: 1000px;
+            height: 250px;
+            background: ffffff;
+            display: flex; 
+            margin: 4px;
+
+        }
+
+        /* 바를 자, 차로 분할 */
+        .바 {
+            width: 1000px;
+            height: 100px;
+            background: ffffff;
+            display: flex; 
+            margin: 4px;
+
+        }
+
+        .사 {
+            width: 500px;
+            height: 250px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        .아 {
+            width: 500px;
+            height: 250px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        .자 {
+            width: 800px;
+            height: 100px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+
+        .차 {
+            width: 200px;
+            height: 100px;
+            background: lightpink;
+            margin: 4px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="wrap1">
+    <div class="A">
+        <div class="가"></div>
+        <div class="나"></div>
+    </div>
+    <div class="B">
+        <div class="다"></div>
+        <div class="라"></div>
+        <div class="마">
+            <div class="사"></div>
+            <div class="아"></div>
+        </div>
+        <div class="바">
+            <div class="자"></div>
+            <div class="차"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
