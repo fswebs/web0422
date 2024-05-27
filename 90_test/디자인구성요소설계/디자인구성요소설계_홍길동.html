@@ -4,60 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃</title>
     <style>
         .wrap {
-            width: 1200px;
+            width: 1204px;
         }
 
         .section {
             display: flex;
         }
 
+        /* header */
         .header {
             width: 200px;
-            background: #999;
         }
 
-        .contents {
+        /* container */
+        .container {
             width: 1000px;
         }
 
         .slide {
             height: 400px;
-            background: #eee;
         }
 
         .banner {
             height: 200px;
-            background: #ccc;
+        }
+
+        /* contents */
+        .contents {
+            display: flex;
+            height: 250px;
         }
 
         .notice {
-            height: 250px;
-            background: #aaa;
+            width: 496px;
         }
 
+        .gallery {
+            width: 500px;
+        }
+
+        /* footer */
         .footer {
+            display: flex;
             height: 100px;
-            background: #111;
+        }
+
+        .blogo {
+            width: 200px;
+        }
+
+        .copy {
+            width: 796px;
+        }
+
+        .sns {
+            width: 200px;
+        }
+
+        /* margin */
+        .header,
+        .notice,
+        .blogo,
+        .copy {
+            margin-right: 4px;
+        }
+
+        .section,
+        .slide,
+        .banner {
+            margin-bottom: 4px;
+        }
+
+        /* bg-color */
+        .header,
+        .slide,
+        .banner,
+        .notice,
+        .gallery,
+        .blogo,
+        .copy,
+        .sns {
+            background: #ccc;
         }
     </style>
 </head>
 
 <body>
     <div class="wrap">
+        <!-- section -->
         <div class="section">
-            <!-- 가로 배치 -->
+            <!-- header -->
             <div class="header"></div>
-            <div class="contents">
-                <!-- 세로 배치 -->
+            <!-- container -->
+            <div class="container">
                 <div class="slide"></div>
                 <div class="banner"></div>
-                <div class="notice"></div>
-            </div>
-        </div>
-        <div class="footer"></div>
+                <!-- contents -->
+                <div class="contents">
+                    <div class="notice"></div>
+                    <div class="gallery"></div>
+                </div><!-- .contents.end -->
+            </div><!-- .container.end -->
+        </div><!-- //.section -->
+
+        <div class="footer">
+            <div class="blogo"></div>
+            <div class="copy"></div>
+            <div class="sns"></div>
+        </div><!-- footer.end -->
     </div>
 </body>
 
