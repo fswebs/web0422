@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRArchitects</title>
+    <style>
+        /* bg-color */
+        header,
+        .s1,
+        .s2 li,
+        .s3 li,
+        .s3 li,
+        h3,
+        .s4 box1,
+        .s4 box2,
+        footer {
+            background: #ccc;
+        }
+
+        /* 헤더 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 36px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        /* 섹션의 공통 */
+
+        section {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 24px 0;
+            margin-bottom: 48px;
+            margin-top: 64px;
+        }
+
+        /* 섹션1 */
+        .s1 {
+            height: 745px;
+        }
+
+        .s1 h2 {
+            border: none;
+            margin: 0;
+        }
+
+        /* 섹션2 */
+        .s2 ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .s2 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s2 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s2 h3 {
+            display: inline-block;
+            padding: 8px 24px;
+        }
+
+        /* 섹션3 */
+        .s3 ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .s3 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s3 li:nth-of-type(4) {
+            margin: 0;
+        }
+
+        /* 섹션4 */
+        .s4 div box1 {
+            height: 240px;
+        }
+
+        .s4 div box2 {
+            height: 845px;
+        }
+
+        /* 푸터 */
+        footer {
+            height: 85px
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        /* 네이버 폰트 */
+        /* 제목: 나눔스퀘어 네오 */
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "NanumSquareNeo", sans-serif;
+        }
+
+        h1,
+        h3 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        a {
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- b는 굵게 -->
+        <h1 class="logo"><a href="#"><b>BR</b>Architects</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section s1">
+            <h2><span>BR</span>Architects</h2>
+        </section>
+        <section class="section s2">
+            <h2>Project</h2>
+            <ul>
+                <li>
+                    <h3>Summer House</h3>
+                </li>
+                <li>
+                    <h3>Brick House</h3>
+                </li>
+                <li>
+                    <h3>Renovated</h3>
+                </li>
+                <li>
+                    <h3>Barn House</h3>
+                </li>
+                <li>
+                    <h3>Summer House</h3>
+                </li>
+                <li>
+                    <h3>Brick House</h3>
+                </li>
+                <li>
+                    <h3>Renovated</h3>
+                </li>
+                <li>
+                    <h3>Barn House</h3>
+                </li>
+            </ul>
+        </section>
+        <section class="section s3">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, officia soluta distinctio pariatur ipsum
+                dolor quam commodi nisi, placeat, quidem dignissimos eum. Corporis quos in maxime, debitis culpa atque
+                sit. Vitae similique excepturi quibusdam explicabo corporis praesentium, provident ad libero eligendi
+                nihil in, minima suscipit quo ut recusandae non facere laudantium itaque veniam eaque dolore,
+                consequatur hic placeat aperiam. Voluptas pariatur error est aspernatur praesentium perferendis harum
+                saepe tempora consequuntur perspiciatis minus suscipit aliquid cumque quis illum, tenetur iusto dolorum
+                officia quas, </p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+        <section class="section s4">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <div class="box1"></div>
+            <div class="box2"></div>
+
+        </section>
+    </main>
+    <footer>Copy right 2024 BR Architects. All rights reserved.</footer>
+
+</body>
+
+</html>
