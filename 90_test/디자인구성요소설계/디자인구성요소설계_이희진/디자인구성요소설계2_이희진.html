@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <style>
+        /* temp - bg color*/
+        header {
+            background: #ccc;
+        }
+
+        .s1 {
+            background: #666;
+        }
+
+        .s2 li {
+            background: #ccc;
+        }
+
+        .s3 li {
+            background: #ddd;
+        }
+
+        .div1 {
+            background: #555;
+        }
+
+        .div2 {
+            background: #777;
+        }
+
+        h3 {
+            background: #666;
+        }
+
+        footer {
+            background: #555;
+        }
+
+        /* reset */
+        body,
+        h1,
+        h2,
+        h3,
+        span,
+        ul {
+            margin: 0;
+        }
+
+        span,
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        /* layout */
+        /* header 영역 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 56px;
+            line-height: 56px;
+        }
+
+        /* container 영역 */
+        nav span a {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        section {
+            width: 1500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 16px 0;
+            margin-top: 64px;
+            margin-bottom: 16px;
+        }
+
+        /* 섹션1 */
+        .s1 {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            width: 1488px;
+            height: 745px;
+        }
+
+        .s1 h2 {
+            text-align: center;
+            line-height: 50%;
+            border-bottom: 0px;
+        }
+
+        /* 섹션2 */
+        .s2 ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .s2 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .s2 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s2 h3 {
+            display: inline-block;
+            padding: 8px 20px;
+        }
+
+        /* 섹션3 */
+        .s3 ul {
+            display: flex;
+        }
+
+        .s3 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 16px;
+            text-align: center;
+        }
+
+        .s3 p {
+            text-align: start;
+        }
+
+        /* 섹션4 */
+        .s4 p {
+            text-align: start;
+        }
+
+        .div1 {
+            height: 280px;
+            margin-bottom: 32px;
+        }
+
+        .div2 {
+            height: 845px;
+        }
+
+        /* 푸터 */
+        footer {
+            height: 85px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        /* typo */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "NanumSquareNeo", sans-serif;
+        }
+
+        h1,
+        h3 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        a {
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header>
+        <h1>
+            <a href="#"><b>BR</b> Architects</a>
+        </h1>
+        <nav>
+            <span>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </span>
+        </nav>
+    </header>
+    <container>
+        <!-- 섹션 1 -->
+        <section class="s1">
+            <h2>BR Architects</h2>
+        </section>
+        <!-- 섹션 2 -->
+        <section class="s2">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <h3>Projects1</h3>
+                </li>
+                <li>
+                    <h3>Projects2</h3>
+                </li>
+                <li>
+                    <h3>Projects3</h3>
+                </li>
+                <li>
+                    <h3>Projects4</h3>
+                </li>
+                <li>
+                    <h3>Projects5</h3>
+                </li>
+                <li>
+                    <h3>Projects6</h3>
+                </li>
+                <li>
+                    <h3>Projects7</h3>
+                </li>
+                <li>
+                    <h3>Projects8</h3>
+                </li>
+            </ul>
+        </section>
+        <!-- 섹션 3 -->
+        <section class="s3">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.
+                Sed ac aliquet tortor diam varius erat<br>sit. Est sed sed bibendum egestas convallis odio.
+                Ultrices feugiat eu aliquam<br>lectus scelerisque phar eget dui ut.</p>
+            <ul>
+                <li>box1</li>
+                <li>box2</li>
+                <li>box3</li>
+                <li>box4</li>
+            </ul>
+        </section>
+        <!-- 섹션4 -->
+        <section class="s4">
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="div1">box1</div>
+            <div class="div2">box2</div>
+        </section>
+    </container>
+    <footer>
+        <p>Copyright 2024 BR Architects. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

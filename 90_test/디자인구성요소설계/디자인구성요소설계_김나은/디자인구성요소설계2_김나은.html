@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <style>
+        /* header */
+        header {
+            display: flex;
+            height: 56px;
+            line-height: 56px;
+            justify-content: space-between;
+            /* padding: 0 36px; */
+            /* line-height:56px; */
+            border: 5px solid black;
+            background: eee;
+        }
+
+        h1 {
+            padding-top: 4px;
+            /* 중앙배치 해야함 */
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 32px;
+        }
+
+        /* 이걸 적으니까 헤더의 BR Architects가 중앙으로 옴 근데 왜 그런지 모름.. */
+        body,
+        h1,
+        h2,
+        h3,
+        ul {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            /* 밑줄 제거 */
+        }
+
+
+        /* Section 공통 */
+        section {
+            width: 1488px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 40px 0;
+            /* margin-bottom: 48px;
+            margin-top:64px; */
+        }
+
+        /* Section1 */
+        .s1 {
+            height: 745px;
+            line-height: 500px;
+            border: 1px solid black;
+            background: lightpink;
+        }
+
+        .s1 h2 {
+            /* 중앙으로 배치해야함 */
+            text-align: center;
+
+            border: none;
+            /* margin: 0; */
+        }
+
+        /* Section2 */
+
+        .s2 {
+            background: lightskyblue;
+        }
+
+        .s2 ul {
+            display: flex;
+            flex-wrap: wrap;
+            /* 감싸면서 다음줄로 넘어가는건데 공간이 남으면 적용안됨 */
+        }
+
+        .s2 li {
+            width: 360px;
+            height: 240px;
+            margin: 16px;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+
+
+
+
+
+        /* Section3 */
+        .s3 {
+            background: lightgreen;
+        }
+
+        .card {
+            width: 360px;
+            height: 240px;
+            display: flex;
+        }
+
+        /* Section4 */
+        .s4 {
+            margin-bottom: 8px;
+            background: lightgoldenrodyellow;
+        }
+
+        .Box1 {
+            height: 280px;
+            border: 1px solid black;
+        }
+
+        .Box2 {
+            height: 845px;
+            border: 1px solid black;
+
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            height: 85px;
+            line-height: 85px;
+            border: 1px solid black;
+            background: lightpink;
+        }
+
+        /* 눈누폰트 */
+        @font-face {
+            font-family: 'MoveSans-Bold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/MoveSans-Bold.woff2') format('woff2');
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="logo"><a href="#"><b>BR</b>Architects</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section s1">
+            <h2>Architects</h2>
+        </section>
+        <section class="section s2">
+            <h2>Projects</h2>
+            <ul>
+                <li>Project1</li>
+                <li>Project2</li>
+                <li>Project3</li>
+                <li>Project4</li>
+                <li>Project5</li>
+                <li>Project6</li>
+                <li>Project7</li>
+                <li>Project8</li>
+            </ul>
+        </section>
+        <section class="section s3">
+            <h2>About</h2>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</div>
+            <div class="card">
+                <div class="card1">1</div>
+                <div class="card2">2</div>
+                <div class="card3">3</div>
+                <div class="card4">4</div>
+            </div>
+        </section>
+        <section class="section s4">
+            <h2>Contact</h2>
+            <div class="lorem">Lorem ipsum dolor sit amet, consectetur</div>
+            <div class="Box1">박스1</div>
+            <div class="Box2">박스2</div>
+
+        </section>
+    </main>
+
+    <footer>
+        Copyright 2024 BR Architects. All rights reserved.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+    <style>
+        /* temp */
+        header {
+            background: #ccc;
+        }
+
+        .s1 {
+            background: #ccc;
+        }
+
+        .s2 li {
+            background: #ccc;
+        }
+
+        .s3 li {
+            background: #ccc;
+        }
+
+        .s4 li {
+            background: #ccc;
+        }
+
+        .box {
+            background: #ccc;
+        }
+
+        footer {
+            background: #ccc;
+        }
+
+        /* 헤더 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 56px;
+            line-height: 56px;
+            padding: 0 36px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        /* 섹션의 공통 */
+
+        section {
+            width: 1488px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            border-bottom: 1px solid black;
+            padding: 24px 0;
+            margin-bottom: 48px;
+            margin-top: 64px;
+        }
+
+        /* 섹션1 */
+        .s1 {
+            height: 745px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .s1 h2 {
+            border: none;
+            width: 1488px;
+            margin: 0 auto;
+        }
+
+        /* 섹션2 */
+        .s2 ul {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        .s2 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .s2 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s2 h3 {
+            display: inline-block;
+            padding: 8px 24px;
+        }
+
+        /* 섹션3 */
+        .class {
+            width: 360px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .class:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s3 ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .s3 li {
+            width: 360px;
+            height: 240px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .s3 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+
+        .s3 h3 {
+            display: inline-block;
+        }
+
+        .s3 p {
+            margin-bottom: 16px;
+        }
+
+        .box {
+            width: 360px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            text-align: center;
+        }
+
+        /* 섹션4 */
+        .s4 ul {
+            flex-wrap: wrap;
+        }
+
+        .s4 li {
+            width: 1488px;
+            margin-right: 16px;
+            margin-bottom: 16px;
+        }
+
+        .box1 {
+            width: 1488px;
+            height: 280px;
+            background: #ccc;
+            margin-bottom: 16px;
+        }
+
+        .box2 {
+            width: 1488px;
+            height: 845px;
+            background: #ccc;
+            margin-bottom: 16px;
+        }
+
+        .s4 li:nth-of-type(4n) {
+            margin: 0;
+        }
+
+        .s4 h3 {
+            display: inline-block;
+            padding: 8px 24px;
+        }
+
+        /* 푸터 */
+        .footer {
+            display: block;
+            text-align: center;
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+
+        body,
+        h1,
+        h2,
+        h3,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        /* 네이버 폰트 */
+        /* 제목: 나눔스퀘어 네오 */
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+        }
+
+        body {
+            font-family: "Noto Sans KR", sans-serif;
+            font-size: 15px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "NanumSquareNeo", sans-serif;
+        }
+
+        h1,
+        h3 {
+            font-size: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        a {
+            color: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#">BR Architects</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section s1">
+            <h2><span>BR</span>Architects</h2>
+        </section>
+        <section class="section s2">
+            <h2>Projects</h2>
+            <p></p>
+            <ul>
+                <li>
+                    <h3>Projects1</h3>
+                </li>
+                <li>
+                    <h3>Projects2</h3>
+                </li>
+                <li>
+                    <h3>Projects3</h3>
+                </li>
+                <li>
+                    <h3>Projects4</h3>
+                </li>
+                <li>
+                    <h3>Projects5</h3>
+                </li>
+                <li>
+                    <h3>Projects6</h3>
+                </li>
+                <li>
+                    <h3>Projects7</h3>
+                </li>
+                <li>
+                    <h3>Projects8</h3>
+                </li>
+            </ul>
+        </section>
+        <section class="section s3">
+            <h2>About</h2>
+            <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo officiis, ratione laudantium, magnam ipsum
+                voluptate tenetur quis quam voluptas nam itaque et aspernatur accusantium voluptatem asperiores? Animi
+                eos cupiditate aut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magni id error
+                ipsum voluptatem voluptas voluptatibus sit harum doloribus repudiandae ullam placeat, totam quidem sequi
+                nobis sunt, deserunt aspernatur aperiam.</P>
+            <ul>
+                <!-- 이미지 -->
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <!-- 이미지 설명 -->
+                <div class="class">
+                    <h3>John Doe</h3>
+                    <p>CEO &amp; Founder</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, sunt a explicabo commodi
+                        deleniti repellendus unde corporis
+                    </p>
+                    <div class="box">Contact</div>
+                </div>
+                <div class="class">
+                    <h3>John Doe</h3>
+                    <p>Architect</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, sunt a explicabo commodi
+                        deleniti repellendus unde corporis
+                    </p>
+                    <div class="box">Contact</div>
+                </div>
+                <div class="class">
+                    <h3>John Doe</h3>
+                    <p>Architect</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, sunt a explicabo commodi
+                        deleniti repellendus unde corporis
+                    </p>
+                    <div class="box">Contact</div>
+                </div>
+                <div class="class">
+                    <h3>John Doe</h3>
+                    <p>Architect</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, sunt a explicabo commodi
+                        deleniti repellendus unde corporis
+                    </p>
+                    <div class="box">Contact</div>
+                </div>
+            </ul>
+        </section>
+        <section class="section s4">
+            <h2>Contact</h2>
+            <P>Lorem ipsum dolor sit amet consectetur.</P>
+            <ul>
+                <div class="box1">
+                </div>
+                <div class="box2">
+                </div>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <p>Copyright 2024 BR Architects. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

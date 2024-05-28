@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어</title>
+    <style>header {
+        display: flex;
+        justify-content: space-between;
+        height: 56px;
+        line-height: 56px;
+        padding: 0 36px;
+    }
+    nav li {
+        display: inline-block;
+        padding-left: 36px;
+    }
+    
+    /* 섹션의 공통 */
+    
+    section {
+        width: 1500px;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        border-bottom: 1px solid black;
+        padding: 24px 0;
+        margin-bottom: 48px;
+        margin-top: 64px;
+    }
+    
+    /* 섹션1 */
+    .s1 {
+        height: 745px;
+    }
+    
+    .s1 h2 {
+        border: none;
+        margin: 0;
+    }
+    
+    /* 섹션2 */
+    .s2 ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .s2 li {
+        width: 360px;
+        height: 240px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .s2 li:nth-of-type(4n) {
+        margin: 0;
+    }
+    
+    .s2 h3 {
+        display: inline-block;
+        padding: 8px 24px;
+    }
+    
+    /* 섹션3 */
+    
+    /* 섹션4 */
+    
+    /* 푸터 */
+ 
+    body,h1,h2,h3,ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #ccc;
+}
+
+.s1 {
+    background: #777;
+}
+
+.s2 li {
+    background: #ccc;
+}
+
+h3 {
+    background: #777;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+
+}
+
+body {
+    font-family: "Noto Sans KR" sans-serif;
+    font-size: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "NanumSquareNeo", sans-serif;
+}
+
+h1,
+h3 {
+    font-size: 15px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+a {
+    color: #111;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><b>HT</b>Hanatour</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#">여행지</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="section s1">
+            <h2><span>HT</span>Hanatour</h2>
+        </section>
+        <section class="section s2">
+            <h2>여행지</h2>
+            <ul>
+                <li><h3>여행지1</h3></li>
+                <li><h3>여행지2</h3></li>
+                <li><h3>여행지3</h3></li>
+                <li><h3>여행지4</h3></li>
+                <li><h3>여행지5</h3></li>
+                <li><h3>여행지6</h3></li>
+                <li><h3>여행지7</h3></li>
+                <li><h3>여행지8</h3></li>
+            </ul>
+        </section>
+<section class="section s3">
+    <h2>이벤트</h2>
+</section>
+<section class="section s4">
+    <h2>고객센터</h2>
+</section>
+    </main>
+    <footer>Copyright 2024 BR Architects. All rights reserved.</footer>
+</body>
+</html>
