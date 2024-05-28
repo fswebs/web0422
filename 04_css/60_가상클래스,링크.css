@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 
+    가상(슈도) 클래스 선택자
+    마우스 이벤트(Event)
+    a:link -> 방문전
+    a:visited -> 방문후
+    선택자:hover -> 올렸을 때
+    선택자:active -> 눌렀을 때
+*/
+
+/* 4가지 상황을 사용하려면 아래 순으로 코딩한다. */
+/* a요소를 방문전(클릭하기전) 글자색 색상이 maroon이다. */
+/* a:link {color:maroon;} */
+/* a요소를 방문후(클릭후) 글자색 색상이 red이다. */
+/* a:visited {color: red;} */
+/* a요소에 마우스를 올리면 글자색 색상이 blue이다. */
+/* a:hover {color: blue;} */
+/* a요소를 마우스로 누르고 있으면 글자색 색상이 yellow이다. */
+/* a:active {color: yellow;} */
+
+a {
+    color: #999;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+    text-decoration: underline;
+}
