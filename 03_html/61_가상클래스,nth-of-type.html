@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            :first-of-type
+            :nth-of-type(1)
+            :last-of-type
+            :nth-last-of-type(1)
+
+            :nth-last-of-type(n)
+            :nth-of-type(n) -> type을 구분한다.
+            :nth-child(n) -> type(태그, 요소)을 구분x
+        */
+
+        /* 첫 번째 자식요소 p */
+        /* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 빨강으로 지정한다. */
+        p:nth-of-type(1) {
+            color:blue;
+        }
+        /* p의 부모 즉, div의 자식 요소 중 첫 번째 p요소를 선택하여 글자색을 lightcoral으로 지정한다. */
+        p:first-of-type {
+            color: lightcoral;
+        }
+        /* p의 부모 즉, div의 자식 요소 중 마지막 p요소를 선택하여 글자색을 lightpink으로 지정한다. */
+        p:last-of-type {
+            color: lightpink;
+        }
+        /* p의 부모 즉, div의 자식 요소 중 짝수 번째 p요소를 선택하여 이탤릭체로 지정한다. */
+        p:nth-of-type(2n) {
+            font-style:italic;
+        }
+
+        /* h3의 부모 즉, div의 자식 요소 중 다섯 번째 h3요소를 선택하여 글자색을 빨강으로 지정한다. */
+        h3:nth-child(5) {
+            color: red;
+        }
+        /* h2의 부모 즉, div의 자식 요소 중 첫 번째 h2요소를 선택하여 배경색을 노랑으로 지정한다. */
+        h2:first-child {
+            background: yellow;
+        }
+        /* p의 부모 즉, div의 자식 요소 중 마지막 p요소를 선택하여 q 배경색을 darkcyan으로 지정한다. */
+        p:last-child {
+            background: darkcyan;
+        }
+        /* p의 부모 즉, div의 자식 요소 중 홀수 번째 p요소를 선택하여 굵기를 bold로 지정한다. */
+        p:nth-child(2n+1) {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <!-- ~of-type, ~child -->
+    <!-- <p>:first-of-type, :last-of-type, :nth-of-type(n), :first-child, :last-child, :nth-child(n)이 있다.</p>
+    <p>괄호 안에 n은 숫자(1,2,...) 또는 수열(2n, 2n+1, 3n,...)이다.</p>
+    <p>부모 자식관계에서 몇 번째 자식 요소인지를 선택한다.</p> -->
+    <div>
+        <h2>nth-child(1)</h2>
+        <p>nth-child(2), nth-of-type(1)</p>
+        <p>nth-child(3), nth-of-type(2)</p>
+        <p>nth-child(4), nth-of-type(3)</p>
+        <h3>nth-child(5)</h3>
+        <p>nth-child(6), nth-of-type(4)</p>
+        <p>nth-child(7), nth-of-type(5)</p>
+        <p>nth-child(8), nth-of-type(6)</p>
+        <p>nth-child(9), nth-of-type(7)</p>
+        <p>nth-child(10), nth-of-type(8)</p>
+        <p>nth-child(11), nth-of-type(9)</p>
+    </div>
+</body>
+</html>
