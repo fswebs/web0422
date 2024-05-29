@@ -37,6 +37,7 @@ header {
     line-height: 200px;
 }
 section {width: 940px; margin: auto;}
+h2 {margin: 56px 0;}
 .home-card {
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,8 @@ section {width: 940px; margin: auto;}
 
 /* header */
 header {
-    background: url(../assets/bg-light.png);
+    /* 패럴렉스 스크롤링 기법 */
+    background: url(../assets/bg-light.png) no-repeat 50% 50%/cover fixed;
 }
 /* section */
 /* footer */
