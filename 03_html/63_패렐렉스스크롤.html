@@ -18,7 +18,12 @@
         */
 
         div {
-            height: 193px;
+            height: 1000px;
+        }
+
+        p {
+            height: 600px;
+            border: 1px solid;
 
             background-image: url(./../assets/figma.png);
             background-repeat: no-repeat;
@@ -29,13 +34,16 @@
             background-attachment: fixed;
 
             /* background: 색|url(경로/이미지명) [반복] [위치/크기]; */
-            background: url(../assets/bg_gnb_over.png) repeat-x 0% 100%;
-            opacity:0.7;
+            background: url(../assets/bg.jpg) no-repeat 0% 50%/cover fixed yellowgreen;
         }
     </style>
 </head>
 <body>
     <h1>배경 이미지</h1>
+    <div></div>
+    <div>
+        <p>background-image, background-repeat, background-position, background-size, background-attachment 와 같은 CSS 속성이 있다.</p>
+    </div>
     <div></div>
 </body>
 </html>
