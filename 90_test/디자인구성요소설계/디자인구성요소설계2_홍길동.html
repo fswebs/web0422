@@ -1,17 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BR Architects(정답)</title>
     <style>
+        /* reset */
+        body,
+        h1,
+        h2,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* typo */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+        @font-face {
+            font-family: 'NanumSquareNeo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+        }
+
+        body {
+            font-family: "Noto Sans KR", Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2 {
+            font-family: "NanumSquareNeo", 'Segoe UI', sans-serif;
+            font-weight: normal;
+            font-size: 15px;
+        }
+
+        h2 {
+            padding: 24px 0;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 24px;
+            text-align: left;
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 24px;
+            font-weight: normal;
+        }
+
+        .about li p:nth-of-type(1) {
+            color: #777;
+        }
+
+        a {
+            color: #333;
+        }
+
+        span {
+            font-weight: 700;
+        }
+
+        /* header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 54px;
+            line-height: 54px;
+            padding: 0 36px;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 36px;
+        }
+
+        /* section */
+        .wrap {
+            width: 1488px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 44px;
+        }
+
+        section:last-child {
+            margin-bottom: 12px;
+        }
+
+        section ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section li {
+            margin-bottom: 16px;
+            margin-right: 16px;
+        }
+
+        section li:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        /* main image */
+        .mainimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 745px;
+            margin-bottom: 64px;
+        }
+
+        .mainimg h2 {
+            border: none;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .mainimg span {
+            background: #555;
+            padding: 8px 16px;
+            margin-right: 16px;
+        }
+
+
+        /* project */
+        .project h2 {
+            margin-bottom: 48px;
+        }
+        .project li {
+            width: 360px;
+            height: 240px;
+            line-height: 240px;
+            text-align: center;
+        }
+
+        /* about */
+        .about>p {
+            margin-bottom: 48px;
+        }
+
+        .about li {
+            width: 360px;
+        }
+
+        .about li div {
+            height: 240px;
+        }
+
+        .about a {
+            display: block;
+            background: #ccc;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        /* form */
+        .form {
+            height: 280px;
+            line-height: 280px;
+            margin-bottom: 48px;
+        }
+
+        /* map */
+        .map {
+            height: 845px;
+            line-height: 845px;
+        }
+
+        footer {
+            height: 85px;
+            line-height: 85px;
+            text-align: center;
+        }
+
         /* bg-color */
-        header {background: #ccc;}
-        .s1 {background: #777;}
-        .s2 li {background: #ccc;}
+        header {
+            background: #d5d5d5;
+        }
+
+        h1,
+        nav,
+        .form,
+        .map {
+            background: #d9d9d9;
+        }
+
+        nav {
+            background: #ddd;
+        }
+
+        .mainimg {
+            background: #ccc;
+        }
+
+        li div {
+            background: #ddd;
+        }
+
+        footer {
+            background: #333;
+        }
     </style>
 </head>
-<body>
 
+<body>
+    <header>
+        <h1 class="logo"><span>HT</span> Hanatour</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <div class="mainimg">
+            <h2><span>BR</span>Architects</h2>
+        </div>
+        <section class="project">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <div>Project1</div>
+                </li>
+                <li>
+                    <div>Project2</div>
+                </li>
+                <li>
+                    <div>Project3</div>
+                </li>
+                <li>
+                    <div>Project4</div>
+                </li>
+                <li>
+                    <div>Project5</div>
+                </li>
+                <li>
+                    <div>Project6</div>
+                </li>
+                <li>
+                    <div>Project7</div>
+                </li>
+                <li>
+                    <div>Project8</div>
+                </li>
+            </ul>
+        </section>
+        <section class="about">
+            <h2>About</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat.</p>
+            <ul>
+                <li>
+                    <div><!-- 이미지 삽입 예정 --></div>
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <div><!-- 이미지 삽입 예정 --></div>
+                    <h3>Jane Doe</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <div><!-- 이미지 삽입 예정 --></div>
+                    <h3>Mike Ross</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <div><!-- 이미지 삽입 예정 --></div>
+                    <h3>Dan Star</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    </p>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2>About</h2>
+            <p>Lets get in touch and talk about your next project.</p>
+            <div class="form"><!-- 폼 영역 --></div>
+            <div class="map"><!-- 지도 삽입 --></div>
+        </section>
+    </div>
+
+    <footer>Copyright 2024 BR Architects. All rights reserved.</footer>
 </body>
+
 </html
