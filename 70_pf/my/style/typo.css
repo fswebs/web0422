@@ -2,8 +2,8 @@
 
 /* 
     style guide(스타일 가이드)
-        h1~h3, Nav a: Georgia, italic
-        body, p, Section a: Arial
+        h1~h3, Nav a: NanumSquareNeo, italic
+        body, p, Section a: Noto Sans KR
 
         단위: rem, em, px, %
 
@@ -15,17 +15,26 @@
         body: 15px, 1.5 -> 150~200% 가독성이 좋다.
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 네이버 폰트 */
+/* 제목: 나눔스퀘어 네오 */
+@font-face {
+    font-family: 'NanumSquareNeo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2');
+}
+
 /* font */
 html {font-size: 10px;}
 body {
-    font:1.5rem/1.5 Helvetica, Arial, sans-serif;
+    font:1.5rem/1.5 "Noto Sans KR", Arial, sans-serif;
 }
 
 h1,
 h2,
 h3,
 nav a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'NanumSquareNeo', Times, serif;
     font-style: italic;
 }
 
