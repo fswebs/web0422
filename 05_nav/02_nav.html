@@ -23,7 +23,7 @@
         .gnb {
             margin-top: 20px;
             margin-right: 30px;
-            border: 1px solid;
+            background: #111;
         }
 
         /* 1depth */
@@ -57,13 +57,18 @@
             line-height: 2;
         }
 
-        .main>li:hover .sub {
+        /* 선택자가 변경됨: >li 제거 */
+        /* 유형1: .main>li:hover .sub { */
+        .main:hover .sub {
             height: 150px;
             visibility:visible;
             opacity:1;
         }
 
-        .sub li:hover {
+        .sub li a {
+            padding: 4px 16px;
+        }
+        .sub li:hover a {
             background: #111;
         }
     </style>
