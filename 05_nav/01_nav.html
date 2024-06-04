@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            /* 블록레벨요소의 가로 가운데 배치: width, margin */
+            width: 1200px;
+            margin: 0 auto;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        .gnb {
+            margin-top: 20px;
+            margin-right: 30px;
+            border: 1px solid;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+        }
+
+        .main>li {
+            width: 160px;
+            height: 30px;
+            /* 모든 메뉴 가로 가운데 배치 */
+            text-align: center;
+            /* 메인메뉴 텍스트 세로 가운데 배치: line-height크기를 height와 같은 크기로 지정 */
+            line-height: 30px;
+        }
+
+        .main>li:hover {
+            background: #333;
+        }
+
+        /* 2depth */
+        .sub {
+            height: 0;
+            overflow:hidden;
+            visibility:hidden;
+            opacity:0;
+            padding: 10px 0 20px;
+            background: rgba(0, 0, 0, .5);
+            /* 숫자가 작을 수록 빠르다. */
+            transition: .3s;
+            line-height: 2;
+        }
+
+        .main>li:hover .sub {
+            height: 150px;
+            visibility:visible;
+            opacity:1;
+        }
+
+        .sub li:hover {
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header>nav.gnb>ul.main>li*4>a[href="#"]{메인메뉴$}+ul.sub>li*4>a[href="#"]{서브메뉴$}   -->
+    <header>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">메인메뉴1</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴2</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴3</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">메인메뉴4</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
