@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 auto;
+            height: 80px;
+        }
+
+        .header_inner {
+            display: flex;
+            width: 1260px;
+            margin: 0 auto;
+            height: 80px;
+            padding: 0 30px;
+            align-items: center;
+        }
+
+        .header_inner>a>img {
+            width: 137px;
+        }
+
+        .header_box {
+            width: 137px;
+            margin-left: 88px;
+        }
+
+        .header_box>a>img {
+            height: 22px;
+            margin-left: 20px;
+        }
+
+        .gnb {
+            float: left;
+            width: 750px;
+            margin-left: 88px;
+            height: 80px;
+            box-sizing: border-box;
+        }
+
+        /* 1depth */
+        .main {
+            display: flex;
+            height: 80px;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .main>li {
+            height: 80px;
+            width: 150px;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .main>li:hover {
+            color: #192547;
+        }
+
+        .all {
+            position: relative;
+        }
+
+        /* 2depth */
+        .menu {
+            position: absolute;
+            right: 0px;
+        }
+
+        .sub {
+            display: flex;
+            text-align: center;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 1;
+            border-radius: 10px;
+            transition: .5s;
+            line-height: 2;
+            border: 1px solid #ccc;
+        }
+
+        .main>li:hover .sub {
+            visibility: visible;
+            opacity: 1;
+            color: #192547;
+        }
+
+        .sub li a:hover {
+            background: #BED600;
+        }
+
+        .box {
+            width: 150px;
+            height: 500px;
+            padding: 5px 10px;
+            background: rgba(0, 0, 0, 0.05);
+            border-right: 1px solid #CCC;
+        }
+
+        .sub li:nth-of-type(5) .box {
+            border-right: none;
+        }
+
+        .box h1 {
+            font-weight: bolder;
+            font-size: 16px;
+            margin-top: 10px;
+            color: #192547;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_inner">
+            <!-- Logo -->
+            <a href="#"><img src="https://images.jinair.com/newHom/images/web/common/logo.svg" alt="home"></a>
+            <!-- //Logo -->
+            <nav class="gnb">
+                <!-- 1depth -->
+                <ul class="main">
+                    <li>
+                        <a href="#">나의예약</a>
+                    </li>
+                    <li>
+                        <a href="#">프로모션</a>
+                    </li>
+                    <li>
+                        <a href="#">부가서비스</a>
+                    </li>
+                    <li>
+                        <a href="#">운항정보</a>
+                    </li>
+                    <li class="all">
+                        <a href="#">전체메뉴</a>
+                        <!-- 2depth -->
+                        <div class="menu">
+                            <ul class="sub">
+                                <li>
+                                    <div class="box">
+                                        <h1>예약 안내</h1><a href="#">항공권 예약</a><br><a href="#">예약/결제 안내</a>
+                                        <h1>추천 항공권</h1><a href="#">최저가 항공권</a><br><a href="#">맞춤 항공권</a>
+                                        <h1>운임 및 수수료</h1><a href="#">국내선</a><br><a href="#">국제선</a><br><a
+                                            href="#">비즈니스운임</a>
+                                        <h1>할인</h1><a href="#">할인쿠폰</a><br><a href="#">프로모션코드</a><br><a
+                                            href="#">신분할인제도</a><br><a href="#">상용우대 프로그램</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <h1>이벤트</h1><a href="#">진행중</a><br><a href="#">종료</a><br><a href="#">당첨자 발표</a>
+                                        <h1>제휴</h1><a href="#">카드/금융</a><br><a href="#">호텔</a><br><a
+                                            href="#">차량</a><br><a href="#">액티비티</a><br><a href="#">기타 여행상품</a><br><a
+                                            href="#">지니 보딩패스</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <h1>부가서비스 안내</h1><a href="#">묶음 할인</a><br><a href="#">좌석</a><br><a
+                                            href="#">수하물</a><br><a href="#">기내식</a><br><a href="#">여행보험</a><br><a
+                                            href="#">JINI PET</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <h1>출도착 안내</h1><a href="#">구간 조회</a><br><a href="#">편명 조회</a>
+                                        <h1>스케쥴 조회</h1><a href="#">왕복</a><br><a href="#">편도</a>
+                                        <h1>취항 노선 안내</h1><a href="#">국내선</a><br><a href="#">국제선</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="box">
+                                        <h1>자주 찾는 메뉴</h1><a href="#">웹/모바일 체크인</a><br><a href="#">부가서비스 안내</a><br><a
+                                            href="#">국내선 할인제도</a><br><a href="#">할인 쿠폰</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header_box">
+                <a href="#"><img src="https://images.jinair.com/newHom/images/web/icons/icon_search.svg" alt="home"></a>
+                <a href="#"><img src="https://images.jinair.com/newHom/images/web/icons/icon_alarm.svg" alt="home"></a>
+                <a href="#"><img src="https://images.jinair.com/newHom/images/web/icons/icon_mypage.svg" alt="home"></a>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
