@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어</title>
+    <style>
+        @import url(style/typo.css);
+
+        h2 {
+            letter-spacing: 4px;
+            font-weight: 400;
+        }
+
+        b {
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            margin-right: 16px;
+        }
+
+        section {
+            position: relative;
+            /* display: flex;
+            justify-content: center;  */
+            border: 1px solid red;
+        }
+
+        h2 {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -110px;
+            margin-top: -16px;
+            /* 
+                transform: translate(-50%,-50%); 
+            */
+        }
+
+        div {
+            width: 1496px;
+            margin: 0 auto;
+            height: 745px;
+            background: #ccc;
+        }
+    </style>
 </head>
+
 <body>
     <!-- section 태그는 그 안에 h2~h6 제목이 반드시 존재해야 한다.  -->
     <section>
-        
+        <h2><b>HT</b>Hanatour</h2>
+        <div>
+            <!-- 배너 이미지 삽입 -->
+        </div>
     </section>
 </body>
+
 </html>
