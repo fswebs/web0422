@@ -76,6 +76,7 @@
         /* 2depth */
         .menu {
             position: absolute;
+            top:80px; /* 추가: 전체메뉴와 서브의 떨어진 부분해결 */
             right: 0px;
         }
 
@@ -86,15 +87,18 @@
             visibility: hidden;
             opacity: 1;
             border-radius: 10px;
-            transition: .5s;
+            transition: opacity .5s; /* 수정 */
             line-height: 2;
-            border: 1px solid #ccc;
+            /* border: 1px solid #ccc; */
+            height:0; /* 추가 */
         }
 
         .main>li:hover .sub {
             visibility: visible;
             opacity: 1;
             color: #192547;
+            height: auto; /* 추가 */
+            border: 1px solid #ccc;
         }
 
         .sub li a:hover {
