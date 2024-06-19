@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,h1 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font: 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+/* common */
+.wrap {
+  position:fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+header {
+  height: 200px;
+  background: #f1f1f1;
+  overflow:hidden;
+}
+
+/* logo */
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: #92b901;
+  color: #fff;
+  position:relative;
+  font-weight:bold;
+  font-size: 5rem;
+  border-radius: 50%;
+  animation: logo 5s 1 forwards;
+}
+
+@keyframes logo {
+  0%,40%,45%,60% {transform: rotate(0deg);}
+  25% {transform: rotate(20deg);}
+  0%,25%,80% {left: 0px;}
+  0%,25%,40%,45%,60%,80%{width: 30px; height: 30px; border-radius:50%;}
+  40%,45%,60% {left: 500px;}
+  60% {background: #1ec7e6;}
+  80%,100% {transform: rotate(-360deg);}
+  100% {width: 2000px; height: 2000px; border-radius:0;}
+}
+
+
+/* GNB */
+
+.gnb_wrap {
+  z-index: 9999;
+  position: relative;
+  height: 40px;
+  margin: auto;
+  border-top: 1px solid;
+}
+
+.gnb {
+  z-index: 2;
+  background: #111;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.main li {
+  display: block;
+  text-align: center;
+  font-size: 1.6rem;
+}
+.main>li>a {
+  color: #999;
+}
+
+.main>li:hover> a {
+  color: #fff;
+}
+
+.sub li a {
+  display: inline;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.sub li:hover a {
+  color: #fff;
+}
+
+
+.main>li {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.main>li:hover {
+  background: #333;
+}
+
+.main::before {
+  z-index: -1;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  content: "";
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  background: rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+.main:hover::before {
+  visibility: visible;
+  opacity: 1;
+  height: 160px;
+}
+
+.sub {
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  padding: 10px 0 20px 0;
+  transition: 0.3s;
+  line-height: 1.8;
+}
+
+.main:hover .sub {
+  visibility: visible;
+  opacity: 1;
+  height: 160px;
+}
+
+.sub li a {
+  padding: 4px 16px;
+  color: #777;
+}
+
+.sub li:hover a {
+  background: #111;
+}
+
+/* slide */
+.slide {
+  position: relative;
+  height: calc(100% - 340px);
+  overflow: hidden;
+}
+.slide ul {
+  position: absolute;
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+.slide li {
+  width: 25%;
+  background: no-repeat 50% 50%/cover;
+  text-indent: -9999em;
+}
+.slide li:nth-child(1) {background-image:url(../assets/pic_1.jpg);}
+.slide li:nth-child(2) {background-image:url(../assets/pic_2.jpg);}
+.slide li:nth-child(3) {background-image:url(../assets/pic_3.jpg);}
+.slide li:nth-child(4) {background-image:url(../assets/pic_1.jpg);}
+
+/* animation */
+.slide ul {
+  animation: slide 12s infinite;
+}
+@keyframes slide {
+  0% {
+    left: 0%;
+  }
+  10% {
+    left: -100%;
+  }
+  33% {
+    left: -100%;
+  }
+  43% {
+    left: -200%;
+  }
+  66% {
+    left: -200%;
+  }
+  76% {
+    left: -300%;
+  }
+  99.99% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+/* footer */
+footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #333;
+  color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header><h1 class="logo"><a href="#"><span>LOGO<span></a></h1></header>
+        <div class="gnb_wrap">
+          <nav class="gnb">
+            <ul class="main">
+              <li><a href="#">MENU-1</a>
+                <ul class="sub">
+                  <li><a href="#">SubMenu-1</a></li>
+                  <li><a href="#">SubMenu-2</a></li>
+                  <li><a href="#">SubMenu-3</a></li>
+                  <li><a href="#">SubMenu-4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">MENU-2</a>
+                <ul class="sub">
+                  <li><a href="#">SubMenu-1</a></li>
+                  <li><a href="#">SubMenu-2</a></li>
+                  <li><a href="#">SubMenu-3</a></li>
+                  <li><a href="#">SubMenu-4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">MENU-3</a>
+                <ul class="sub">
+                  <li><a href="#">SubMenu-1</a></li>
+                  <li><a href="#">SubMenu-2</a></li>
+                  <li><a href="#">SubMenu-3</a></li>
+                  <li><a href="#">SubMenu-4</a></li>
+                </ul>
+              </li>
+              <li><a href="#">MENU-4</a>
+                <ul class="sub">
+                  <li><a href="#">SubMenu-1</a></li>
+                  <li><a href="#">SubMenu-2</a></li>
+                  <li><a href="#">SubMenu-3</a></li>
+                  <li><a href="#">SubMenu-4</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="slide">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+        <footer>Copyright 2024. LOGO. All rights reversed.</footer>
+      </div>
+</body>
+</html>
