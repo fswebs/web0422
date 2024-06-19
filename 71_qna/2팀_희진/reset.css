@@ -7,3 +7,6 @@
 .Big_menu {
     padding: 0;
 }
+
+/* Q:상단의 목록이 가운데가 아닌 이유? ul의 padding의 원인*/
+ul {padding:0;}
