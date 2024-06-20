@@ -45,6 +45,8 @@
         }
         /* 내비게이션 */
         .gnb {
+            display: flex;
+            justify-content: center;
             position: relative;
             background: olive;
         }
@@ -94,11 +96,6 @@
             background: #111;
         }
 
-
-
-
-
-
         /* 
             ::before, ::after를 가상요소 선택자
 
@@ -113,16 +110,16 @@
         
         */
 
-
         .main::before {
             content: "";
             position: absolute;
             z-index: -1;
-            top: 30px;
-            right: 0;
+            top: 40px;
+            left:0;
+            /* right: 0; */
             /* display: block; 또는 display:inline-block; 또는 position:static;이 아니면 width와 height가 지정된다. */
             width: 100%;
-            height: 0px;
+            height: 0;
             opacity: 0;
             transition: .3s;
             background: rgba(0, 0, 0, 0.5);
@@ -196,7 +193,15 @@
             </ul>
         </nav>
         <!-- 슬라이드 -->
-         <div class="slide">슬라이드</div>
+        <div class="slide">
+            <ul>
+                <li><img src="images/slide1.jpg" alt="슬라이드 이미지1"></li>
+                <li><img src="images/slide2.jpg" alt="슬라이드 이미지2"></li>
+                <li><img src="images/slide3.jpg" alt="슬라이드 이미지3"></li>
+                <li><img src="images/slide1.jpg" alt="슬라이드 이미지1"></li>
+            </ul>
+        </div>
+        
         <!-- 푸터 -->
          <footer><p>Copyright 2024. Vallery Festival. All rights reserved.</p></footer>
     </div>
