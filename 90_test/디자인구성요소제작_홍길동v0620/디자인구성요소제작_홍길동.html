@@ -133,7 +133,38 @@
         /* 슬라이드 */
         .slide {
             height: calc(100% - 340px);
+            /* width: 500px;  */
+            overflow: hidden; 
+        } 
+        .slide ul { 
+            display: flex; 
+            width: 400%;
+            height: 100%; 
+            animation: slide 12s infinite;
         }
+        .slide li {
+            width: 25%;
+            height: 100%;
+            background: no-repeat 50% 50%/cover;
+            text-indent: -9999em;
+        }
+        .slide li:nth-child(1) {background-image: url(images/slide1.jpg);}
+        .slide li:nth-child(2) {background-image: url(images/slide2.jpg);}
+        .slide li:nth-child(3) {background-image: url(images/slide3.jpg);}
+        .slide li:nth-child(4) {background-image: url(images/slide1.jpg);}
+
+        /* animation */
+        @keyframes slide { 
+            0% { transform: translate(0%, 0%); } 
+            10% { transform: translate(-25%, 0%); } 
+            33% { transform: translate(-25%, 0%); } 
+            43% { transform: translate(-50%, 0%); } 
+            66% { transform: translate(-50%, 0%); } 
+            76% { transform: translate(-75%, 0%); } 
+            99.99% { transform: translate(-75%, 0%); } 
+            100% { transform: translate(0%, 0%); } 
+        }
+
         /* 푸터 */
         footer {
             height: 100px;
@@ -195,10 +226,10 @@
         <!-- 슬라이드 -->
         <div class="slide">
             <ul>
-                <li><img src="images/slide1.jpg" alt="슬라이드 이미지1"></li>
-                <li><img src="images/slide2.jpg" alt="슬라이드 이미지2"></li>
-                <li><img src="images/slide3.jpg" alt="슬라이드 이미지3"></li>
-                <li><img src="images/slide1.jpg" alt="슬라이드 이미지1"></li>
+                <li>슬라이드 이미지1</li>
+                <li>슬라이드 이미지2</li>
+                <li>슬라이드 이미지3</li>
+                <li>슬라이드 이미지1</li>
             </ul>
         </div>
         
