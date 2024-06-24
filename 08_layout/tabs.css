@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(typo.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+.tabs {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    padding: 2px;
+    border: 1px solid;
+}
+
+.tabs label {
+    display: inline-block;
+    padding: 2px 24px;
+    background: #999;
+    color: #777;
+    cursor: pointer;
+}
+
+.tabs div {
+    display: none;
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 31px);
+    padding: 16px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs input:checked+label {
+    background: #333;
+    color: #fff;
+}
+
+.tabs input:checked+label+div {
+    display: block;
+}
+
+/* bg-color */
+.tab1 {
+    background: #ddd;
+}
+
+.tab2 {
+    background: #ccc;
+}
