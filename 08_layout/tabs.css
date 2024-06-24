@@ -68,7 +68,7 @@
 .tab2 ul {
     display: flex;
     justify-content: space-between;
-    line-height: .2;
+    line-height: 2.3;
     margin-top: 8px;
 }
 .tab2 div {
