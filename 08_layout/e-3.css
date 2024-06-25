@@ -1,22 +1,84 @@
 @charset "utf-8";
+@import url(common/reset.css);
+@import url(common/typo.css);
 
-/* @import는 상단에 기록해야한다. */
-@import url(reset.css);
-@import url(typo.css);
-@import url(header.css);
-@import url(footer.css);
+/* 상단 영역 */
+.top_wrap {
+    display: flex;
+}
 
+/* 헤더 영역 */
+header {
+    width: 200px;
+    padding: 20px;
+}
 
-/* 슬라이드 */
-#slide {
-    height: 350px;
-    background: rgba(240, 68, 103, 0.5);
+/* 로고 */
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+}
+
+/* 내비게이션 */
+#gnb {
+    margin-bottom: 24px;
+}
+/* 1depth */
+#gnb .main>li {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #ccc;
+}
+
+#gnb .main>li:hover {
+    background: #333;
+}
+
+/* 2depth */
+#gnb .sub {
+    position: relative;
+    left:160px;
+    top: -40px;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    padding: 10px 0 20px;
+    transition: .3s;
+    line-height: 2;
+    background: red;
+}
+
+#gnb .main>li:hover .sub {
+    height: 150px;
+    visibility: visible;
+    opacity: 1;
+}
+
+#gnb .sub li a {
+    display: block;
+}
+
+#gnb .sub li:hover a {
+    background: #111;
+}
+
+/* 스팟 메뉴 */
+header .spot_menu a:first-child::after {
+    content: "|";
+    margin: 0 4px;
+}
+header .spot_menu a:hover {
+    text-decoration: underline;
 }
 
 /* 메인 콘텐츠 */
 #main_contents {
-    width: 1340px;
-    margin: -100px auto 0;
+    width: 400px;
     border: 1px solid;
 }
 
@@ -26,14 +88,17 @@
     padding: 20px;
     background: bisque;
 }
+
 #link ul {
     display: flex;
     justify-content: space-evenly;
 }
+
 #link li a {
     display: flex;
     align-items: center;
 }
+
 /* 아이콘 이미지 */
 #link ul li a span {
     width: 60px;
@@ -64,6 +129,7 @@
     width: 1000px;
     padding-right: 200px;
 }
+
 #banner>div h2 {
     margin-bottom: 16px;
 }
@@ -130,6 +196,7 @@
     line-height: 2.3;
     border-bottom: 1px dotted #ccc;
 }
+
 #tab_wrap .tab1 li a {
     display: inline-block;
     width: 422px;
@@ -142,6 +209,7 @@
     line-height: 2.3;
     margin-top: 8px;
 }
+
 #tab_wrap .tab2 span {
     display: block;
     width: 150px;
@@ -149,5 +217,62 @@
     background: #ccc;
 }
 
+/* 슬라이드 이미지 */
+#slide {
+    width: calc(100% - 600px);
+    height: 700px;
+    background: rgba(240, 68, 103, 0.5);
+}
 
+/* 푸터 영역 */
+footer {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background: #111;
+    color: #fff;
+}
 
+footer a {
+    color: #fff;
+}
+
+/* 하단 로고 */
+footer .flogo {
+    width: 190px;
+    text-align: center;
+}
+
+/* 하단 메뉴 */
+footer ul {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+footer ul a {
+    text-decoration: underline;
+}
+
+/* 
+    가상클래스
+        선택자1:not(선택자2) - 선택자2를 제외한 선택자1
+        li:not(:last-child) - 마지막 li를 제외한 li
+*/
+footer ul li:not(:last-child) a::after {
+    content: "|";
+    margin: 0 8px;
+}
+
+/* footer ul li a::after {
+    content: "|";
+    margin: 0 8px;
+}
+footer ul li:last-child a::after {
+    content: "";
+    margin: 0;
+} */
+
+/* 주소 및 저작권 */
+footer p {
+    width: 850px;
+}
