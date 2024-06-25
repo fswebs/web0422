@@ -1,11 +1,11 @@
-@charset "utf-8";
-@import url(reset.css);
-@import url(typo.css);
+#tab_wrap {
+    height: 300px;
+}
 
 .tabs {
     position: relative;
     left: 50px;
-    top: 50px;
+    top: 30px;
     width: 550px;
     height: 220px;
 }
