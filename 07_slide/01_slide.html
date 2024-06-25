@@ -19,21 +19,22 @@
             overflow: hidden; 
         } 
         .slide ul { 
+            position: relative;
             display: flex; 
             width: 400%; 
-            animation: slide 12s infinite;
+            animation: slide 9s infinite;
         } 
 
         /* animation */
         @keyframes slide { 
-            0% { transform: translate(0%, 0%); } 
-            10% { transform: translate(-25%, 0%); } 
-            33% { transform: translate(-25%, 0%); } 
-            43% { transform: translate(-50%, 0%); } 
-            66% { transform: translate(-50%, 0%); } 
-            76% { transform: translate(-75%, 0%); } 
-            99.99% { transform: translate(-75%, 0%); } 
-            100% { transform: translate(0%, 0%); } 
+            0% { left: 0; } 
+            10% { left: -100%; } 
+            33% { left: -100%; } 
+            43% { left: -200%; } 
+            66% { left: -200%; } 
+            76% { left: -300%; } 
+            99.99% { left: -300%; } 
+            100% { left:0; } 
         }
     </style>
 </head>
