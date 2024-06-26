@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* reset */
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+::selection {
+    background: #fdd000;
+}
+
+/* typo */
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #1c1c1c;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+strong {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+strong+p {
+    font-size: 2.24rem;
+    font-weight: 400;
+}
+
+a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #1c1c1c;
+}
+
+/* layout */
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .cell {
+    width: 50%;
+}
+section .cell2 {
+    background: url(../images/story_bg.png) no-repeat -600px;
+}
+#story {
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 1280px;
+}
+#story .inner {
+    width: 430px;
+}
+#story strong+p {
+    margin-top: 40px;
+}
+#story span {
+    position: relative;
+    display: block;
+}
+
+#story span::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    bottom: -10px;
+    z-index: -1;
+    width: 300px;
+    height: 32px;
+    background: #fdd000;
+}
+
+#story .btn {
+    margin-top: 40px;
+}
+
+#story a {
+    display: inline-block;
+    background: #fdd000;
+    margin-right: 20px;
+    padding: 16px 30px;
+    transition: .3s;
+}
+#story a:hover {
+    background: #ffdd43;
+    transform: translateY(-4px);
+}
