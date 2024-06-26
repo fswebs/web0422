@@ -23,20 +23,21 @@
             overflow: hidden; 
         } 
         .slide ul { 
+            position: relative;
             animation: slide 12s infinite;
         } 
 
         /* animation */
         @keyframes slide { 
             /* translateX는 좌우 이동, translateY는 상하 이동 */
-            0% { transform: translateY(0%); } 
-            10% { transform: translateY(-25%); } 
-            33% { transform: translateY(-25%); } 
-            43% { transform: translateY(-50%); } 
-            66% { transform: translateY(-50%); } 
-            76% { transform: translateY(-75%); } 
-            99.99% { transform: translateY(-75%); } 
-            100% { transform: translateY(0%); } 
+            0% { top:0%; } 
+            10% { top:-100%; } 
+            33% { top:-100%; } 
+            43% { top:-200%; } 
+            66% { top:-200%; } 
+            76% { top:-300%; } 
+            99.99% { top:-300%; } 
+            100% { top:0%; } 
         }
     </style>
 </head>
