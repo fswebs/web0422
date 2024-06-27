@@ -43,7 +43,7 @@ header {
 }
 
 .main>li:hover {
-    background: #333;
+    background: #30a3f3;
 }
 
 /* 2depth */
@@ -53,7 +53,7 @@ header {
     visibility:hidden;
     opacity:0;
     padding: 10px 0 20px;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 101, 173, 0.475);
     /* 숫자가 작을 수록 빠르다. */
     transition: .3s;
     line-height: 2;
@@ -66,10 +66,11 @@ header {
 }
 
 .sub li:hover {
-    background: #111;
+    background: #18517a;
 }
-
-/* 내비색상: #30a3f3 #0066ad*/
+.sub li:hover a {
+    color: #fff;
+}
 
 /* 슬라이드: 페이드 효과 */
         /* 슬라이드: 페이드(fade) 효과 */
@@ -135,25 +136,25 @@ header {
 .popup button {cursor:pointer; position:absolute; right:20px; bottom:20px; padding:5px 10px;}
 
 /* 탭 */
-#main_contents {display: flex; height: 200px; padding-top:10px;}
+/* #main_contents {display: flex; height: 200px; padding-top:10px;}
 #tabs {width:420px;}
 #tabs>ul {display: flex; font-size:1.1em;}
 #tabs>ul li {padding:10px 20px; background:#0066ad; color:#fff;}
-#tabs>div {position:absolute;}
+#tabs>div {position:absolute;} */
 
 /* 공지사항 */
-#tab1 {margin-top:10px;}
+/* #tab1 {margin-top:10px;}
 #tab1 li {padding:3px 0;}
 #tab1 a {display:inline-block; width:340px;}
-#tab1 a:hover {text-decoration:underline;}
+#tab1 a:hover {text-decoration:underline;} */
 
 /* 갤러리 */
-#tab2 {display:none; padding:15px 32px;}
+/* #tab2 {display:none; padding:15px 32px;}
 #tab2 a:nth-of-type(1) {margin-right:10px;}
-#tab2 a:nth-of-type(2) {margin-right:10px;}
+#tab2 a:nth-of-type(2) {margin-right:10px;} */
 
 /* 배너 & 바로가기 */
-.banner, .quick {width:390px; text-align:right;}
+/* .banner, .quick {width:390px; text-align:right;} */
 
 /* 푸터 */
 footer {display: flex; padding:15px; height:100px; background:#30a3f3;}}
