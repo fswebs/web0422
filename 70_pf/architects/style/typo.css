@@ -11,7 +11,7 @@
 @font-face { font-family: 'NanumSquareNeo'; src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2'); } 
 
 html { font-size: 10px; } 
-body { font-family: "Noto Sans KR", sans-serif; font-size: 1.5rem; } 
+body { font-family: "Noto Sans KR", sans-serif; font-size: 1.5rem; color: #333; } 
 h1 {font-weight: normal;}
 h1,h2,h3 { font-family: "NanumSquareNeo", sans-serif; } 
 h1,h3 { font-size: 1.5rem; } 
