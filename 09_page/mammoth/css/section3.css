@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {box-sizing: border-box;}
+html {font-size: 10px;}
+body,ul,h2,h3 {margin:0;}
+ul {padding:0; list-style:none;}
+
+/* 섹션3 */
+section {
+    padding-top: 130px;
+}
+section h2 {
+    font-size: 6rem;
+    text-align: center;
+    color:#61443a;
+}
+#tabs>div {
+    display: flex;
+    justify-content: center;
+}
+#tabs div ul {
+    display: flex;
+}
+#tabs div ul li {
+    position: relative;
+    width: 360px;
+    height: 400px;
+    text-align: center;
+}
+#tabs div ul li:hover img {
+    display: block;
+    width: 296px;
+    /* transform: scale(1.2,1.2); */
+}
+#tabs div ul li:not(:last-child) {
+    margin-right: 40px;
+}
+#tabs div img {
+    z-index: 1;
+    position: absolute;
+    left:50%;
+    top:0;
+    /* margin-left: calc(-264px / 2); */
+    transform: translateX(-50%);
+    width: 264px;
+    transition: .7s;
+}
+#tabs div div {
+    position: absolute;
+    left:0;
+    bottom:0;
+    width: 360px;
+    height: 215px;
+    padding-top: 100px;
+    background: #f8f8f8;
+    transition: .5s;
+}
+#tabs div div h3 {
+    color: #333;
+    font-size: 3.2rem;
+    transition: .5s;
+}
+#tabs div div b {
+    color: #b8aaa4;
+    font-size: 1.7rem;
+    transition: .5s;
+}
+
+#tabs div div:hover {
+    background: #a57454;
+}
+#tabs div div:hover h3 {
+    color: #fff;
+}
+#tabs div div:hover b {
+    color: #bbada7;
+}
