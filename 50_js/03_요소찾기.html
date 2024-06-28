@@ -30,9 +30,12 @@
         <li class="red">목록2 - index 2</li>
         <li>목록3</li>
         <li id="green">목록1</li>
-        <li class="aqua">목록2</li>
+        <li class="aqua">목록2 - index 0</li>
+        <li class="aqua">목록2 - index 1</li>
         <li>목록3</li>
     </ul>
+
+    <p class="aqua">나는 유엘밖의 아쿠아 - index 2</p>
 
     <script>
         // 변수1 = 값;
@@ -50,10 +53,11 @@
         document.getElementsByClassName("red")[0].style.color = "red";
         document.getElementsByTagName("li")[5].style.borderTop = "1px solid";
 
-        // 단일 요소
         document.querySelector("ul").style.borderLeft = "5px solid";
-        // 같은 요소가 여러 개
-        document.querySelectorAll("ul")[0].style.borderTop = "1px solid";
+        document.querySelector("#green").style.width = "400px";
+        document.querySelector(".aqua").style.borderTop = "solid";
+        document.querySelectorAll(".aqua")[2].style.color = "aqua";
+
         // 객체: document
         // 메소드: getElementById() - 동작 -> 동사(서술어)
         // 속성: style.color - 특징 -> 형용사
