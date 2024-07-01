@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jomolhari&display=swap');
+
+/* reset */
+* {box-sizing: border-box;}
+
+:root {font-size: 12px;}
+
+body,ul {margin: 0 auto;}
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+a, p, h1, h2, h3 {
+    margin: 0;
+    text-decoration: none;
+    color: #4A433B;
+    font: 400 16px "Noto Sans KR",sans-serif;
+}
+
+/* //reset */
+
+
+
+input {
+    padding-left:8px;
+    display: block;
+}
+
+button {
+    border:none;
+    background: #000;
+    color:#fff;
+}
+
+
+/* .main_login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: lightblue;
+} */
+
+.login_des {
+    width: 1903px;
+    height: 200px;
+    padding-left: 280px;
+    padding-top : 80px;
+}
+
+
+.full_login {
+    padding : 48px 0 0 48px;
+    width: 1903px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.login_chk {
+    position: relative;
+    width: 480px;
+    height: 200px;
+    padding: 2px;
+    /* border: 1px solid; */
+    text-align: left;
+    background: #000;
+}
+
+
+
+.login_chk label {
+    position: absolute;
+    left:0;
+    top:0;
+    display: inline-block;
+    background: #999; /* 비활성화 상태 */
+    color: #777;
+    cursor: pointer;
+    background: yellow;
+    text-align: center;
+    line-height: 30px;
+    width: 240px;
+    height: 30px;
+}
+#btn2 + label {
+    left: 240px;
+}
+
+.login_chk div {
+    display: none;
+    position: absolute;
+    top:30px;
+    width: 480px;
+    /* border: 1px solid; */
+    padding: 48px;
+}
+
+.login_chk input[type="radio"] {
+    display: none;
+    /* 스타일 안보이게 숨김 */
+}
+
+.login_chk input:checked+label {
+    background: #333;
+    color: #fff;
+}
+
+.login_chk input:checked+label+div {
+    display: block;
+}
+
+/* bg-color */
+.member1 {
+    background: #ddd;
+}
+
+.member2 {
+    background: #ccc;
+}
+
+.recommand_join{
+    width: 480px;
+    height: 200px;
+}
+
+/* form */
+input {
+    width: 100%;
+    padding-left: 8px;
+}
+
+button {
+    /* padding: 8px 16px; */
+    border: none;
+    background: #000;
+    color: #fff;
+}
