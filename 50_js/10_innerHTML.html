@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>요소의 콘텐츠를 변경하거나 가져오기</h1>
+    <h1>콘텐츠 변경하기/가져오기</h1>
     <p class="p1">나는 첫 번째 단락입니다.</p>
     <p class="p2">나는 두 번째 단락입니다.</p>
-    <p class="p3"></p>
-    <p class="p4"></p>
+    <p class="p3">아무것도 없어요!</p>
+    <p class="p4">나두요!</p>
 
     <script>
         /* 
@@ -35,12 +35,12 @@
         // 콘텐츠 가져오기
         let getP1 = p1.innerHTML;
         let getP2 = p2.textContent;
-        console.log("getP1 = ", getP1);
-        console.log("getP2 = ", getP2);
 
         // 콘텐츠 변경하기
         p1.innerHTML = '<a href="#">네이버</a>';
         p2.textContent = '<a href="#">네이버</a>';
+        p3.innerHTML = getP1;
+        p4.textContent = getP2;
     </script>
 </body>
 </html>
