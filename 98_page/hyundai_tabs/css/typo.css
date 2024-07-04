@@ -12,4 +12,5 @@ a { color: #111;}
 /* 섹션2 */
 #s2>.inner>p {color: #777;}
 #s2 #tabs>ul a {color: #777;}
+#s2 #tabs>ul>li:first-child a {color: #fec00c;}
 #s2 h3.rank1 { font-size: 4rem; font-weight: 600; } 
