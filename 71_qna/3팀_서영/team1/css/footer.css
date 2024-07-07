@@ -3,6 +3,7 @@
 @import url(typo.css);
 
 #footer1 {
+    position: relative;
     width: 100%;
     height: 384px;
     margin: auto 0;

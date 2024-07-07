@@ -15,7 +15,7 @@ header {
     background: rgba(0, 0, 0, 0);
 }
 
-.header_inner {
+header .header_inner {
     display: flex;
     width: 1260px;
     margin: 0 auto;
@@ -24,21 +24,21 @@ header {
     align-items: center;
 }
 
-.header_inner>a>img {
+header .header_inner>a>img {
     width: 137px;
 }
 
-.header_box {
+header .header_box {
     width: 137px;
     margin-left: 88px;
 }
 
-.header_box>a>img {
+header .header_box>a>img {
     height: 22px;
     margin-left: 20px;
 }
 
-.gnb {
+header .gnb {
     float: left;
     width: 750px;
     margin-left: 88px;
@@ -47,40 +47,40 @@ header {
 }
 
 /* 1depth */
-.main {
+header .main {
     display: flex;
     height: 80px;
     text-align: center;
     justify-content: space-between;
 }
 
-.main>li {
+header .main>li {
     height: 80px;
     width: 150px;
     text-align: center;
     line-height: 80px;
 }
 
-.main>li:hover {
+header .main>li:hover {
     color: #192547;
 }
 
-.main>li a:hover {
+header .main>li a:hover {
     font-weight: bold;
 }
 
-.all {
+header .all {
     position: relative;
 }
 
 /* 2depth */
-.menu {
+header .menu {
     position: absolute;
     top: 80px;
     right: 0px;
 }
 
-.sub {
+header .sub {
     display: flex;
     text-align: center;
     overflow: hidden;
@@ -92,7 +92,7 @@ header {
     height:0; /* 추가 */
 }
 
-.main>li:hover .sub {
+header .main>li:hover .sub {
     visibility: visible;
     opacity: 1;
     color: #192547;
@@ -100,13 +100,13 @@ header {
     border: 1px solid #ccc;
 }
 
-.sub li a:hover {
+header .sub li a:hover {
     padding: 4px;
     background: #BED600;
     color: #192547;
 }
 
-.box {
+header .box {
     width: 150px;
     height: 500px;
     padding: 5px 10px;
@@ -115,11 +115,11 @@ header {
     transition: .5s;
 }
 
-.sub li:nth-of-type(5) .box {
+header .sub li:nth-of-type(5) .box {
     border-right: none;
 }
 
-.box span {
+header .box span {
     display: flex;
     justify-content: center;
     font-weight: bolder;
