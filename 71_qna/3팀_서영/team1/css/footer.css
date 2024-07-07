@@ -1,0 +1,131 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(typo.css);
+
+#footer1 {
+    width: 100%;
+    height: 384px;
+    margin: auto 0;
+    background: #F9F9F9;
+}
+
+#footer1 .wrap_1{
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+    height: 270px;
+    margin: 0 auto;
+    border-bottom: 1px solid #192547;
+}
+
+#footer1 .wrap_1 h2{
+    font-size: 16px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+#footer1 .sns_sec{
+    display: flex;
+}
+
+#footer1 .sns_sec li {
+    display: inline-block;
+    width: 45px;
+    margin-right: 10px;
+}
+
+#footer1 .sns_sec li:nth-of-type(3) {
+    margin-right: 0px;
+}
+
+#footer .notice li a {
+    display: inline-block;
+    width: 600px;
+}
+
+#footer1 .wrap_2{
+    display: flex;
+    justify-content:space-between;
+    width: 1200px;
+    margin: 0 auto;
+    height: 384px;
+}
+#footer1 .wrap_2{
+    display: flex;
+    justify-content:left;
+    width: 1200px;
+    height: 114px;
+    margin: 0 auto;
+}
+#footer1 .letter {
+    display: flex;
+    width: 723px;
+}
+
+#footer1 .wrap_2 .letter h2{
+    padding-top: 40px;
+    margin-right: 34px;
+}
+
+input {
+    display: inline-block;
+    width: 230px;
+    height: 35px;
+    padding-left: 8px;
+    border: none;
+}
+
+button {
+    width: 75px;
+    height: 35px;
+    margin-top: 30px;
+    margin-left: -4px;
+    background: #BED600;
+    color: #192547;
+}
+
+#footer1 .wrap_2 h2{
+    font-size: 16px;
+    padding-top: 27px;
+}
+
+#footer1 .wrap_2 span{
+    font-size: 14px;
+}
+
+#footer1 .wrap_2 ul:nth-of-type(1) {
+    margin-right: 115px;
+}
+
+#footer2 {
+    display: flex;
+    width: 100%;
+    height: 126px;
+    margin: auto 0;
+    background: #fff;
+}
+#footer2 .wrap{
+    width: 1200px;
+    height: 126px;
+    margin: 0 auto;
+    padding: 30px 0;
+    font-size: 12px;
+}
+
+#footer2 ul {
+    margin-top: 4px;
+    display: flex;
+}
+
+#footer2 li {
+    margin-right: 25px;
+}
+
+#footer2 span {
+    margin: 8px 0px
+}
+
+#footer2 p {
+    font-size: 12px;
+    margin: 0;
+}
