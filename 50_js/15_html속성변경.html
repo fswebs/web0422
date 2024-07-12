@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {width:300px;}
+        div {margin: 20px;}
+        a {text-decoration: none; color: #333; border: 1px solid #d01717; padding: 8px 16px; border-radius: 5px; transition: .3s;}
+        a:hover {box-shadow: 0 0 5px 2px red;}
+    </style>
+</head>
+<body>
+    <h1>HTML 속성 변경하기/가져오기</h1>
+    <div>
+        <a href="#" id="prev">이전(prev) 버튼</a>
+        <a href="#" id="next">다음(next) 버튼</a>
+    </div>
+    <img src="../assets/pic_1.jpg" alt="나무가 무성한 멋진 산" title="자연1">
+
+    <script>
+        // 요소 찾기
+        const prev = document.querySelector("#prev");
+        const next = document.querySelector("#next");
+        const img = document.querySelector("img");
+
+        // HTML속성 가져오기
+        const tit = img.alt;
+        //console.log(tit);
+        // HTML속성 변경하기
+        img.title = tit;
+        
+        // 이벤트 처리
+        prev.onclick = function(){
+            // HTML속성 변경하기
+            img.src = "../assets/pic_1.jpg";
+            img.alt = "자연1";
+            //img.setAttribute("src","../assets/pic_2.jpg");
+            //img.setAttribute("alt","자연2");
+        };
+        next.onclick = function(){
+            // HTML속성 변경하기
+            img.src = "../assets/pic_2.jpg";
+            img.alt = "자연2";
+            //img.setAttribute("src","../assets/pic_2.jpg");
+            //img.setAttribute("alt","자연2");
+        };
+
+    </script>
+</body>
+</html>
