@@ -24,20 +24,20 @@
         // 1. 선언적 함수 -> 이름이 있는 함수
         //      function 함수명(){실행 코드};
         function fn1() { 
-            alert("메세지"); 
+            document.write("메세지"); 
         }
 
         // 2. 익명 함수 -> 이름이 없는 함수
         //      const 변수명 = function(){};
         // 변수 선언 키워드: var, let, const
         const fn2 = function () { 
-            alert("메세지"); 
+            document.write("메세지"); 
         };
 
         // 3. 화살표 함수
-        //      const 변수명 = ()=>{};
+        // const 변수명 = ()=>{};
         const fn3 = () => {
-            alert("메세지");
+            document.write("메세지");
         };
 
         // 함수 호출
@@ -46,8 +46,8 @@
         fn2();
         fn3();
 
-        // alert()은 window의 메소드이면서 내장 함수이다.
-        // window.alert(); 여기서 window 객체명은 생략 가능하다.
+        // document.write()은 window의 메소드이면서 내장 함수이다.
+        // window.document.write(); 여기서 window 객체명은 생략 가능하다.
     </script>
 </body>
 
