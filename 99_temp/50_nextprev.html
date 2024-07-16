@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {width:300px;}
+        div {margin: 20px;}
+        a {text-decoration: none; color: #333; border: 1px solid #d01717; padding: 8px 16px; border-radius: 5px; transition: .3s;}
+        a:hover {box-shadow: 0 0 5px 2px red;}
+    </style>
+</head>
+<body>
+    <h1>HTML 속성 변경하기/가져오기</h1>
+    <div>
+        <a href="#" id="prev">이전(prev) 버튼</a>
+        <a href="#" id="next">다음(next) 버튼</a>
+    </div>
+    <div>
+        <img src="../assets/pic_1.jpg" alt="나무가 무성한 멋진 산" title="자연1">
+        <img src="../assets/pic_2.jpg" alt="나무가 무성한 멋진 산" title="자연1">
+        <img src="../assets/pic_3.jpg" alt="나무가 무성한 멋진 산" title="자연1">
+    </div>
+
+    <script>
+        // 요소 찾기
+        const prev = document.querySelector("#prev");
+        const next = document.querySelector("#next");
+        const img1 = document.querySelectorAll("img")[0];
+        const img2 = document.querySelectorAll("img")[1];
+        const img3 = document.querySelectorAll("img")[2];
+
+        let cnt = 3;
+        // 이벤트 처리
+        prev.onclick = function(){
+            cnt--
+            if (cnt === 2) cnt = 9;
+            imgG(cnt);
+            console.log(cnt);
+        };
+        next.onclick = function(){
+            cnt++
+            imgG(cnt);
+            console.log(cnt);
+            if (cnt === 11) cnt = 1;
+        };
+
+        function imgG(num){
+            img1.setAttribute("src","../assets/pic_" + (num-1) + ".jpg");
+            img1.setAttribute("alt","자연2");
+            img2.setAttribute("src","../assets/pic_" + num + ".jpg");
+            img2.setAttribute("alt","자연2");
+            img3.setAttribute("src","../assets/pic_" + (num+1) + ".jpg");
+            img3.setAttribute("alt","자연2");
+        }
+
+    </script>
+</body>
+</html>
