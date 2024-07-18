@@ -18,7 +18,7 @@
 $(document).ready(function () {
     // 문서가 준비되면 실행할 코드;
 
-    $('.slide').bxSlider({
+    $('.slider').bxSlider({
 
         ////////////////////////////////////////////////////////
 
@@ -49,14 +49,15 @@ $(document).ready(function () {
 
         ////////////////////////////////////////////////////////
 
-        // auto: true(기본값) -> 자동 전환
+        // auto: false(기본값), true이면 자동 전환
         auto: true,
         // 클릭시 자동 슬라이드 정지
-        stopAutoOnClick: true,
+        //stopAutoOnClick: false(기본값)
+        //stopAutoOnClick: true,
         // pause: 4000 (기본값) -> 일시정지 시간
         //pause: 1000,
         // autoStart: true(기본값) -> 자동 슬라이드
-        autoStart: true,
+        //autoStart: true,
         // autoDirection: 'next'(기본값) -> 슬라이드 방향
         // next이면 오른쪽에서 왼쪽 방향
         // prev이면 왼쪽에서 오른쪽 방향

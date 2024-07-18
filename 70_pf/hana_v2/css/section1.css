@@ -49,3 +49,11 @@
 .bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
     background-position: 0 0;
 }
+
+/* 텍스트 */
+#s1 .slideWrap p {
+    z-index: 9999;
+    position: absolute;
+    left:50%; top:50%;
+    transform: translate(-50%, -50%);
+}

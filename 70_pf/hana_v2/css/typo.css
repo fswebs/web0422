@@ -10,6 +10,9 @@ p {font-weight: 300;}
 span { font-size: 2rem; font-weight: 600; } 
 a {color: #1b1b1b;}
 
+/* 섹션1 */
+#s1 p {font-size: 60px; font-weight: 600; color: #fff; text-shadow: 0 0 5px #111;}
+
 /* 섹션2 */
 #s2>.ibx>p {color: #777;}
 #s2 #tabs>ul a {color: #777;}
