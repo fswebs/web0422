@@ -6,25 +6,20 @@
 /* 공통 */
 
 /* 섹션1 */
-#s1 {
-    height: 100vh;
-}
+
 /* 슬라이드 */
 .bx-wrapper {
     box-shadow: none;
     border: none;
     margin-bottom: 0;
-    height: 100%;
 }
 .bx-viewport {
-    height: 100%;
+    height: 100% !important;
 }
-#s1 .slide {
-    height: 100%;
-}
-#s1 .slide img {
-    width: 1920px;
-    height: 970px;
+
+.bx-wrapper li {
+    width: 100vw;
+    height: 100vh;
 }
 
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
@@ -49,4 +44,8 @@
 .bx-wrapper .bx-next {
     right: 48px;
     background: url(../assets/next.png) no-repeat 0px 0px;
+}
+/* next 버튼 호버시 사라지는 현상 초기화 */
+.bx-wrapper .bx-next:focus, .bx-wrapper .bx-next:hover {
+    background-position: 0 0;
 }

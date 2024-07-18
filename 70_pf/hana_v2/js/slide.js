@@ -62,7 +62,7 @@ $(document).ready(function () {
         // prev이면 왼쪽에서 오른쪽 방향
         //autoDirection: 'prev',
         // autoHover: false(기본값), true이면 슬라이드에 호버시 일시정지
-        autoHover: true,
+        //autoHover: true,
         // autoDelay: 0(기본값) -> 자동 슬라이드 시작 시 지연 시간
         //autoDelay: 4000
         // 슬라이드 크기(단, px 단위 생략)
