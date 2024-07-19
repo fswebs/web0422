@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하나투어</title>
+    <style>
+        @import url(reset.css);
+        @import url(typo.css);
+
+        /* 공통 */
+        .inner {
+            width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 섹션2 */
+        #s2 {
+            padding: 72px 0;
+        }
+
+        #s2>.inner>h2 {
+            text-align: center;
+        }
+
+        #s2>.inner>h2+p {
+            text-align: center;
+            margin: 24px 0 48px;
+        }
+
+        /* 탭 공통 */
+        #s2 #tabs {
+            position: relative;
+        }
+
+        #s2 #tabs ul {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* 탭의 버튼 */
+        #s2 #tabs>ul {
+            position: absolute;
+            right: 0;
+            width: 474px;
+        }
+
+        #s2 #tabs>ul>li:not(:first-child) {
+            margin: 0 16px;
+        }
+
+        /* 탭의 콘텐츠 */
+        #s2 #tabs>div ul {
+            height: 432px;
+        }
+
+        #s2 #tabs>div ul li:nth-child(1) {
+            align-self: flex-start;
+        }
+
+        #s2 #tabs>div ul li:nth-child(2) {
+            margin: 0 30px 0 75px;
+        }
+
+        #s2 #tabs>div ul li {
+            height: 216px;
+        }
+
+        #s2 #tabs>div a {
+            display: block;
+            width: 222px;
+            height: 168px;
+        }
+
+        #s2 #tabs>div a.rank1 {
+            width: 570px;
+            height: 432px;
+        }
+
+        #s2 #tabs>div a.rank1+h3 {
+            position: absolute;
+            width: 474px;
+            height: 48px;
+            right: 0;
+            top: 48px;
+            text-wrap: nowrap;
+        }
+
+        /* 탭의 기능 핵심 */
+        #s2 #tabs>div {
+            display: none;
+        }
+
+        #s2 #tabs>div.on {
+            display: block;
+        }
+    </style>
+
+    <script>
+        // tabs
+
+        window.addEventListener("DOMContentLoaded", function () {
+
+            // 요소 찾기
+            const btn1 = document.querySelectorAll('#tabs a').item(0);
+            const btn2 = document.querySelectorAll('#tabs a').item(1);
+            const btn3 = document.querySelectorAll('#tabs a').item(2);
+            const btn4 = document.querySelectorAll('#tabs a').item(3);
+            // console.log(btn1,btn2,btn3,btn4);
+
+            const cont1 = document.querySelector('#tab1');
+            // console.log(cont1);
+            const cont2 = document.querySelector('#tab2');
+            const cont3 = document.querySelector('#tab3');
+            const cont4 = document.querySelector('#tab4');
+
+            // 이벤트 처리
+            btn1.onclick = function (e) {
+                e.preventDefault();
+                resetF();
+                cont1.classList.add('on');
+            }
+            btn2.onclick = function (e) {
+                e.preventDefault();
+                resetF();
+                cont2.classList.add('on');
+            }
+            btn3.onclick = function (e) {
+                e.preventDefault();
+                resetF();
+                cont3.classList.add('on');
+            }
+            btn4.onclick = function (e) {
+                e.preventDefault();
+                resetF();
+                cont4.classList.add('on');
+            }
+
+            function resetF() {
+                cont1.classList.remove('on');
+                cont2.classList.remove('on');
+                cont3.classList.remove('on');
+                cont4.classList.remove('on');
+            }
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 섹션2 -->
+    <section id="s2">
+        <div class="ibx">
+            <h2>여름 시즌 여행지</h2>
+            <p>최근 한 달 동안 고객님들이 가장 많이 좋아하신 여름 시즌 여행지입니다.</p>
+
+            <!-- 탭 -->
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tab1">전체</a></li>
+                    <li><a href="#tab2">2~30대</a></li>
+                    <li><a href="#tab3">4~50대</a></li>
+                    <li><a href="#tab4">6~70대</a></li>
+                </ul>
+                <div id="tab1" class="on">
+                    <ul>
+                        <li>
+                            <a href="#" class="rank1"><img src="assets/r1.jpg" alt="1위. 수박주스"></a>
+                            <h3 class="rank1"><a href="#">1위. 수박주스</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/r2.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
+                            <h3><a href="#">2위. 몽글젤리 복숭아 스무디</a></h3>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/r3.png" alt="3위. 대파 송송 치즈 감자빵"></a>
+                            <h3><a href="#">3위. 대파 송송 치즈 감자빵</a></h3>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tab2">
+                    준비중.
+                </div>
+                <div id="tab3">
+                    준비중..
+                </div>
+                <div id="tab4">
+                    준비중...
+                </div>
+            </div>
+
+        </div><!-- //.ibx -->
+    </section>
+
+</body>
+
+</html>
