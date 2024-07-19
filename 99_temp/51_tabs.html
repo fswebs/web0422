@@ -20,6 +20,7 @@
             height: 100vh;
             align-items: center;
         }
+
         #s2 .ibx h2 {
             text-align: center;
         }
@@ -114,7 +115,7 @@
                 rankTxt: ["홋카이도", "튀르키예 이스탄불", "하와이"]
             },
             "2~30대": {
-                rankImg: ["/assets/hana/turkiye.jpg", "/assets/hana/hokkaido.jpg","/assets/hana/hawaii.jpg"],
+                rankImg: ["/assets/hana/turkiye.jpg", "/assets/hana/hokkaido.jpg", "/assets/hana/hawaii.jpg"],
                 rankTxt: ["튀르키예 이스탄불", "홋카이도", "하와이"]
             },
             "4~50대": {
@@ -130,20 +131,34 @@
         window.addEventListener("DOMContentLoaded", function () {
 
             // 요소 찾기
-            const tBtn = document.querySelectorAll('#tabs>ul>li a');
-            const tImg = document.querySelectorAll('#tabs img');
-            const tTxt = document.querySelectorAll('#tabs h3');
+            const tbtn = document.querySelectorAll('#tabs>ul>li a');
+            const rimg = document.querySelectorAll('#tabs img');
+            const rtxt = document.querySelectorAll('#tabs h3');
 
             // 이벤트 처리
-            tBtn.forEach((cVal,idx)=>{
-                console.log(idx);
-                cVal.onclick = (e)=>{
-                    const txt = e.currentTarget.textContent;
-                    console.log(txt);
-                    tImg[idx].setAttribute("src", season.rankImg[idx]);
-                    tTxt[idx].innerHTML = `${idx+1}위. ${season.rankTxt[idx]}`;
+            /* for(let i = 0; i<tBtn.length; i++) {
+                console.log(i);
+            } */
+
+            /* 
+                for(변수 of 노드리스트명) (ver.ES6)
+                v는 배열, 문자열, 노드리스트의 각 항목
+            */
+            for (let v of tbtn) {
+                v.onclick = () => {
+                    let btxt = v.innerHTML;
+                    season[btxt].rankImg.forEach((ele,idx) => {
+                        rimg[idx].setAttribute("src", ele);
+                        rimg[idx].setAttribute("alt", season[btxt].rankTxt[idx]);
+                        console.log(rimg[idx]);
+                    });
+                    season[btxt].rankTxt.forEach((ele,idx) => {
+                        rtxt[idx].innerHTML = season[btxt].rankTxt[idx];
+                    });
                 };
-            });
+            }
+
+
         });
 
     </script>
