@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>하나투어</title>
     <style>
-        @import url(reset.css);
-        @import url(typo.css);
+        @import url(css/reset.css);
+        @import url(css/typo.css);
 
-        /* 공통 */
-        .inner {
+        /* common */
+        .ibx {
             width: 1120px;
             margin: 0 auto;
         }
 
-        /* 섹션2 */
         #s2 {
-            padding: 72px 0;
+            display: flex;
+            height: 100vh;
+            align-items: center;
         }
-
-        #s2>.inner>h2 {
+        #s2 .ibx h2 {
             text-align: center;
         }
 
-        #s2>.inner>h2+p {
+        #s2 .ibx h2+p {
             text-align: center;
             margin: 24px 0 48px;
         }
@@ -50,6 +50,11 @@
             margin: 0 16px;
         }
 
+        #s2 #tabs>ul>li:not(:first-child)::before {
+            content: '|';
+            margin-right: 24px;
+        }
+
         /* 탭의 콘텐츠 */
         #s2 #tabs>div ul {
             height: 432px;
@@ -73,6 +78,10 @@
             height: 168px;
         }
 
+        #s2 #tabs>div h3 {
+            margin-top: 16px;
+        }
+
         #s2 #tabs>div a.rank1 {
             width: 570px;
             height: 432px;
@@ -88,62 +97,53 @@
         }
 
         /* 탭의 기능 핵심 */
-        #s2 #tabs>div {
+        /* #s2 #tabs>div {
             display: none;
         }
 
         #s2 #tabs>div.on {
             display: block;
-        }
+        } */
     </style>
 
     <script>
         // tabs
+        const season = {
+            "전체": {
+                rankImg: ["/assets/hana/hokkaido.jpg", "/assets/hana/turkiye.jpg", "/assets/hana/hawaii.jpg"],
+                rankTxt: ["홋카이도", "튀르키예 이스탄불", "하와이"]
+            },
+            "2~30대": {
+                rankImg: ["/assets/hana/turkiye.jpg", "/assets/hana/hokkaido.jpg","/assets/hana/hawaii.jpg"],
+                rankTxt: ["튀르키예 이스탄불", "홋카이도", "하와이"]
+            },
+            "4~50대": {
+                rankImg: ["/assets/hana/hokkaido.jpg", "/assets/hana/hawaii.jpg", "/assets/hana/turkiye.jpg"],
+                rankTxt: ["홋카이도", "하와이", "튀르키예 이스탄불"]
+            },
+            "6~70대": {
+                rankImg: ["/assets/hana/hawaii.jpg", "/assets/hana/hokkaido.jpg", "/assets/hana/turkiye.jpg"],
+                rankTxt: ["하와이", "홋카이도", "튀르키예 이스탄불"]
+            },
+        };
 
         window.addEventListener("DOMContentLoaded", function () {
 
             // 요소 찾기
-            const btn1 = document.querySelectorAll('#tabs a').item(0);
-            const btn2 = document.querySelectorAll('#tabs a').item(1);
-            const btn3 = document.querySelectorAll('#tabs a').item(2);
-            const btn4 = document.querySelectorAll('#tabs a').item(3);
-            // console.log(btn1,btn2,btn3,btn4);
-
-            const cont1 = document.querySelector('#tab1');
-            // console.log(cont1);
-            const cont2 = document.querySelector('#tab2');
-            const cont3 = document.querySelector('#tab3');
-            const cont4 = document.querySelector('#tab4');
+            const tBtn = document.querySelectorAll('#tabs>ul>li a');
+            const tImg = document.querySelectorAll('#tabs img');
+            const tTxt = document.querySelectorAll('#tabs h3');
 
             // 이벤트 처리
-            btn1.onclick = function (e) {
-                e.preventDefault();
-                resetF();
-                cont1.classList.add('on');
-            }
-            btn2.onclick = function (e) {
-                e.preventDefault();
-                resetF();
-                cont2.classList.add('on');
-            }
-            btn3.onclick = function (e) {
-                e.preventDefault();
-                resetF();
-                cont3.classList.add('on');
-            }
-            btn4.onclick = function (e) {
-                e.preventDefault();
-                resetF();
-                cont4.classList.add('on');
-            }
-
-            function resetF() {
-                cont1.classList.remove('on');
-                cont2.classList.remove('on');
-                cont3.classList.remove('on');
-                cont4.classList.remove('on');
-            }
-
+            tBtn.forEach((cVal,idx)=>{
+                console.log(idx);
+                cVal.onclick = (e)=>{
+                    const txt = e.currentTarget.textContent;
+                    console.log(txt);
+                    tImg[idx].setAttribute("src", season.rankImg[idx]);
+                    tTxt[idx].innerHTML = `${idx+1}위. ${season.rankTxt[idx]}`;
+                };
+            });
         });
 
     </script>
@@ -159,35 +159,26 @@
             <!-- 탭 -->
             <div id="tabs">
                 <ul>
-                    <li><a href="#tab1">전체</a></li>
-                    <li><a href="#tab2">2~30대</a></li>
-                    <li><a href="#tab3">4~50대</a></li>
-                    <li><a href="#tab4">6~70대</a></li>
+                    <li><a href="#">전체</a></li>
+                    <li><a href="#">2~30대</a></li>
+                    <li><a href="#">4~50대</a></li>
+                    <li><a href="#">6~70대</a></li>
                 </ul>
-                <div id="tab1" class="on">
+                <div>
                     <ul>
                         <li>
-                            <a href="#" class="rank1"><img src="assets/r1.jpg" alt="1위. 수박주스"></a>
-                            <h3 class="rank1"><a href="#">1위. 수박주스</a></h3>
+                            <a href="#" class="rank1"><img src="/assets/hana/hokkaido.jpg" alt="1위. 홋카이도"></a>
+                            <h3 class="rank1"><a href="#">1위. 홋카이도</a></h3>
                         </li>
                         <li>
-                            <a href="#"><img src="assets/r2.png" alt="2위. 몽글젤리 복숭아 스무디"></a>
-                            <h3><a href="#">2위. 몽글젤리 복숭아 스무디</a></h3>
+                            <a href="#"><img src="/assets/hana/turkiye.jpg" alt="2위. 튀르키예 이스탄불"></a>
+                            <h3><a href="#">2위. 튀르키예 이스탄불</a></h3>
                         </li>
                         <li>
-                            <a href="#"><img src="assets/r3.png" alt="3위. 대파 송송 치즈 감자빵"></a>
-                            <h3><a href="#">3위. 대파 송송 치즈 감자빵</a></h3>
+                            <a href="#"><img src="/assets/hana/hawaii.jpg" alt="3위. 하와이"></a>
+                            <h3><a href="#">3위. 하와이</a></h3>
                         </li>
                     </ul>
-                </div>
-                <div id="tab2">
-                    준비중.
-                </div>
-                <div id="tab3">
-                    준비중..
-                </div>
-                <div id="tab4">
-                    준비중...
                 </div>
             </div>
 
