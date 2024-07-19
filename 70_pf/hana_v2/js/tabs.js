@@ -1,3 +1,6 @@
+// section2 - tabs
+// Vanilla JS
+
 window.addEventListener("DOMContentLoaded", function () {
 
     // 요소 찾기
