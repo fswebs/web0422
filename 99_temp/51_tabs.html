@@ -108,7 +108,9 @@
     </style>
 
     <script>
-        // tabs
+        // 탭 구현하기
+
+        // 데이터
         const season = {
             "전체": {
                 rankImg: ["/assets/hana/hokkaido.jpg", "/assets/hana/turkiye.jpg", "/assets/hana/hawaii.jpg"],
@@ -141,23 +143,29 @@
             } */
 
             /* 
-                for(변수 of 노드리스트명) (ver.ES6)
+                for(let v of nodelist){코드;} (ver.ES6)
                 v는 배열, 문자열, 노드리스트의 각 항목
             */
             for (let v of tbtn) {
                 v.onclick = () => {
                     let btxt = v.innerHTML;
-                    season[btxt].rankImg.forEach((ele,idx) => {
-                        rimg[idx].setAttribute("src", ele);
+                    /* 
+                        arr.forEach((val,[idx],[arr])=>{코드;}); (ver.ES5)
+                    */
+
+                    let data = season[btxt];
+                    console.log(data);
+
+                    data.rankImg.forEach((val,idx) => {
+                        rimg[idx].setAttribute("src", val);
                         rimg[idx].setAttribute("alt", season[btxt].rankTxt[idx]);
-                        console.log(rimg[idx]);
+                        //console.log(rimg[idx]);
                     });
-                    season[btxt].rankTxt.forEach((ele,idx) => {
+                    data.rankTxt.forEach((val,idx) => {
                         rtxt[idx].innerHTML = season[btxt].rankTxt[idx];
                     });
                 };
             }
-
 
         });
 
