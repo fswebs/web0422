@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>시계</p>
+    <script>
+        const arr1 = ["일", "월", "화", "수", "목", "금"];
+        //console.log(arr1);
+        console.log(arr1.length);
+        arr1.push("토");
+
+        for (let i = 0; i < 7; i++) {
+            console.log("for " + arr1[i]);
+        }
+
+        // ES6
+        for (let x of arr1) {
+            console.log("for~of " + x);
+        }
+
+        // ES5
+        arr1.forEach(function (ele) {
+            console.log("forEach " + ele)
+        });
+
+        const clock = document.querySelector("p");
+
+        setInterval(timer, 1000);
+
+        function timer() {
+            const d = new Date();
+            const week = d.getDay();
+            console.log(arr1[week]);
+
+            const hou = d.getHours();
+            const min = d.getMinutes();
+            let sec = d.getSeconds();
+
+            /* if (sec < 10) {
+                sec = "0" + sec;
+            } else {
+                sec = sec;
+            } */
+
+            clock.innerHTML = `${addZero(hou)}:${addZero(min)}:${addZero(sec)}`;
+
+            function addZero(num) {
+                return num < 10 ? "0" + num : num;
+            }
+        }
+    </script>
+</body>
+
+</html>
