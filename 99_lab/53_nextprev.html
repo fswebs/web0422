@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* reset */
+            body,
+            ul {
+                margin: 0;
+            }
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            img {
+                vertical-align: top;
+            }
+
+            /* slide */
+            #slide ul {
+                display: flex;
+                position: relative;
+                width: 300px;
+                left:0;
+            }
+            #slide img {
+                width: 300px;
+            }
+        </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const npBtn = document.querySelectorAll(".npBtn a");
+                const next = document.querySelector("#next");
+                const slideList = document.querySelector("#slide ul");
+                const slideItem = slideList.querySelectorAll("li");
+                let num = 0;
+
+                npBtn[0].onclick = () => goSlide();
+                npBtn[1].onclick = () => goSlide();
+
+                function goSlide() {
+                    num++;
+                    slideList.style.left = (-100*num)+"%";
+                    slideList.style.transition = ".7s";
+                    console.log("불렀니?",slideItem.length);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div id="slide">
+            <ul>
+                <li><img src="../assets/pic_1.jpg" alt="이미지1" /></li>
+                <li><img src="../assets/pic_2.jpg" alt="이미지2" /></li>
+                <li><img src="../assets/pic_3.jpg" alt="이미지3" /></li>
+                <li><img src="../assets/pic_4.jpg" alt="이미지4" /></li>
+                <li><img src="../assets/pic_5.jpg" alt="이미지5" /></li>
+            </ul>
+            <div class="npBtn">
+                <a href="#">prev</a>
+                <a href="#">next</a>
+            </div>
+        </div>
+    </body>
+</html>
