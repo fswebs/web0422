@@ -30,10 +30,20 @@
                     :root {--변수명: 값;}
                 2. 사용
                     선택자 {속성: var(--변수명);}
+
+
+            url(이미지)
+            scale()
+            rotate()
+            translate()
+            skew()
+            calc(10 - 2)
+            var()
+
         */
 
         /* 색상 */
-        :root {
+        html {
             --violet: rgb(81, 7, 118);
             --bluesky: #a4f208;
             --skyblue: rgb(138, 172, 13);
@@ -117,6 +127,15 @@
 
         /* https://www.w3schools.com/css/css_rwd_intro.asp */
         /* 최소 576px 이상의 장치: tablet, desktop */
+
+        /* 
+            미디어쿼리
+            중단점(breakpoint): 576, 992
+            @media (조건) {
+                CSS 코드
+            }
+        */
+
         @media (min-width: 576px) {
             .section {display: flex; flex-wrap: wrap;}
             /* 
