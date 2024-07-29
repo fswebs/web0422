@@ -19,6 +19,10 @@
             const se = document.querySelectorAll("span")[4];
             
             // setInterval(함수, 밀리초);
+            // setInterval(function(){return clock()}, 1000);
+            // setInterval(()=>{return clock(1)}, 1000);
+            // 실행문이 하나이면 return과 {} 생략
+            // 매개값이 없으면 함수 이름만으로 호출한다. 즉, ()는 안쓴다.
             setInterval(clock, 1000);
 
             function clock() {
@@ -65,10 +69,6 @@
                (sec < 10) ? sec = "0" + sec : sec = sec;
                //console.log(sec);
                se.innerText = sec;
-
-                function ze(num){
-                    return (num < 10) ? num = "0" + num : num = num;
-                }
 
             } // clock_fn
 
