@@ -9,6 +9,7 @@
     <style>
         .progress {
             height: 30px;
+            margin: 10px 0;
         }
         .progress-bar {
             width: 10%;
@@ -16,8 +17,8 @@
     </style>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            const pBar = document.querySelector(".progress-bar");
-            const pBarNum = document.querySelector(".progress b");
+            const pBar = document.querySelectorAll(".progress-bar");
+            const pBarNum = document.querySelectorAll(".progress b");
             const pBtn = document.querySelector('.pbtn');
 
             pBtn.onclick = () => pb();
@@ -25,9 +26,14 @@
             let num = 0;
             function pb() {
                 num++;
-                pBarNum.innerText = num;
-                pBar.style.width = num + "%";
 
+                for(let x of pBar) {
+                    x.style.width = num + "%";
+                }
+                for(let y of pBarNum) {
+                    y.innerText = num;
+                }
+                
                 if (num < 100) {
                     setTimeout(pb, 50);
                 }
@@ -39,6 +45,9 @@
 <body>
     <div class="container">
         <h2>Progress Bar</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated"><span><b>10</b>%</span></div>
+        </div>
         <div class="progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated"><span><b>10</b>%</span></div>
         </div>
