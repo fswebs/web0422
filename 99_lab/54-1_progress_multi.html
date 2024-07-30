@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <style>
+        .progress {
+            height: 30px;
+            margin: 10px 0;
+        }
+
+        .progress-bar {
+            width: 0%;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const pBar = document.querySelectorAll(".progress-bar");
+            const pBarNum = document.querySelectorAll(".progress b");
+            const pBtn = document.querySelector('.pbtn');
+            let num = 0;
+
+            pBtn.onclick = () => pBar.forEach((ele, idx) => pb(idx));
+
+            function pb(i) {
+                num++;
+
+                if (num <= pBar[i].getAttribute("data-num")) {
+                    setTimeout(() => pb(i), 50);
+                } else {
+                    return;
+                }
+
+                pBar[i].style.width = num + "%";
+                pBarNum[i].innerText = num;
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Progress Bar</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" data-num="70"><span><b>0</b>%</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" data-num="80"><span><b>0</b>%</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" data-num="95"><span><b>0</b>%</span>
+            </div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" data-num="75"><span><b>0</b>%</span>
+            </div>
+        </div>
+        <button class="mt-3 pbtn">버튼</button>
+    </div>
+</body>
+
+</html>
