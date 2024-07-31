@@ -21,7 +21,10 @@
             const pBar = document.querySelectorAll(".progress-bar");
             const pBarNum = document.querySelectorAll(".progress b");
             const pBtn = document.querySelector('.pbtn');
-            const num = [0, 0, 0, 0];
+            const num = [];
+            for(let i = 0; i<pBar.length; i++) {
+                num[i]=0;
+            }
             const percent = [80, 90, 70, 95];
 
             pBtn.onclick = () => pBar.forEach((ele, idx) => pb(idx));

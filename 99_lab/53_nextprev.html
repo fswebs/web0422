@@ -37,10 +37,10 @@
                 const slideItem = slideList.querySelectorAll("li");
                 let num = 0;
 
-                npBtn[0].onclick = () => goSlide();
-                npBtn[1].onclick = () => goSlide();
+                npBtn[0].onclick = () => moveSlide();
+                npBtn[1].onclick = () => moveSlide();
 
-                function goSlide() {
+                function moveSlide() {
                     num++;
                     slideList.style.left = (-100*num)+"%";
                     slideList.style.transition = ".7s";
