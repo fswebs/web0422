@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR_Architects</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .tablet,
+        .desktop {
+            display: none;
+        }
+
+        @media (min-width:576px) {
+            .tablet {
+                display: block;
+            }
+
+            .phone {
+                display: none;
+            }
+        }
+
+        @media (min-width:992px) {
+            .desktop {
+                display: block;
+            }
+
+            .tablet {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img class="phone" src="phone.png" alt="폰 이미지">
+    <img class="tablet" src="tablet.png" alt="테블릿 이미지">
+    <img class="desktop" src="desktop.png" alt="데스크탑 이미지">
+</body>
+
+</html>

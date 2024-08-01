@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            perspective(원근감): 숫자px;
+            transform-origin: x, y; -> 기준점
+            transform(변형)
+                2D(x, y)
+                    rotate(각도)
+                    scale(w, h)
+                    scaleX(w)
+                    scaleY(h)
+                    translate(x, y)
+                    translateX(x)
+                    translateY(y)
+                    skew(각도, 각도)
+                    skewX(각도)
+                    skewY(각도)
+                3D(x, y, z)
+                    큐브
+                    rotateX(회전)
+                    rotateY(회전)
+                    scaleZ(크기 조절)
+                    translateZ(위치)
+
+            2D
+                transform: rotate(숫자deg);
+            3D
+                transform: rotateX(숫자deg);
+                transform: rotateY(숫자deg);
+        */
+
+        .rot {
+            display: flex;
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        .rot div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            border-radius: 10px;
+            margin: 20px;
+            overflow: hidden;
+            /* 
+                원근감
+                    perspective: 숫자; 
+                    transform을 적용한 요소의 부모 요소에 지정한다.
+                    숫자는 800px ~ 1000px
+                    3D 효과를 줄때 사용!
+            */
+            perspective: 800px;
+        }
+
+        span {
+            display: block;
+            width: 100px;
+            height: 100px;
+            background: rgb(1, 191, 255);
+            transition: 1s;
+            text-align: center;
+        }
+
+        /* 
+            transition(전환)
+            transition-property: 속성;
+            transition-duration: 전환시간;
+            transition-timing-function: 가속도;
+            transition-delay: 지연시간;
+
+            transition: [속성] 전환시간 [가속도] [지연시간];
+        */
+        .rot div:first-child:hover span {
+            transform: rotate(180deg);
+        }
+
+        .rot div:nth-child(2):hover span {
+            transform: rotateX(180deg);
+        }
+
+        .rot div:last-child:hover span {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>변형</h1>
+    <div class="rot">
+        <div><span>2D</span></div>
+        <div><span>3D-X</span></div>
+        <div><span>3D<br>Y</span></div>
+    </div>
+</body>
+
+</html>
