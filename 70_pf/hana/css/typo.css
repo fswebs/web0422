@@ -16,11 +16,34 @@ h1 {font-weight: normal;}
 h1,h2,h3 { font-family: "NanumSquareNeo", sans-serif; } 
 h1,h3 { font-size: 1.5rem; } 
 h2 { font-size: 2.4rem; } 
+
+/* a태그는 글자색을 상속받지 않는다. */
 a { color: #111;} 
-::placeholder {font-size: 1.5rem; color: #aaa;}
-input, button {
-    font:1.5rem 'Noto Sans KR', sans-serif;
+
+/* input, button, ::placeholder는 글자색, 글자크기, 글꼴 등을 상속받지 않는다. */
+input {font-size:1.5rem;font-family: "Noto Sans KR", sans-serif;}
+::placeholder {font-family: "Noto Sans KR", sans-serif; font-size: 1.5rem; color: #aaa;}
+button {font-size:1.5rem; color: #fff;font-family: "Noto Sans KR", sans-serif;}
+
+/* 헤더 */
+/* 섹션1 */
+#sec1 h2 {
+    letter-spacing: 4px;
+    font-weight: 400;
 }
-button {
+#sec1 b {
+    color: #fff;
+}
+/* 섹션2 */
+#sec2 h3 {
+    color: #fff;
+}
+/* 섹션3 */
+#sec3 h3 {
+    font-size: 2.4rem;
+}
+/* 섹션4 */
+/* 푸터 */
+footer {
     color: #fff;
 }
