@@ -8,46 +8,35 @@
     <style>
         /* https://www.w3schools.com/cssref/tryit.php?filename=trycss3_perspective2 */
 
-        .ex1 {
-            perspective: 800px;
-        }
+        .cube {perspective: 800px;}
+        .cube * {outline: 1px solid lime; opacity:0.8;}
+        .side {width: 200px; height: 200px; position: absolute; left: 200px; top: 200px;}
 
-        .cube {
-            font-size: 4em;
-            width: 2em;
-            margin: 1.5em auto;
-            transform-style: preserve-3d;
-            transform: rotateX(-45deg) rotateY(30deg);
-        }
+        .front {transform: rotateY(-20deg) translateZ(100px)}
+        .back {transform: rotateY(-20deg) translateZ(-100px)}
+        .right {transform: rotateX(90deg) rotate(20deg) translateZ(100px)}
+        .left {transform: rotateX(270deg) rotate(-20deg) translateZ(100px)}
+        .top {transform: rotateY(610deg) translateZ(-100px)}
+        .bottom {transform: rotateY(70deg) translateZ(-100px)}
 
-        .side {
-            position: absolute;
-            width: 2em;
-            height: 2em;
-            background: rgba(100,100,100,0.5);
-            border: 1px solid red;
-            text-align: center;
-            line-height: 2em;
-        }
-
-        .front {transform: translateZ(1em);}
-        .top {transform: rotateX(90deg) translateZ(1em);}
-        .right {transform: rotateY(90deg) translateZ(1em);}
-        .left {transform: rotateY(-90deg) translateZ(1em);}
-        .bottom {transform: rotateX(-90deg) translateZ(1em);}
-        .back {transform: rotateY(-180deg) translateZ(1em);}
+        .front {background: url(../assets/pic_1.jpg) no-repeat 0 0/cover;}
+        .back {background: url(../assets/pic_2.jpg) no-repeat 0 0/cover;}
+        .right {background: url(../assets/pic_3.jpg) no-repeat 0 0/cover;}
+        .left {background: url(../assets/pic_4.jpg) no-repeat 0 0/cover;}
+        .top {background: url(../assets/pic_5.jpg) no-repeat 0 0/cover;}
+        .bottom {background: url(../assets/pic_6.jpg) no-repeat 0 0/cover;}
     </style>
 </head>
 
 <body>
     <div class="ex1">
         <div class="cube">
-            <div class="side front">1</div>
             <div class="side back">6</div>
             <div class="side right">4</div>
             <div class="side left">3</div>
             <div class="side top">5</div>
             <div class="side bottom">2</div>
+            <div class="side front">1</div>
         </div>
     </div>
 </body>
