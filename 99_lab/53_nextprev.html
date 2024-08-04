@@ -146,8 +146,9 @@
             });
 
             function pager(num) {
+                console.log(num);
                 let currentSlideNumber = slideList.querySelectorAll("li")[num].getAttribute("data-pager");
-                // console.log(currentSlideNumber);
+                console.log("currentSlideNumber: ",currentSlideNumber);
                 for(let x of pagerLink) {
                     x.classList.remove("active");
                 }
@@ -156,27 +157,17 @@
 
             for(let y of pagerLink) {
                 y.onclick = ()=>{
-                    pager(event.currentTarget.innerText);
+                    stopSlide();
                     goToSlide(event.currentTarget.innerText);
+                    console.log("a:",event.currentTarget.innerText);
                 };
             }
-
-
+            
+            
             function goToSlide(num) {
-                if (forbidden) return;
-                forbidden = 1;
-                setTimeout(()=>forbidden=0, 700);
-
-                const slideItem = slideList.querySelectorAll("li");
                 slideList.style.left = -100 * num + "%";
                 slideList.style.transition = ".7s";
-                setTimeout(() => {
-                    slideList.appendChild(slideItem[0]);
-                    slideList.style.left = 0 * num + "%";
-                    slideList.style.transition = "none";
-                }, 700);
-
-                stopSlide();
+                pager(num);
             }
 
             let auto;
