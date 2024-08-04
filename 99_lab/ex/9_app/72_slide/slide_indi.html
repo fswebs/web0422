@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 - indi</title>
+    <style>
+        /* reset.css */
+        @import url(/assets/css/reset.css);
+
+        #slideWrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .slide li {
+            position: absolute;
+            width: 100%;
+            left: 100%;
+        }
+
+        .slide li:first-of-type {
+            left: 0;
+        }
+
+        /* indi */
+        .indi {
+            z-index: 9999;
+            display: flex;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .indi li {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            text-indent: -9999em;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .indi li.on {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="slideWrap">
+        <ul class="slide">
+            <li><img src="/assets/images/pic_1.jpg" alt="이미지1"></li>
+            <li><img src="/assets/images/pic_2.jpg" alt="이미지2"></li>
+            <li><img src="/assets/images/pic_3.jpg" alt="이미지3"></li>
+            <li><img src="/assets/images/pic_4.jpg" alt="이미지4"></li>
+            <li><img src="/assets/images/pic_5.jpg" alt="이미지5"></li>
+        </ul>
+        <!-- 인디케이터 -->
+        <ul class="indi">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <script>
+        let eDelay = 0;
+        const speed = 700;
+        let idx = 0;
+        let currentIdx = 0;
+
+        // 요소 선택
+        const slide = document.querySelector('.slide');
+        const slideList = slide.querySelectorAll('li');
+        const indiBtn = document.querySelectorAll('.indi li');
+
+        // indicator
+        for (let i = 0; i < indiBtn.length; i++) {
+            indiBtn[i].onclick = function () {
+                console.log('몇 번버튼?',i)
+                // 이벤트 지연
+                if (eDelay) return;
+                eDelay = 1;
+                setTimeout(() => eDelay = 0, speed);
+                
+                if (currentIdx === i) return;
+                currentIdx = i;
+                                
+                slideList[currentIdx].style.left = '0%';
+                slideList[currentIdx].style.transition = `left ${speed / 1000}s`;
+                indiBtn[currentIdx].classList.add('on');
+                
+                slideList[idx].style.left = '-100%';
+                slideList[idx].style.transition = `left ${speed / 1000}s`;
+                indiBtn[idx].classList.remove('on');
+
+                setTimeout(() => {
+                    slideList[idx].style.left = '100%';
+                    slideList[idx].style.transition = 'none';
+
+                    idx = currentIdx;
+                }, speed);
+
+            };
+        }
+
+    </script>
+</body>
+
+</html>

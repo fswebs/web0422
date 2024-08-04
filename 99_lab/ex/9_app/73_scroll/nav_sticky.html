@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        header {
+            height: 300px;
+            background: orange;
+        }
+
+        nav {
+            height: 50px;
+            background: gray;
+        }
+
+        section {
+            background: yellow;
+            height: 2000px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <header>헤더</header>
+    <nav>내비</nav>
+    <section>섹션</section>
+
+    <script>
+        const navbar = document.querySelector("nav");
+        const sticky = navbar.offsetTop;
+
+        document.body.onscroll = myFn;
+
+        function myFn() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

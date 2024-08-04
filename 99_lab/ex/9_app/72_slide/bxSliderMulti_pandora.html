@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐로셀 - bxSlider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+    <style>
+        body {
+            margin:0;
+        }
+
+        .slideWrap {
+            /* 이미지 하나가 348px */
+            width: 1044px;
+            margin:0 auto;
+            border: 1px solid red;
+        }
+
+        /* reset */
+        .bx-wrapper {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+            overflow:hidden;
+        }
+
+        .bx-wrapper .bx-pager {
+            bottom: 32px;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus {
+            background: red;
+        }
+
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background: #666;
+            width: 5px;
+            height: 5px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="section">
+        <!-- 버튼들이 슬라이드 안에 포함되게 div를 한 번더 감싼다. -->
+        <div class="slideWrap">
+            <div class="slider">
+                <!-- alt는 웹접근성으로 반드시 기록한다. -->
+                <div>
+                    <img src="images/762676C01.png" alt="이미지1">
+                    <p>투톤 셀레셀 트리플 댕글 참</p>
+                    <p>&#8361;138,000</p>
+                    <a href="#">제품보기</a>
+                </div>
+                <div><img src="images/791691C02.png" alt="이미지2"></div>
+                <div><img src="images/792680C01.png" alt="이미지3"></div>
+                <div><img src="images/792681C01.png" alt="이미지4"></div>
+                <div><img src="images/792687C01.png" alt="이미지5"></div>
+                <div><img src="images/792694C01.png" alt="이미지6"></div>
+                <div><img src="images/792695C01.png" alt="이미지7"></div>
+                <div><img src="images/792698C01.png" alt="이미지8"></div>
+                <div><img src="images/792703C01.png" alt="이미지9"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 제이쿼리? 자바스크립트 라이브러리언어이다. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- bx슬라이더 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script>
+        $('.slider').bxSlider({
+            slideWidth: 348,
+            minSlides: 3,
+            maxSlides: 3,
+            moveSlides: 3,
+        });
+    </script>
+</body>
+
+</html>

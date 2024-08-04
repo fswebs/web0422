@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>경남아너스빌_홍길동</title>
+    <style>
+        /* reset.css */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font: 1.5rem/1.6 'Noto Sans KR', sans-serif;
+        }
+
+        body,
+        h1,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            vertical-align: top;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrap {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* header */
+        #header {
+            z-index: 9999;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            /* position: relative; */
+            transition: .4s ease-in-out;
+        }
+
+        #header:hover {
+            background: #0F2244 !important;
+        }
+
+        #header::after {
+            content: '';
+            position: absolute;
+            top: 95px;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #fff;
+            transition: height .5s ease-out;
+        }
+
+        #header:hover::after {
+            height: 200px;
+        }
+
+        /* logo */
+        #header .logo {
+            width: 207px;
+        }
+
+        #header .inner {
+            height: 95px;
+            margin: 0 auto;
+        }
+
+        #header .gnb {
+            position: relative;
+            z-index: 1;
+            height: 95px;
+            overflow: hidden;
+            transition: .4s ease-in-out;
+        }
+
+        #header:hover .gnb {
+            height: 295px;
+        }
+
+        #header .gnb .main {
+            display: flex;
+        }
+
+        #header .gnb .main>li {
+            text-align: center;
+            line-height: 95px;
+        }
+
+        #header .gnb .main>li>a {
+            position: relative;
+        }
+
+        #header .gnb .main>li>a::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0%;
+            width: 100%;
+            height: 2px;
+            background: #b0b3b1;
+            display: block;
+            transform: scaleX(0);
+            transition: .3s;
+        }
+
+        #header .gnb .main>li>a:hover::after {
+            transform-origin: 50% 50%;
+            transform: scaleX(1);
+        }
+
+        #header .gnb .main>li+li {
+            margin-left: 50px;
+        }
+
+        #header .gnb .main>li>a {
+            transition: .3s;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        #header .gnb .sub li {
+            line-height: 2;
+        }
+
+        #header .gnb .sub li:first-of-type {
+            padding-top: 16px;
+        }
+
+        #header .gnb .sub li a {
+            color: #555;
+            font-size: 1.6rem;
+        }
+
+        #header .gnb li a:hover {
+            color: #b0b3b1;
+        }
+
+        /* util */
+        #header .util,
+        #header .util ul {
+            display: flex;
+            line-height: 95px;
+            /* align-items: center; */
+            font-size: 1.3rem;
+        }
+
+        #header .util a {
+            color: #fff;
+        }
+
+        #header:hover .util a {
+            color: #bab3ac;
+        }
+
+        #header .sns {
+            position: relative;
+            width: 32px;
+            margin-right: 16px;
+            font-size: 1.8rem;
+            transition: .3s;
+            background: no-repeat 0% 50%/100%;
+        }
+
+        #header .sns img {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            top: 35%;
+            left: 2px;
+            opacity: 0;
+            transition: .3s;
+        }
+
+        #header .sns:hover span {
+            opacity: 0;
+        }
+
+        #header .sns:hover img {
+            opacity: 1;
+        }
+
+        #header .sns::after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 49%;
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background: #fff;
+            margin-left: 10px;
+        }
+
+        #header:hover .sns::after {
+            background: #bab3ac;
+        }
+
+        #header .member li {
+            margin: 0 6px;
+        }
+
+        #slideWrap {
+            position: relative;
+            width: 1200px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .slide {
+            display: flex;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /* overflow: hidden; */
+            /* margin-top: 30px; */
+        }
+
+        .slide li {
+            position: absolute;
+            top: 0;
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin-bottom: 20px;
+            left: 100%;
+        }
+
+        .slide li:first-of-type {
+            left: 0;
+        }
+
+        /* 텍스트 모션 */
+        h2 {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: 1s;
+        }
+
+        p {
+            position: absolute;
+            top: calc(50% + 40px);
+            left: -10px;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            opacity: 0;
+            transition: 1s .2s;
+        }
+
+        /* 좌우버튼 */
+        .ctls {
+            z-index: 9999;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .ctls a {
+            position: absolute;
+            color: #fff;
+        }
+
+        #pb {
+            left: 5%;
+        }
+
+        #nb {
+            right: 5%;
+        }
+
+        /* indi */
+        .indi {
+            z-index: 9999;
+            display: flex;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .indi li {
+            width: 8px;
+            height: 8px;
+            margin: 0 4px;
+            text-indent: -9999em;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #1d1d1d;
+            color: #5d5d5d;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header id="header">
+            <!-- logo -->
+            <h1 class="logo"><a href="#"><img src="images/header_logo.png" alt="honorsville"></a></h1>
+            <div class="inner">
+                <!-- nav -->
+                <nav class="gnb">
+                    <ul class="main">
+                        <li>
+                            <a href="#">분양단지</a>
+                            <ul class="sub">
+                                <li><a href="#">분양중인 단지</a></li>
+                                <li><a href="#">분양예정 단지</a></li>
+                                <li><a href="#">분양완료 단지</a></li>
+                                <li><a href="#">연간분양계획</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">브랜드</a>
+                            <ul class="sub">
+                                <li><a href="#">브랜드 스토리</a></li>
+                                <li><a href="#">브랜드 아이덴티티</a></li>
+                                <li><a href="#">특화아이템</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">아너스빌 멤버스</a>
+                            <ul class="sub">
+                                <li><a href="#">아너스빌 소식</a></li>
+                                <li><a href="#">청약가이드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">마이아너스빌</a>
+                            <ul class="sub">
+                                <li><a href="#">자주 묻는 질문</a></li>
+                                <li><a href="#">1:1문의</a></li>
+                                <li><a href="#">A/S 문의</a></li>
+                                <li><a href="#">관심단지 관리</a></li>
+                                <li><a href="#">개인정보 변경</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- //.inner -->
+            <div class="util">
+                <div class="sns"><a href="#"><span>SNS</span><img src="images/btn_youtube.png" alt="youtube"></a>
+                </div>
+                <ul class="member">
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="slideWrap">
+            <ul class="slide">
+            </ul>
+            <!-- 좌우버튼 -->
+            <div class="ctls">
+                <a href="#" id="pb">prev</a>
+                <a href="#" id="nb">next</a>
+            </div>
+            <!-- 인디케이터 -->
+            <ul class="indi">
+            </ul>
+        </div>
+        <footer>Copyright 홍길동. All rights reserved.</footer>
+    </div>
+
+    <script>
+        // 슬라이드 데이터
+        const obj = {
+            imgItem1: {
+                'main Tit': '<h2>CONSIDERATION</h2>',
+                subTit: '<p>편안한 삶을 영위하기 위한 사려 깊은 생각</p>',
+                imgSrc: 'images/brstory_sec2_bg01.jpg',
+                tit: function () {
+                    return this['main Tit'] + this.subTit;
+                }
+            },
+            imgItem2: {
+                'main Tit': '<h2>PRESTIGE</h2>',
+                subTit: '<p>당신의 일상이 명예가 되는 고품격 주거공간</p>',
+                imgSrc: 'images/brstory_sec4_bg01.jpg',
+                tit: function () {
+                    return this['main Tit'] + this.subTit;
+                }
+            },
+            imgItem3: {
+                'main Tit': '<h2>AFFINITY</h2>',
+                subTit: '<p>감각적인 공간이 선사하는 감명 깊은 생각</p>',
+                imgSrc: 'images/brstory_sec6_bg01.jpg',
+                tit: function () {
+                    return this['main Tit'] + this.subTit;
+                }
+            },
+
+        };
+
+        // 요소 선택
+        const slideList = document.querySelector('.slide');
+        const indiList = document.querySelector('.indi');
+        const ctlsBtn = document.querySelectorAll('.ctls a');
+
+        // 객체 수 확인
+        let dataCnt = 0;
+        for (let i in obj) {
+            dataCnt++;
+        }
+        console.log(dataCnt);
+
+        let slideCount = 0;
+        let clickDelayInit = 0;
+        let auto;
+        let autoplay = 1;
+
+        // 콘텐츠 추가
+        for (let i = 0; i < dataCnt; i++) {
+            cont(i);
+        }
+
+        function cont(num) {
+            // 슬라이드 이미지와 텍스트 동적 삽입
+            slideList.innerHTML += `
+                <li><img src=${obj['imgItem' + (num + 1)].imgSrc} alt="이탈리아">${obj['imgItem' + (num + 1)].tit()}</li>
+            `;
+            // 인디케이터 동적 삽입
+            indiList.innerHTML += `
+                <li>${num + 1}</li>
+            `;
+        }
+        console.log(slideList);
+
+        // console.log(imgItem1['main Tit']);
+        // console.log(imgItem1.subTit);
+        // console.log(imgItem1.imgSrc);
+
+        const slideItem = document.querySelectorAll('.slide li');
+        const indiBtn = document.querySelectorAll('.indi li');
+        const tit1 = document.querySelectorAll('.slide li h2');
+        const tit2 = document.querySelectorAll('.slide li p');
+
+        for (let i = 0; i < ctlsBtn.length; i++) {
+            ctlsBtn[i].onclick = function () {
+
+                // 클릭 시 자동 슬라이드 정지
+                clearInterval(auto);
+
+                // 클릭 지연
+                if (clickDelayInit) return;
+                clickDelayInit = 1;
+                setTimeout(() => { clickDelayInit = 0; autoSlide(); }, 1500);
+
+                if (i === 0) {
+                    // prev
+                    prevSlide();
+                } else {
+                    // next
+                    nextSlide();
+                }
+                console.log(slideCount);
+            };
+        }
+
+        for (let i = 0; i < indiBtn.length; i++) {
+            indiBtn[i].onclick = function () {
+                // 클릭 시 자동 슬라이드 정지
+                clearInterval(auto);
+
+                // 클릭 지연
+                if (clickDelayInit) return;
+                clickDelayInit = 1;
+                setTimeout(() => { clickDelayInit = 0; autoSlide(); }, 500);
+
+                moveSlide(i, 1);
+            };
+        }
+
+        // 로딩 시 자동 슬라이드
+        autoSlide();
+
+        function autoSlide() {
+            auto = setInterval(nextSlide, 3000);
+        }
+
+        function prevSlide() {
+            slideCount--;
+            if (slideCount === -1) slideCount = slideItem.length - 1;
+            initSlide(slideCount, -1);
+            setTimeout(() => moveSlide(slideCount, -1), 100);
+        }
+
+        function nextSlide() {
+            slideCount++;
+            if (slideCount === slideItem.length) slideCount = 0;
+            console.log('호출!', slideCount);
+            initSlide(slideCount, 1);
+            setTimeout(() => moveSlide(slideCount, 1), 100);
+        }
+
+        // 로딩시 첫 인디색
+        indiBtn[0].style.background = '#f00';
+
+        function moveSlide(idx, sign) {
+            slideItem[idx].style.left = 0 + '%';
+            slideItem[idx].style.zIndex = 1;
+            indiBtn[idx].style.background = '#f00';
+            slideItem[idx].style.transition = '1s';
+            txtMotion(idx, 50, 1, '%');
+            for (let j = 0; j < slideItem.length; j++) {
+                if (idx !== j) {
+                    slideItem[j].style.left = sign * -100 + '%';
+                    indiBtn[j].style.background = '#fff';
+                    slideItem[j].style.zIndex = -1;
+                    slideItem[j].style.transition = '1s';
+                    txtMotion(j, 10, 0, 'px');
+                    setTimeout(() => initSlide(j, sign), 2500);
+                }
+            }
+        }
+
+        function initSlide(idx, sign) {
+            slideItem[idx].style.left = sign * 100 + '%';
+            slideItem[idx].style.transition = 'none';
+        }
+
+        //첫 텍스트 모션
+        setTimeout(() => {
+            txtMotion(0, 50, 1, '%');
+        }, 100);
+
+        function txtMotion(idx, pos, opa, unit) {
+            tit1[idx].style.left = pos + unit;
+            tit2[idx].style.left = pos + unit;
+            tit1[idx].style.opacity = opa;
+            tit2[idx].style.opacity = opa;
+        }
+    </script>
+</body>
+
+</html>

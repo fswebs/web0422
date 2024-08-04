@@ -145,9 +145,10 @@
                 ele.setAttribute("data-pager",idx);
             });
 
+            let currentSlideNumber;
             function pager(num) {
-                console.log(num);
-                let currentSlideNumber = slideList.querySelectorAll("li")[num].getAttribute("data-pager");
+                console.log("pager:",num);
+                currentSlideNumber = slideList.querySelectorAll("li")[num].getAttribute("data-pager");
                 console.log("currentSlideNumber: ",currentSlideNumber);
                 for(let x of pagerLink) {
                     x.classList.remove("active");
@@ -157,17 +158,13 @@
 
             for(let y of pagerLink) {
                 y.onclick = ()=>{
-                    stopSlide();
-                    goToSlide(event.currentTarget.innerText);
                     console.log("a:",event.currentTarget.innerText);
                 };
             }
             
             
             function goToSlide(num) {
-                slideList.style.left = -100 * num + "%";
-                slideList.style.transition = ".7s";
-                pager(num);
+
             }
 
             let auto;
