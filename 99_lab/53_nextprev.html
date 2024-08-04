@@ -51,12 +51,25 @@
 
         #slideWrap .controls {
             position: absolute;
-            left:0;
-            top:0;
+            top:50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 82px;
         }
         #slideWrap .controls a {
-            color: red;
-            font-size: 3rem;
+            position: absolute;
+            width: 43px;
+            height: 100%;
+            background: no-repeat;
+            text-indent: -9999em;
+        }
+        #slideWrap .controls a.next {
+            right: 30px;
+            background-image: url(../assets/next.png);
+        }
+        #slideWrap .controls a.prev {
+            left: 30px;
+            background-image: url(../assets/prev.png);
         }
         #slideWrap .pager {
             position: absolute;
@@ -199,8 +212,8 @@
                 <li><img src="../assets/pic_5.jpg" alt="이미지5"></li>
             </ul>
             <div class="controls">
-                <a href="#">prev</a>
-                <a href="#">next</a>
+                <a href="#" class="prev">prev</a>
+                <a href="#" class="next">next</a>
             </div>
             <div class="pager">
                 <a href="#" class="active">0</a>
