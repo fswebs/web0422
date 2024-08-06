@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디저트39</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <style>
+        /* https://dessert39.com/main.php  */
+        /* https://kenwheeler.github.io/slick/ */
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .txt {
+            padding: 0 20px;
+            height: 48px;
+        }
+
+        .slide {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .slick-slide {
+            margin: 0 15px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+            padding-bottom: 20px;
+        }
+
+        /* 이전 버튼 */
+        .slick-prev {
+            z-index: 9999;
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 45vw);
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: 0;
+            background: 0 0;
+        }
+        .slick-next {
+            z-index: 9999;
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            top: 50%;
+            right: calc(50% - 45vw);
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            color: transparent;
+            border: none;
+            outline: 0;
+            background: 0 0;
+        }
+
+        .slick-prev:before {
+            content: '←';
+        }
+
+        .slick-next:before,
+        .slick-prev:before {
+            font-family: slick;
+            font-size: 60px;
+            line-height: 1;
+            opacity: .75;
+            color: gray;
+        }
+
+        @media (min-width:768px) {
+            .slide {
+                max-width: 1210px;
+            }
+        }
+    </style>
+    <script>
+        $(() => {
+            $('.slide').slick({
+                autoplay: true,
+                centerMode: true,
+                centerPadding: '145px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="slide">
+        <div>
+            <img src="assets/11194_1715678339.png" alt="슬라이드이미지1">
+            <div class="txt">
+                <h3>[24년 8월 신메뉴]저칼로리 딸기 음료 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/25487_1720515705.png" alt="슬라이드이미지2">
+            <div class="txt">
+                <h3>[24년 8월 신메뉴]피스타치오크림 음료 3종 출시!</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/27967_1722586583.png" alt="슬라이드이미지3">
+            <div class="txt">
+                <h3>[24년 7월 신메뉴]오레오 쉐이크 3종 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/32944_1722586583.png" alt="슬라이드이미지4">
+            <div class="txt">
+                <h3>[24년 7월 신메뉴]카라멜 인절미 퐁 라떼 출시!</h3>
+                <p>2024-07-29</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/43001_1721263519.png" alt="슬라이드이미지5">
+            <div class="txt">
+                <h3>[24년 7월~8월 이벤트]디저트39 X 사이퍼즈 친환경...</h3>
+                <p>2024-07-25</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/44545_1718332895.png" alt="슬라이드이미지6">
+            <div class="txt">
+                <h3>[24년 7월 신메뉴]설탕 무첨가 과일 슬러시 4종...</h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/51763_1719535657.png" alt="슬라이드이미지7">
+            <div class="txt">
+                <h3>[24년 7월 신메뉴]애사비 탄산수 3종 출시!</h3>
+                <p>2024-07-18</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/56055_1721263519.png" alt="슬라이드이미지8">
+            <div class="txt">
+                <h3>[24년 7월 신메뉴]코코넛 프라페 2종 출시! </h3>
+                <p>2024-07-09</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/60440_1719801035.png" alt="슬라이드이미지9">
+            <div class="txt">
+                <h3>이벤트 종료[7월 APP 이벤트]디저트39 앱 고객...</h3>
+                <p>2024-07-04</p>
+            </div>
+        </div>
+        <div>
+            <img src="assets/77625_1722214356.png" alt="슬라이드이미지10">
+            <div class="txt">
+                <h3>[24년 8월 신메뉴]저칼로리 & 라이스 슬림 요거트...</h3>
+                <p>2024-08-02</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
