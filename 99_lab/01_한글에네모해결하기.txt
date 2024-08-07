@@ -1,0 +1,3 @@
+https://codiving.kr/176
+
+Editor>Unicode Highlight: Non Basic ASCII -> false
