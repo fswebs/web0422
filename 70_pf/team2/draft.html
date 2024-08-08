@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>니베아</title>
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        /* phone */
+        .desktop,
+        .tablet {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+
+            /* tablet */
+            .phone {
+                display: none;
+            }
+
+            .tablet {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* desktop */
+            .tablet {
+                display: none;
+            }
+
+            .desktop {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://www.w3schools.com/html/html_images_imagemap.asp -->
+    <!-- https://www.image-map.net/ -->
+
+    <!-- 이미지맵: 
+            1. 하나의 이미지의 특정 영역에 링크를 적용시킬 때
+            2. 하나의 이미지에 두 개이상의 링크를 적용시킬 때 
+    -->
+
+    <img class="desktop" src="assets/index/draft_main_da.png" alt="desktop PC" usemap="#image-map-desktop">
+    <img class="tablet" src="assets/index/draft_main_ta.png" alt="tablet PC" usemap="#image-map-tablet">
+    <img class="phone" src="assets/index/draft_main_ph.png" alt="phone" usemap="#image-map-phone">
+
+
+
+    <map name="image-map-desktop">
+        <!-- 
+            shape="rect" coords="x1,y1,x2,y2"
+        -->
+        <area alt="로고" title="로고입니다. 누르면 메인페이지로 이동됩니다." href="draft.html" coords="1040,80,881,35" shape="rect">
+        <area alt="조언" title="눌러보세요. 조언 페이지로 이동됩니다." href="html/sub/draft_advice.html" coords="974,131,915,106" shape="rect">
+        <area alt="리베아월드" title="눌러보세요. 리베아월드 페이지로 이동됩니다." href="html/sub/draft_niveaworld.html" coords="1135,102,1218,132" shape="rect">
+        <area alt="로그인" title="눌러보세요. 로그인 페이지로 이동됩니다." href="html/draft_login.html" coords="126,42,176,71" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area alt="로고" title="로고" href="#" coords="324,14,441,46" shape="rect">
+    </map>
+
+    <map name="image-map-phone">
+        <area alt="로고" title="로고" href="#" coords="129,7,232,37" shape="rect">
+    </map>
+</body>
+
+</html>

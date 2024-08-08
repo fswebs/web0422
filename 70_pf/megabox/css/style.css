@@ -3,9 +3,6 @@
 @import url("common.css");
 
 /* 공통 영역 */
-html {
-    scroll-behavior: smooth;
-}
 
 /* 헤더 */
 header {
@@ -22,6 +19,7 @@ header {
 
 /* 섹션 공통 */
 section {
+    /* 상 좌우 하 - 폰에서만 */
     padding: 96px 32px 0;
 }
 
@@ -33,6 +31,7 @@ section h2 {
 }
 
 section li {
+    /* 섹션2,3 */
     margin-bottom: 20px;
     border: 1px solid #f1f1f1;
 }
@@ -43,11 +42,22 @@ section li {
     padding: 54px 0 0;
 }
 
+#sec1 div {
+    /* 
+        1500 : 745 = 100 : x
+        1500x = 745 * 100 -> x = 49.17vw
+    */
+    height: min(745px, 49.17vw);
+    margin: 0 auto;
+}
+
 #sec1 h2 {
     position: absolute;
     left: 50%;
-    top: 62%;
-    transform: translate(-50%, -50%);
+    /* 27px은 내비게이션 높이의 반만큼 내린다. */
+    top: calc(50% + 27px);
+    /* 27px의 반만큼 내린다. -> 14px */
+    transform: translate(-50%, calc(-50% + 14px));
     border: none;
 }
 
@@ -75,12 +85,19 @@ section li {
     margin-bottom: 48px;
 }
 
-#sec3 h3,
+#sec3 li h3 {
+    /* ... 생략 효과 */
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#sec3 li h3,
 #sec3 li p:last-of-type {
     margin: 24px 0;
 }
 
-#sec3 a {
+#sec3 li a {
     display: block;
     text-align: center;
     padding: 12px 0;
@@ -103,9 +120,15 @@ section li {
     margin: 16px 0 48px;
 }
 
+/* 섹션4 */
 #sec4 .map {
-    height: 260px;
+    /* 
+    height: 845px; 
+    1903 : 845 = 100 : x
+    1903x = 845 * 100 -> x=44.4vw
+    */
     margin-bottom: 8px;
+    height: 44.4vw;
 }
 
 /* 푸터 */
@@ -162,37 +185,32 @@ nav {
         margin-right: 20px;
     }
 
-    /* 섹션4 */
-    #sec4 .map {
-        height: 420px;
+    /* 섹션3 */
+    #sec3 li {
+        position: relative;
     }
-    
+
+    #sec3 li p:last-of-type {
+        margin: 24px 0 64px;
+    }
+
+    #sec3 a {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+
 }
 
 /* 992이상: 데스크탑 */
 @media (min-width: 992px) {
 
-    /* 섹션 공통 */
-    /* 
-        환산? 전체: 1920, 콘텐츠: 1480 
-        문> 1480은 1920 중에 몇 %인가?
-            1480 / 1903 * 100 = 77.77%
-    */
     section {
-        width: 77.77%;
-        /* width: 1480px; */
         margin: 0 auto;
-        /* border: 1px solid red; */
-    }
-
-    /* 섹션1 */
-    #sec1 h2 {
-        top: 55%;
     }
 
     /* 섹션2,3 공통 */
     section li {
-        /* calc(숫자 - 숫자), 연산자 앞뒤는 띄어쓰기 한다. */
         width: calc(25% - 15px);
     }
 
@@ -200,19 +218,21 @@ nav {
         margin-right: 20px;
     }
 
-    /* 섹션1 */
-    #sec1 div {
-        height: 745px;
+}
+
+/* 1480이상: 데스크탑 */
+@media (min-width: 1500px) {
+
+    /* 섹션 공통 */
+    section {
+        width: 1480px;
+        /* 데스크탑에서는 좌우 32px 여백 제거 */
+        padding: 96px 0px 0;
     }
 
-    /*  섹션2 */
-    /* #sec2 li {
-        height: 240px;
-    } */
-
-    /* 섹션4 */
-    #sec4 .map {
-        height: 845px;
+    #sec1 div {
+        width: 1480px;
+        height: 745px;
     }
 
 }

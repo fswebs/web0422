@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>니베아</title>
+    <style>
+        /* reset */
+        body {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: top;
+        }
+
+        /* 폰 */
+        img:first-of-type,
+        img:nth-of-type(2) {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+
+            /* 테블릿 */
+            img:last-of-type {
+                display: none;
+            }
+
+            img:nth-of-type(2) {
+                display: block;
+            }
+        }
+
+        @media (min-width: 992px) {
+
+            /* 데스크탑 */
+            img:nth-of-type(2) {
+                display: none;
+            }
+
+            img:first-of-type {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../../assets/advice/draft_advice_da.png" alt="데스크탑" usemap="#image-map-desktop">
+    <img src="../../assets/advice/draft_advice_ta.png" alt="테블릿" usemap="#image-map-tablet">
+    <img src="../../assets/advice/draft_advice_ph.png" alt="폰" usemap="#image-map-phone">
+
+    <map name="image-map-desktop">
+        <!-- 
+            shape="rect" coords="x1,y1,x2,y2"
+        -->
+        <area alt="로고" title="로고입니다. 누르면 메인페이지로 이동됩니다." href="../../draft.html" coords="1040,80,881,35" shape="rect">
+        <area alt="조언" title="눌러보세요. 조언 페이지로 이동됩니다." href="draft_advice.html" coords="974,131,915,106" shape="rect">
+        <area alt="리베아월드" title="눌러보세요. 리베아월드 페이지로 이동됩니다." href="draft_niveaworld.html" coords="1135,102,1218,132" shape="rect">
+        <area alt="로그인" title="눌러보세요. 로그인 페이지로 이동됩니다." href="../draft_login.html" coords="126,42,176,71" shape="rect">
+    </map>
+
+    <map name="image-map-tablet">
+        <area alt="로고" title="로고" href="#" coords="324,14,441,46" shape="rect">
+    </map>
+
+    <map name="image-map-phone">
+        <area alt="로고" title="로고" href="#" coords="129,7,232,37" shape="rect">
+    </map>
+</body>
+
+</html>
