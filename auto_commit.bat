@@ -1,6 +1,6 @@
 :loop
 
-	cd C:\Users\USER\Documents\GitHub\ju-ing
+	cd D:\조휘일T\web0422
 
 	git init
 	
@@ -13,6 +13,6 @@
 	git push
 	
 	:: 3600초 대기
-	TIMEOUT 3600
+	TIMEOUT 10
 	
 goto loop
