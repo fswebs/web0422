@@ -8,6 +8,7 @@
         * {box-sizing: border-box;}
         img {
             width: 100%;
+            object-fit: cover;
             vertical-align: top;
         }
         ul {
@@ -21,8 +22,8 @@
             left:50%;
             top:50%;
             transform: translate(-50%, -50%);
-            /* overflow: hidden; */
-            outline: 2px solid blue;
+            overflow: hidden;
+            border: 1px solid red;
         }
         #slideWrap ul {
             display: flex;
@@ -35,28 +36,35 @@
             // 요소 찾기
             const slide = document.querySelector("#slideWrap");
             const slideList = slide.querySelector("ul");
-            const slideListItemImg = slide.querySelectorAll("img");
-
+            const slideListItemImg = slideList.querySelectorAll("img");
+            
             // 요소 순번
             let idx = 0;
+            // 슬라이드 전환 시간
+            const speed = 2000;
+            
+            // 슬라이드 개수
+            const slideCount = slideListItemImg.length + 1;
+            
+            // 슬라이드 크기
+            const slideWidth = 50;
+            const slideHeight = 50;
+            
+            // 슬라이드 크기
+            slide.style.width = slideWidth + "%";
+            slide.style.height = slideHeight + "%";
+            slideList.style.width = 100 * slideCount + "%";
+            slideList.style.height = slideHeight + "%";
 
-            // ul의 첫 번째 요소 복제
+            // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
-            // 슬라이드 크기
-            slide.style.width = "400px";
-            // 슬라이드 이미지 크기
-            for (x of slideListItemImg) {
-                x.style.width = "400px";
-            }
-
             // 2초 마다 자동 슬라이드 함수 호출
-            setInterval(autoSlide, 2000);
+            setInterval(autoSlide, speed);
 
             // 자동 슬라이드 함수 선언
             function autoSlide(){
                 idx++;
-                console.log(idx);
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = "1s";
                 
