@@ -7,8 +7,10 @@
     <title>Document</title>
     <style>
         .collapsedMenuIcon {
-            display: inline-block;
+            position: absolute;
+            /* 마우스 포인터 모양 */
             cursor: pointer;
+            border: 1px solid red;
         }
 
         .bar1,
@@ -17,6 +19,7 @@
             width: 35px;
             height: 5px;
             background-color: #333;
+            border-radius: 3px;
             margin: 6px 0;
             transition: 0.4s;
         }
@@ -39,20 +42,11 @@
             const collapsedMenuIcon = document.querySelector(".collapsedMenuIcon");
 
             // 이벤트 처리
-            collapsedMenuIcon.onclick = (e)=>{
+            collapsedMenuIcon.onclick = ()=>{
+                // event.currentTarget는 이벤트 함수내에서 객체 자신을 가리킨다.
                 // 함수 호출
                 btnMotion(event.currentTarget);
-
-                // 화살표 함수 이벤트 내에서 this는 window이다.
-                    // console.log(collapsedMenuIcon);
-                    // console.log(event.currentTarget);
-                    // console.log(e.currentTarget);
-                // 익명 함수 이벤트 내에서 this는 이벤트 객체이다.
-                    // console.log(collapsedMenuIcon);
-                    // console.log(event.currentTarget);
-                    // console.log(e.currentTarget);
-                    // console.log(this);
-            };
+            }; 
 
             // 호이스팅
             // 함수 선언(정의)
