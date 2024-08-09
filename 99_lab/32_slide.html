@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {box-sizing: border-box;}
+        img {
+            width: 200px;
+            vertical-align: top;
+        }
+        ul {
+            list-style: none;
+            padding:0;
+            margin:0;
+        }
+
+        #slideWrap {
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            overflow: hidden;
+            outline: 10px solid blue;
+        }
+        #slideWrap ul {
+            position: relative;
+            width: 100%;
+            left: 0%;
+            display: flex;
+            outline: 1px solid red;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+            const slideList = document.querySelector("#slideWrap ul");
+            let idx = 0;
+
+            setInterval(autoSlide, 1000);
+
+            function autoSlide(){
+                idx++;
+                console.log(idx);
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = ".3s";
+                
+                if (idx === 5) {
+                    slideList.style.left = "0%";
+                    slideList.style.transition = "0s";
+                    idx = 0;
+                    setTimeout(()=>{
+                        slideList.style.left = "-100%";
+                        slideList.style.transition = ".3s";
+                    }, 10)
+                }
+
+
+                
+            }
+        });
+    </script>
 </head>
 <body>
-    깃 테스트 되네요
+    <div id="slideWrap">
+        <ul>
+            <li><img src="../assets/pic_1.jpg" alt="이미지1"></li>
+            <li><img src="../assets/pic_2.jpg" alt="이미지2"></li>
+            <li><img src="../assets/pic_3.jpg" alt="이미지3"></li>
+            <li><img src="../assets/pic_4.jpg" alt="이미지3"></li>
+            <li><img src="../assets/pic_5.jpg" alt="이미지3"></li>
+        </ul>
+    </div>
 </body>
 </html>
