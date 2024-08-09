@@ -21,6 +21,15 @@
             vertical-align: top;
         }
 
+        /* typo */
+        html {
+            font-size: 10px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
         /* slick 슬라이드 */
         .slider {
             position: absolute;
@@ -28,18 +37,18 @@
             top: 50%;
             transform: translate(-50%, -50%);
             width: 100%;
-            /* 데스크탑 슬라이드 전체 크기 */
-            max-width: 1210px;
+            /* 슬라이드 전체 크기 */
+            max-width: 260px;
         }
 
         /* 슬라이드 아이템 */
         .slick-slide {
-            margin: 8px 16px;
+            margin: 8px 10px;
             background: #fff;
             border-radius: 15px;
             /* 이미지 상단 영역 모서리 둥글게 보이기 */
             overflow: hidden;
-            box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
         }
 
         /* 설명글 */
@@ -48,33 +57,36 @@
         }
 
         /* 이전(prev)/다음(next) 버튼 */
-        .slick-prev:hover, .slick-next:hover, 
-        .slick-prev, .slick-next {
+        .slick-prev,
+        .slick-next {
             z-index: 9999;
-            width: 50px;
-            height: 50px;
-            padding: 8px;
+            width: 30px;
+            height: 30px;
+            padding: 4px;
             border-radius: 50%;
             background: #ccc;
         }
-        .slick-prev:hover, .slick-next:hover {
+
+        .slick-prev:hover,
+        .slick-next:hover {
             background: #ccc;
         }
 
-        .slick-prev::before, .slick-next::before {
+        .slick-prev::before,
+        .slick-next::before {
             display: block;
             width: 100%;
             height: 100%;
-            font-size: 0px; 
+            font-size: 0px;
             background: url(../assets/dessert39/btn-slider-arrow-white.svg);
         }
 
         .slick-prev {
-            /* 70px */
-            left: -120px;
+            left: min(-7vw, -40px);
         }
+
         .slick-next {
-            right: -120px;
+            right: min(-7vw, -40px);
         }
 
         .slick-prev::before {
@@ -82,6 +94,38 @@
         }
 
 
+        @media (min-width: 768px) {
+            .slider {
+                max-width: 620px;
+            }
+
+            .slick-slide {
+                margin: 8px 12px;
+            }
+            .slick-prev,
+            .slick-next {
+                width: 44px;
+                height: 44px;
+                padding: 6px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .slider {
+                max-width: 1210px;
+            }
+
+            .slick-slide {
+                margin: 8px 16px;
+            }
+
+            .slick-prev,
+            .slick-next {
+                width: 50px;
+                height: 50px;
+                padding: 8px;
+            }
+        }
     </style>
     <!-- 제이쿼리 라이브러리 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -107,19 +151,19 @@
                         // 992 이하 테블릿
                         breakpoint: 992,
                         settings: {
-                            arrows: false,
+                            // arrows: false -> 좌우버튼 숨기기
                             centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 3
+                            centerPadding: '180px',
+                            slidesToShow: 1
                         }
                     },
                     {
                         // 768 이하 폰
                         breakpoint: 768,
                         settings: {
-                            arrows: false,
+                            // arrows: false -> 좌우버튼 숨기기
                             centerMode: true,
-                            centerPadding: '40px',
+                            centerPadding: '30px',
                             slidesToShow: 1
                         }
                     }
