@@ -34,7 +34,7 @@
 
         /* 슬라이드 아이템 */
         .slick-slide {
-            margin: 0 16px;
+            margin: 8px 16px;
             background: #fff;
             border-radius: 15px;
             /* 이미지 상단 영역 모서리 둥글게 보이기 */
@@ -48,6 +48,7 @@
         }
 
         /* 이전(prev)/다음(next) 버튼 */
+        .slick-prev:hover, .slick-next:hover, 
         .slick-prev, .slick-next {
             z-index: 9999;
             width: 50px;
@@ -56,6 +57,10 @@
             border-radius: 50%;
             background: #ccc;
         }
+        .slick-prev:hover, .slick-next:hover {
+            background: #ccc;
+        }
+
         .slick-prev::before, .slick-next::before {
             display: block;
             width: 100%;
@@ -65,10 +70,11 @@
         }
 
         .slick-prev {
-            left: calc(50% - 35vw);
+            /* 70px */
+            left: -120px;
         }
         .slick-next {
-            right: calc(50% - 35vw);
+            right: -120px;
         }
 
         .slick-prev::before {
