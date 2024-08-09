@@ -8,6 +8,7 @@
         * {box-sizing: border-box;}
         img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
             vertical-align: top;
         }
@@ -25,10 +26,32 @@
             overflow: hidden;
             border: 1px solid red;
         }
+
         #slideWrap ul {
             display: flex;
             position: relative;
             left: 0%;
+        }
+
+        /* prev/next */
+        #slideWrap .controls {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        #slideWrap .controls a {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            border: 1px solid blue;
+        }
+        #slideWrap .prev {
+            left: 30px;            
+        }
+        #slideWrap .next {
+            right: 30px;
         }
     </style>
     <script>
@@ -36,8 +59,9 @@
             // 요소 찾기
             const slide = document.querySelector("#slideWrap");
             const slideList = slide.querySelector("ul");
+            const slideListItem = slideList.querySelectorAll("li");
             const slideListItemImg = slideList.querySelectorAll("img");
-            
+
             // 요소 순번
             let idx = 0;
             // 슬라이드 전환 시간
@@ -45,22 +69,30 @@
             
             // 슬라이드 개수
             const slideCount = slideListItemImg.length + 1;
+            console.log(slideCount);
             
             // 슬라이드 크기
             const slideWidth = 50;
             const slideHeight = 50;
             
-            // 슬라이드 크기
-            slide.style.width = slideWidth + "%";
-            slide.style.height = slideHeight + "%";
-            slideList.style.width = 100 * slideCount + "%";
-            slideList.style.height = slideHeight + "%";
-
+            slideSize();
+            
+            function slideSize() {
+                // 슬라이드 크기
+                slide.style.width = slideWidth + "%";
+                slide.style.height = slideHeight + "%";
+                slideList.style.width = 100 * slideCount + "%";
+                slideList.style.height = 100 + "%";
+                for(x of slideListItem) {
+                    x.style.width = 100 + "%";
+                }
+            }
+            
             // ul의 첫 번째 요소 ul끝에 복제 (반드시 크기를 지정하고 복제해야 한다!)
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
-
+            
             // 2초 마다 자동 슬라이드 함수 호출
-            setInterval(autoSlide, speed);
+            // setInterval(autoSlide, speed);
 
             // 자동 슬라이드 함수 선언
             function autoSlide(){
@@ -68,7 +100,27 @@
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = "1s";
                 
-                if (idx === 6) {
+                if (idx === slideCount) {
+                    idx = 0;
+                    slideList.style.left = "0%";
+                    slideList.style.transition = "0s";
+                    setTimeout(()=>{
+                        idx = 1
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = "1s";
+                    }, 0)
+                }
+            }
+
+            // 
+
+            // 다음 슬라이드
+            function nextSlide(){
+                idx++;
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = "1s";
+                
+                if (idx === slideCount) {
                     idx = 0;
                     slideList.style.left = "0%";
                     slideList.style.transition = "0s";
@@ -88,9 +140,11 @@
             <li><img src="../assets/pic_1.jpg" alt="이미지1"></li>
             <li><img src="../assets/pic_2.jpg" alt="이미지2"></li>
             <li><img src="../assets/pic_3.jpg" alt="이미지3"></li>
-            <li><img src="../assets/pic_4.jpg" alt="이미지3"></li>
-            <li><img src="../assets/pic_5.jpg" alt="이미지3"></li>
         </ul>
+        <div class="controls">
+            <a href="#" class="prev">prev</a>
+            <a href="#" class="next">next</a>
+        </div>
     </div>
 </body>
 </html>
