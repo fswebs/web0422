@@ -7,7 +7,7 @@
     <style>
         * {box-sizing: border-box;}
         img {
-            width: 200px;
+            width: 100%;
             vertical-align: top;
         }
         ul {
@@ -21,43 +21,55 @@
             left:50%;
             top:50%;
             transform: translate(-50%, -50%);
-            width: 200px;
             /* overflow: hidden; */
             outline: 2px solid blue;
         }
         #slideWrap ul {
             display: flex;
             position: relative;
-            width: 100%;
             left: 0%;
         }
     </style>
     <script>
         window.addEventListener("DOMContentLoaded",()=>{
-            const slideList = document.querySelector("#slideWrap ul");
+            // 요소 찾기
+            const slide = document.querySelector("#slideWrap");
+            const slideList = slide.querySelector("ul");
+            const slideListItemImg = slide.querySelectorAll("img");
+
+            // 요소 순번
             let idx = 0;
 
-            setInterval(autoSlide, 3000);
+            // ul의 첫 번째 요소 복제
+            slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
+            // 슬라이드 크기
+            slide.style.width = "400px";
+            // 슬라이드 이미지 크기
+            for (x of slideListItemImg) {
+                x.style.width = "400px";
+            }
+
+            // 2초 마다 자동 슬라이드 함수 호출
+            setInterval(autoSlide, 2000);
+
+            // 자동 슬라이드 함수 선언
             function autoSlide(){
                 idx++;
                 console.log(idx);
                 slideList.style.left = -100 * idx + "%";
                 slideList.style.transition = "1s";
                 
-                if (idx === 5) {
+                if (idx === 6) {
                     idx = 0;
-                    slideList.style.left = "0%";
                     slideList.style.left = "0%";
                     slideList.style.transition = "0s";
                     setTimeout(()=>{
+                        idx = 1
                         slideList.style.left = -100 * idx + "%";
                         slideList.style.transition = "1s";
                     }, 0)
                 }
-
-
-                
             }
         });
     </script>
