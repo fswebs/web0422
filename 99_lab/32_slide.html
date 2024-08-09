@@ -22,15 +22,14 @@
             top:50%;
             transform: translate(-50%, -50%);
             width: 200px;
-            overflow: hidden;
-            outline: 10px solid blue;
+            /* overflow: hidden; */
+            outline: 2px solid blue;
         }
         #slideWrap ul {
+            display: flex;
             position: relative;
             width: 100%;
             left: 0%;
-            display: flex;
-            outline: 1px solid red;
         }
     </style>
     <script>
@@ -38,22 +37,22 @@
             const slideList = document.querySelector("#slideWrap ul");
             let idx = 0;
 
-            setInterval(autoSlide, 1000);
+            setInterval(autoSlide, 3000);
 
             function autoSlide(){
                 idx++;
                 console.log(idx);
                 slideList.style.left = -100 * idx + "%";
-                slideList.style.transition = ".3s";
+                slideList.style.transition = "1s";
                 
                 if (idx === 5) {
+                    idx = 0;
                     slideList.style.left = "0%";
                     slideList.style.transition = "0s";
-                    idx = 0;
                     setTimeout(()=>{
-                        slideList.style.left = "-100%";
-                        slideList.style.transition = ".3s";
-                    }, 10)
+                        slideList.style.left = -100 * idx + "%";
+                        slideList.style.transition = "1s";
+                    }, 0)
                 }
 
 
