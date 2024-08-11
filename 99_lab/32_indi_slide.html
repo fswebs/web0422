@@ -32,7 +32,7 @@
             border: 1px solid red;
         }
 
-        #slideWrap ul {
+        #slideWrap .slideImg {
             display: flex;
             position: relative;
             left: 0%;
@@ -61,6 +61,28 @@
         #slideWrap .next {
             right: 30px;
         }
+
+        /* indicator */
+        #slideWrap .indicator {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+        }
+
+        #slideWrap .indicator a {
+            display: inline-block;
+            text-indent: 9999em;
+            width: .7vw;
+            height: .7vw;
+            border-radius: 50%;
+            margin: 0 8px;
+            background: #fff;
+        }
+
+        #slideWrap .indicator a.active {
+            background: #f00;
+        }
     </style>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
@@ -71,11 +93,16 @@
             const slideListItemImg = slideList.querySelectorAll("img");
             const prevBtn = slide.querySelector(".prev");
             const nextBtn = slide.querySelector(".next");
+            const indicator = slide.querySelectorAll(".indicator a");
 
             // 요소 순번
             let idx = 0;
+
             // 슬라이드 전환 시간
             const speed = 2000;
+
+            // 클릭 허용
+            let flag = 1;
 
             // 슬라이드 개수
             const slideCount = slideListItemImg.length + 1;
@@ -106,54 +133,90 @@
 
             // auto slide function
             function autoSlide() {
-                nextSlide();
+                idx >= slideCount - 1 ? idx = 1 : ++idx;
+                nextSlide(idx);
             }
 
             // prev/next button event
-            prevBtn.onclick = () => { prevSlide() };
-            nextBtn.onclick = () => { nextSlide() };
+            prevBtn.onclick = () => {
+
+                // 클릭 제한
+                if (flag === 0) return;
+                flag = 0;
+                setTimeout(() => { flag = 1 }, 1000);
+
+                idx <= 1 ? idx = slideCount - 1 : --idx;
+                console.log("prev버튼", idx);
+                prevSlide(idx);
+            };
+
+            nextBtn.onclick = () => {
+
+                // 클릭 제한
+                if (flag === 0) return;
+                flag = 0;
+                setTimeout(() => { flag = 1 }, 1000);
+
+                idx >= slideCount - 1 ? idx = 1 : ++idx;
+                console.log("next버튼", idx);
+                nextSlide(idx);
+            };
 
 
             // previous slide function
-            function prevSlide() {
-                idx--;
+            function prevSlide(idx) {
                 
-                if (idx === -1) {
+                if (idx === slideCount - 1) {
                     idx = slideCount - 1;
                     slideList.style.left = -100 * idx + "%";
                     slideList.style.transition = "0s";
-                    setTimeout(() => {
-                        idx--;
-                        slideList.style.left = -100 * idx + "%";
-                        slideList.style.transition = "1s";
-                    }, 0)
-                } else {
+                }
+                idx--;
+                setTimeout(()=>{
                     slideList.style.left = -100 * idx + "%";
                     slideList.style.transition = "1s";
-                }
-
+                },0);
+                
                 console.log("이전", idx);
+                if (idx === 3) idx = 0;
+                indiActive(idx);
+
             }
 
             // next slide function
-            function nextSlide() {
-                idx++;
+            function nextSlide(idx) {
+                slideList.style.left = -100 * idx + "%";
+                slideList.style.transition = "1s";
 
-                if (idx === slideCount) {
-                    idx = 0;
-                    slideList.style.left = -100 * idx + "%";
-                    slideList.style.transition = "0s";
+                if (idx === slideCount - 1) {
                     setTimeout(() => {
-                        idx++;
+                        idx = 0;
                         slideList.style.left = -100 * idx + "%";
-                        slideList.style.transition = "1s";
-                    }, 0)
-                } else {
-                    slideList.style.left = -100 * idx + "%";
-                    slideList.style.transition = "1s";
+                        slideList.style.transition = "0s";
+                    }, 1000)
                 }
 
                 console.log("다음", idx);
+                if (idx === 3) idx = 0;
+                indiActive(idx);
+
+            }
+
+            // indicator
+            indicator.forEach((indi, idx) => {
+                indi.onclick = () => {
+                    nextSlide(idx)
+
+                    console.log("인디케이터", idx);
+                };
+            });
+
+            // indicator active color function
+            function indiActive(indi) {
+                for (x of indicator) {
+                    x.classList.remove("active");
+                }
+                indicator[indi].classList.add("active");
             }
         });
     </script>
@@ -161,7 +224,7 @@
 
 <body>
     <div id="slideWrap">
-        <ul>
+        <ul class="slideImg">
             <li><img src="../assets/pic_1.jpg" alt="이미지1"></li>
             <li><img src="../assets/pic_2.jpg" alt="이미지2"></li>
             <li><img src="../assets/pic_3.jpg" alt="이미지3"></li>
@@ -169,6 +232,11 @@
         <div class="controls">
             <a href="#" class="prev">prev</a>
             <a href="#" class="next">next</a>
+        </div>
+        <div class="indicator">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
         </div>
     </div>
 </body>
