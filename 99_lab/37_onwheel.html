@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
         }
@@ -27,11 +31,11 @@
         }
 
         section:nth-of-type(2) {
-            background: rgb(44, 149, 184);
+            background: red;
         }
 
         section:nth-of-type(3) {
-            background: rgb(84, 197, 235);
+            background: orange;
         }
 
         section:nth-of-type(4) {
@@ -46,9 +50,35 @@
 </head>
 <script>
     window.addEventListener("DOMContentLoaded", () => {
-        const section = document.querySelectorAll("section");
-        console.log(section[0].nextElementSibling);
-        console.log(section[0].previousElementSibling);
+        const htmlEle = document.documentElement;
+        const sectionEle = document.querySelectorAll("section");
+        let lastSt = 0;
+        let flag = 0;
+
+        window.onscroll = () => {
+
+            if (flag) return;
+            flag = 1;
+            setTimeout(() => flag = 0, 300);
+
+
+            // 요소 찾기
+            const htmlTag = document.documentElement;
+            let st = htmlTag.scrollTop;
+            console.log(st);
+
+            for(x of sectionEle) {
+                if (st > lastSt) {
+                    htmlEle.scrollTop = x.nextElementSibling.offsetTop;
+                    console.log("아래로 내림");
+                } else {
+                    htmlEle.scrollTop = x.previousElementSibling.offsetTop;
+                    console.log("위로 올림");
+                }
+                lastSt = st;
+            }
+
+        };
     });
 </script>
 
