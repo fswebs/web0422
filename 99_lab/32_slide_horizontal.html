@@ -101,6 +101,10 @@
             // 슬라이드 전환 시간
             const speed = 2000;
 
+            // 타이머
+            let auto;
+            let timer;
+
             // 클릭 허용
             let flag = 1;
 
@@ -129,12 +133,16 @@
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
             // 2초 마다 자동 슬라이드 함수 호출
-            // setInterval(autoSlide, speed);
+            auto = setInterval(autoSlide, speed);
 
             // auto slide function
             function autoSlide() {
-                idx >= slideCount - 1 ? idx = 1 : ++idx;
+                idx === slideCount - 1 ? idx = 1 : ++idx;
                 nextSlide(idx);
+            }
+
+            function pauseSlide() {
+                clearInterval(auto);
             }
 
             // prev/next button event
