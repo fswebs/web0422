@@ -45,7 +45,7 @@
             navTag.appendChild(spanTag);
 
             navTag.onmousemove = ()=>{
-                spanTag.style.left = event.pageX;
+                spanTag.style.left = event.pageX - 15 + "px";
                 console.log(spanTag.style.left);
             };
         });
