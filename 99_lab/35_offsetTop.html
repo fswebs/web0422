@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            top: 0px;
+            margin-top: 0px;
+            padding-top: 20px;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<script>
+    window.addEventListener("DOMContentLoaded", ()=>{
+        const div = document.querySelector("div");
+        console.log(div.offsetTop);
+    });
+</script>
+<body>
+    <div>박스</div>
+</body>
+</html>
