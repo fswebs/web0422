@@ -133,20 +133,25 @@
             slideList.appendChild(slideList.firstElementChild.cloneNode(true));
 
             // 2초 마다 자동 슬라이드 함수 호출
-            auto = setInterval(autoSlide, speed);
-
+            autoSlide();            
             // auto slide function
             function autoSlide() {
-                idx === slideCount - 1 ? idx = 1 : ++idx;
-                nextSlide(idx);
+                auto = setInterval(()=>{
+                    idx === slideCount - 1 ? idx = 1 : ++idx;
+                    nextSlide(idx);
+                }, speed);
             }
 
             function pauseSlide() {
                 clearInterval(auto);
+                clearTimeout(timer);
+                timer = setTimeout(autoSlide, 7000);
             }
 
             // prev/next button event
             prevBtn.onclick = () => {
+
+                pauseSlide();
 
                 // 클릭 제한
                 if (flag === 0) return;
@@ -159,6 +164,8 @@
             };
 
             nextBtn.onclick = () => {
+
+                pauseSlide();
 
                 // 클릭 제한
                 if (flag === 0) return;
@@ -211,7 +218,8 @@
             // indicator
             indicator.forEach((indi, idx) => {
                 indi.onclick = () => {
-                    nextSlide(idx)
+                    pauseSlide();
+                    nextSlide(idx);
 
                     console.log("인디케이터", idx);
                 };
