@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            border: 1px solid blue;
+        }
+        section {
+            height: 100vh;
+            border: 2px solid red;
+            padding: 5px;
+            overflow-y: scroll;
+        }
+        div {
+            height: 2000px;
+        }
+    </style>
+    <script>
+        window.addEventListener("DOMContentLoaded", ()=>{
+            const sectionEle = document.querySelectorAll("section")[0];
+
+            console.log("document.body.offsetHeight", document.body.offsetHeight);
+            console.log("document.body.clientHeight", document.body.clientHeight);
+            console.log("document.body.scrollHeight", document.body.scrollHeight);
+            console.log("sectionEle.offsetHeight", sectionEle.offsetHeight);
+            console.log("sectionEle.clientHeight", sectionEle.clientHeight);
+            console.log("sectionEle.scrollHeight", sectionEle.scrollHeight);
+        });
+;    </script>
+</head>
+<body>
+    <section>
+        <div>박스</div>
+    </section>
+    <section>섹션2</section>
+    <section>섹션3</section>
+    <section>섹션4</section>
+</body>
+</html>
