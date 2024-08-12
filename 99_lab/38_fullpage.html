@@ -52,19 +52,17 @@
     window.addEventListener("DOMContentLoaded", () => {
         const htmlEle = document.documentElement;
         const sectionEle = document.querySelectorAll("section");
-        const docHeight = document.innerHeight;
-        console.log("문서높이", docHeight);
-
+        
         sectionEle.forEach((x, i) => {
             x.onwheel = () => {
                 event.preventDefault();
                 // 위로 음수, 아래로 양수
                 if (event.deltaY > 0) {
-                    if (htmlEle.scrollTop > winHeight * (sectionEle.length)) return;
+                    if (htmlEle.scrollTop) return;
                     console.log("스크롤탑", htmlEle.scrollTop);
                     htmlEle.scrollTop = x.nextElementSibling.offsetTop;
                 } else {
-                    if (htmlEle.scrollTop < winHeight) return;
+                    if (htmlEle.scrollTop) return;
                     htmlEle.scrollTop = x.previousElementSibling.offsetTop;
                 }
             };
