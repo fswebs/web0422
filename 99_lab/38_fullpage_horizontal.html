@@ -12,17 +12,25 @@
 
         body {
             margin: 0;
+            /* 스크롤바 숨김 */
+            overflow: hidden;
+        }
+
+        .wrap {
+            display: flex;
         }
 
         header {
             z-index: 9999;
             position: fixed;
-            width: 100%;
-            height: 56px;
-            background: #bbbbbb;
+            width: 56px;
+            height: 100vh;
+            background: #bbb;
         }
 
         section {
+            flex-shrink: 0;
+            width: 100vw;
             height: 100vh;
         }
 
@@ -41,11 +49,6 @@
         section:nth-of-type(4) {
             background: rgb(5, 181, 240);
         }
-
-        footer {
-            height: 200px;
-            background: #000;
-        }
     </style>
 </head>
 <script>
@@ -53,18 +56,19 @@
         const htmlEle = document.documentElement;
         const bodyEle = document.body;
         const sectionEle = document.querySelectorAll("section");
-        
+        console.log(bodyEle.scrollWidth);
+
         sectionEle.forEach((x, i) => {
             x.onwheel = () => {
                 event.preventDefault();
                 // 위로 음수, 아래로 양수
                 console.log("이벤트발생");
                 if (event.deltaY > 0) {
-                    if (htmlEle.scrollTop > bodyEle.offsetHeight) return;
-                    htmlEle.scrollTop = x.nextElementSibling.offsetTop;
+                    if (htmlEle.scrollLeft > bodyEle.scrollWidth / 2) return;
+                    htmlEle.scrollLeft = x.nextElementSibling.offsetLeft;
                 } else {
-                    if (htmlEle.scrollTop < 0) return;
-                    htmlEle.scrollTop = x.previousElementSibling.offsetTop;
+                    if (htmlEle.scrollLeft < 0) return;
+                    htmlEle.scrollLeft = x.previousElementSibling.offsetLeft;
                 }
             };
         });
@@ -72,12 +76,13 @@
 </script>
 
 <body>
-    <header>헤더</header>
-    <section>섹션1</section>
-    <section>섹션2</section>
-    <section>섹션3</section>
-    <section>섹션4</section>
-    <footer>푸터</footer>
+    <div class="wrap">
+        <header>헤더</header>
+        <section>섹션1</section>
+        <section>섹션2</section>
+        <section>섹션3</section>
+        <section>섹션4</section>
+    </div>
 </body>
 
 </html>
