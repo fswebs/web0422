@@ -52,11 +52,13 @@
             // 이벤트 처리
             // 객체.이벤트(function(){})
             firstList.click(()=>{
-                modal.style.display = "block";
+                // css("속성", "값")
+                // css({속성: 값, 속성: 값, ...})
+                modal.css({display: "block"});
             });
 
             closeBtn.click(()=>{
-                modal.style.display = "none";
+                modal.css({display: "none"});
             });
         });
     </script>
