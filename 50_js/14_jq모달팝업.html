@@ -52,6 +52,8 @@
             // 이벤트 처리
             // 객체.이벤트(function(){})
             firstList.click(()=>{
+                // 기본 이벤트 제거 -> a의 링크
+                event.preventDefault();
                 // css("속성", "값")
                 // css({속성: 값, 속성: 값, ...})
                 modal.css({display: "block"});
