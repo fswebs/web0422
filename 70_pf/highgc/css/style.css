@@ -62,12 +62,12 @@ nav {
     font-weight: bold;
 }
 
-.main>li>a {
+.main > li > a {
     display: inline-block;
     padding: 16px 24px;
 }
 
-.main>li>a:hover {
+.main > li > a:hover {
     background: #e31a40;
 }
 
@@ -214,7 +214,7 @@ nav {
     padding: 20px 40px;
 }
 
-#board>div {
+#board > div {
     width: 600px;
     height: 260px;
 }
@@ -256,7 +256,6 @@ nav {
     height: 140px;
     margin-bottom: 8px;
 }
-
 
 /* D영역 */
 footer {
