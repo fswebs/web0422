@@ -26,10 +26,10 @@
         } 
         #slide ul { 
             position: relative;
-            /* left: 0 -> -100% -> -200% -> -300% -> 0 */
+            /* left: 0 -> -100% -> -200% -> 0 */
             left:0%;
             display: flex; 
-            width: 400%; 
+            width: 300%; 
         } 
     </style>
     <!-- 제이쿼리 라이브러리 -->
@@ -56,21 +56,21 @@
 
             // 위치 변수 선언
             // 단위를 생략하면 px이다.
-            let posx = 0;
+            let idx = 0;
 
             // 1초 마다 autoSlide 호출
             setInterval(autoSlide, 1000);
 
             function autoSlide(){
-                console.log("posx",posx);
-                // posx가 0 -> 1 -> 2 -> 0
-                // if (posx === 3) {
-                //     posx = 0;
+                console.log("idx",idx);
+                // idx가 0 -> 1 -> 2 -> 0
+                // if (idx === 2) {
+                //     idx = 0;
                 // } else {
-                //     posx++;
+                //     idx++;
                 // }
-                (posx === 3) ? posx = 0 : posx++;
-                $("#slide ul").animate({left: posx * -100 + "%"});
+                (idx === 2) ? idx = 0 : idx++;
+                $("#slide ul").animate({left: idx * -100 + "%"});
             }
         });
     </script>
