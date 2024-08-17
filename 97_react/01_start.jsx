@@ -1,7 +1,7 @@
 // JSX(JavaScript XML) - return ()안의 HTML태그는 따옴표 없이 사용
 // JSX 파일명: *.jsx
 // 함수명의 첫 글자는 대문자로 기록한다.
-function MyFirstReact(){
+function Hello(){
     return (
         <div>
             <h2>ReactJS?</h2>
@@ -19,4 +19,4 @@ function MyFirstReact(){
         컨테이너는 HTML 페이지의 div.myRoot
 */
 // HTML 페이지에 요소 삽입
-ReactDOM.render(<MyFirstReact/>, document.querySelector(".myRoot"));
+ReactDOM.render(<Hello/>, document.querySelector(".myRoot"));
