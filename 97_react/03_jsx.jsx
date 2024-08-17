@@ -46,3 +46,20 @@ root5.render(myElement5);
 const myElement6 = <h2 className="myclass">Hello World</h2>;
 const root6 = ReactDOM.createRoot(document.querySelectorAll("#root div")[5]);
 root6.render(myElement6);
+
+// JSX 외부에 조건문 if 사용하기
+const x = 5;
+let text = "Goodbye";
+if (x < 10) {
+  text = "Hello";
+}
+
+const myElement7 = <h2>{text}</h2>;
+const root7 = ReactDOM.createRoot(document.querySelectorAll("#root div")[6]);
+root7.render(myElement7);
+
+// JSX 내부에 삼항 연산자 사용하기
+const x2 = 5;
+const myElement8 = <h2>{(x2) < 10 ? "Hello" : "Goodbye"}</h2>;
+const root8 = ReactDOM.createRoot(document.querySelectorAll("#root div")[7]);
+root8.render(myElement8);
