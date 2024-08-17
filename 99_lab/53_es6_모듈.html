@@ -14,18 +14,23 @@
                 import: 파일에서 함수나 변수를 가져온다.
         */
 
+        // 명명된 내보내기를 가져오기
         import {name, age} from "./53_es6_person.js";
+        // 기본 내보내기를 가져오기
+        import message from "./53_es6_message.js";
 
         window.addEventListener("DOMContentLoaded",()=>{
             // 요소 찾기
-            const p = document.querySelector("p");
+            const p = document.querySelectorAll("p");
 
-            p.innerHTML = "My name is " + name + ", I'm " + age + ".";
+            p[0].innerHTML = "My name is " + name + ", I'm " + age + ".";
+            p[1].innerHTML = message();
         });        
     </script>
 </head>
 
 <body>
+    <p></p>
     <p></p>
 </body>
 
