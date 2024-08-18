@@ -50,7 +50,7 @@ root4.render(<Car3 color="red" brand="Benz" />);
 // 컴포넌트 내의 컴포넌트
 function Car4() {
     return <h2>I am a Car!</h2>;
-}
+} 
 
 function Garage() {
     return (
@@ -63,3 +63,6 @@ function Garage() {
 
 const root5 = ReactDOM.createRoot(document.querySelectorAll("#root div")[4]);
 root5.render(<Garage />);
+
+// 컴포넌트를 별도의 파일로 분할(.js)
+
