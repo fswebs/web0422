@@ -1,3 +1,6 @@
+// import된 *.js 또는 *.jsx 파일 확장자는 생략 가능
+import Car5 from "./Car5";
+
 /* 
     extends React.Component ~ React.Component에 대한 상속을 생성하고, 컴포넌트에 React.Component의 함수에 대한 액세스를 제공한다.
     render() ~ HTML 반환
@@ -64,5 +67,10 @@ function Garage() {
 const root5 = ReactDOM.createRoot(document.querySelectorAll("#root div")[4]);
 root5.render(<Garage />);
 
-// 컴포넌트를 별도의 파일로 분할(.js)
 
+// 컴포넌트를 별도의 파일로 분할(.js)
+// 파일 이름은 대문자로 시작해야 한다.
+
+
+const root6 = ReactDOM.createRoot(document.querySelectorAll("#root div")[5]);
+root6.render(<Car5 />);
