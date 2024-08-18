@@ -1,65 +1,65 @@
-// 변수 선언
-const myElement1 = <h2>I do use JSX!</h2>;
-
 /* 
-    ReactDOM
-    createRoot() ~ React 구성 요소가 표시될 HTML 요소 정의 메소드 
-    render()
-
-    [출력 방법1]
-        ReactDOM.render(요소, 컨테이너);
-    [출력 방법2]
-        const 변수 = ReactDOM.createRoot(컨테이너);
-        변수.render(요소);
+    extends React.Component ~ React.Component에 대한 상속을 생성하고, 컴포넌트에 React.Component의 함수에 대한 액세스를 제공한다.
+    render() ~ HTML 반환
 */
-const root1 = ReactDOM.createRoot(document.querySelectorAll("#root div")[0]);
-root1.render(myElement1);
 
-// createElement("태그", {표현식}, 내용) ~ React 요소 생성 메소드
-const myElement2 = React.createElement("h2", {}, "I do not use JSX!");
-const root2 = ReactDOM.createRoot(document.querySelectorAll("#root div")[1]);
-root2.render(myElement2);
-
-// JSX 표현식 - { } 안에 React 변수, 속성, JS 표현식을 사용한다.
-const num = 5;
-const myElement3 = <h2>React is {num + num} times better with JSX</h2>;
-const root3 = ReactDOM.createRoot(document.querySelectorAll("#root div")[2]);
-root3.render(myElement3);
-
-// 최상위 요소는 하나
-// 최상위 요소는 HTML 태그, <React.Fragment></React.Fragment> 또는 <></>로 한다.
-const myElement4 = (
-    <React.Fragment>
-        <p>I am a paragraph.</p>
-        <p>I am a paragraph too.</p>
-    </React.Fragment>
-);
-const root4 = ReactDOM.createRoot(document.querySelectorAll("#root div")[3]);
-root4.render(myElement4);
-
-// 빈 요소는 />로 닫는다.
-const myElement5 = <input type="text" />;
-const root5 = ReactDOM.createRoot(document.querySelectorAll("#root div")[4]);
-root5.render(myElement5);
-
-// class 대신 className으로 기록한다.
-const myElement6 = <h2 className="myclass">Hello World</h2>;
-const root6 = ReactDOM.createRoot(document.querySelectorAll("#root div")[5]);
-root6.render(myElement6);
-
-// JSX 외부에 조건문 if 사용하기
-const x = 5;
-let text = "Goodbye";
-if (x < 10) {
-  text = "Hello";
+// 클래스 컴포넌트 생성
+class Car extends React.Component {
+    render() {
+        return (
+            <>
+                <h2>Hi, I am a Car!</h2>
+                <img src="assets/car.jpg" alt="카" />
+            </>
+        );
+    }
 }
 
-const myElement7 = <h2>{text}</h2>;
-const root7 = ReactDOM.createRoot(document.querySelectorAll("#root div")[6]);
-root7.render(myElement7);
+// 컴포넌트 렌더링
+const root1 = ReactDOM.createRoot(document.querySelectorAll("#root div")[0]);
+root1.render(<Car />);
 
-// JSX 내부에 삼항 연산자 사용하기
-const x2 = 5;
-const myElement8 = <h2>{(x2) < 10 ? "Hello" : "Goodbye"}</h2>;
-const root8 = ReactDOM.createRoot(document.querySelectorAll("#root div")[7]);
-root8.render(myElement8);
+// 함수 컴포넌트 생성
+function Car2() {
+    return <h2>Hi, I am a Car!</h2>;
+}
+
+const root2 = ReactDOM.createRoot(document.querySelectorAll("#root div")[1]);
+root2.render(<Car2 />);
+
+/* 
+    props ~ 함수의 인수와 같으며, 속성으로 컴포넌트에 전송한다. 
+    
+    function 함수명(props) {
+        return XML문장 내에서 {props.속성명}
+    }
+
+    render(<함수명 속성="값" />);
+*/
+function Car3(props) {
+    return <h2>I am a {props.color} and I drive a {props.brand} Car!</h2>;
+}
+
+const root3 = ReactDOM.createRoot(document.querySelectorAll("#root div")[2]);
+root3.render(<Car3 color="yellow" brand="Ford" />);
+
+// 컴포넌트 재사용
+const root4 = ReactDOM.createRoot(document.querySelectorAll("#root div")[3]);
+root4.render(<Car3 color="red" brand="Benz" />);
+
+// 컴포넌트 내의 컴포넌트
+function Car4() {
+    return <h2>I am a Car!</h2>;
+}
+
+function Garage() {
+    return (
+        <>
+            <h2>Who lives in my Garage?</h2>
+            <Car4 />
+        </>
+    );
+}
+
+const root5 = ReactDOM.createRoot(document.querySelectorAll("#root div")[4]);
+root5.render(<Garage />);
