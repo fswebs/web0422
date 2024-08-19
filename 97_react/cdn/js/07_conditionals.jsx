@@ -26,7 +26,8 @@ function Garage(props) {
     return (
         <>
             <h2>Garage</h2>
-            {cars.length > 3 &&
+            {/* condition && true */}
+            {cars.length > 0 &&
                 <h2>
                     You have {cars.length} cars in your garage.
                 </h2>

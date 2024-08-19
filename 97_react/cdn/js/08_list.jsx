@@ -11,8 +11,8 @@ function Garage() {
         <>
             <h2>Who lives in my garage?</h2>
             <ul>
-                {/* map()을 사용하여 목록을 렌더링한다. */}
-                {cars.map(car => <Car brand={car} />)}
+{/* map()을 사용하여 목록을 렌더링한다. */}
+{cars.map(car => <Car brand={car} />)}
             </ul>
         </>
     );
