@@ -40,4 +40,6 @@ const root2 = ReactDOM.createRoot(document.querySelectorAll("#root div")[1]);
 root2.render(<Garage cars={cars} />);
 
 // 삼항 연산자
-// 
+// condition ? true : false
+
+
