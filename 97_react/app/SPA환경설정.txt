@@ -14,3 +14,5 @@ npm uninstall -g create-react-app
 npx create-react-app 앱이름
 - react, react-dom 설치
 npm i react react-dom
+- 앱 실행
+npm start
