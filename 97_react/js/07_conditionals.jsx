@@ -41,5 +41,15 @@ root2.render(<Garage cars={cars} />);
 
 // 삼항 연산자
 // condition ? true : false
+function Goal2(props) {
+    const isGoal = props.isGoal;
+    return (
+        <>
+            {isGoal ? <MadeGoal /> : <MissedGoal />}
+        </>
+    );
+}
 
+const root3 = ReactDOM.createRoot(document.querySelectorAll("#root div")[2]);
+root3.render(<Goal2 isGoal={true} />);
 
