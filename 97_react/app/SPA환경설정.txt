@@ -2,7 +2,11 @@
 - https://nodejs.org/en
 - 참고: node.js? 서버에서 동작하는 JS
 
-2. VSCode 터미널 작업
+2. path 확인
+- 시스템 속성>고급>환경변수>path: 
+-> C:\Program Files\nodejs 없으면 새로 만들기로 추가
+
+3. VSCode 터미널 작업
 - npm? node package management
 - 기존 npm Global 제거
 npm uninstall -g create-react-app
