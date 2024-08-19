@@ -1,4 +1,5 @@
-import {Outlet, Link} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import Logo from "./Logo";
 import "./Layout.css";
 
 /* 
@@ -18,35 +19,47 @@ import "./Layout.css";
 const Layout = () => {
     return (
         <>
-            <nav className="gnb">
-                <ul>
-                    <li>
-                        <Logo />
-                    </li>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/ct">CHARACTERS</Link>
-                    </li>
-                    <li>
-                        <Link to="/co">COMICS</Link>
-                    </li>
-                    <li>
-                        <Link to="/mv">MOVIES</Link>
-                    </li>
-                    <li>
-                        <Link to="/gm">GAMES</Link>
-                    </li>
-                    <li>
-                        <Link to="/vd">VIDEO</Link>
-                    </li>
-                    <li>
-                        <Link to="/nw">NEWS</Link>
-                    </li>
-                </ul>
-            </nav>
-            <Outlet />
+            {/* 헤더 */}
+            <header className="top">
+                <nav className="gnb">
+                    <ul>
+                        <li>
+                            <Logo />
+                        </li>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/ct">CHARACTERS</Link>
+                        </li>
+                        <li>
+                            <Link to="/co">COMICS</Link>
+                        </li>
+                        <li>
+                            <Link to="/mv">MOVIES</Link>
+                        </li>
+                        <li>
+                            <Link to="/gm">GAMES</Link>
+                        </li>
+                        <li>
+                            <Link to="/vd">VIDEO</Link>
+                        </li>
+                        <li>
+                            <Link to="/nw">NEWS</Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+            {/* 메인 */}
+            <main className="cont">
+                <Outlet />
+            </main>
+
+            {/* 푸터 */}
+            <footer className="info">
+                &copy; &amp; &trade; DC. ALL RIGHTS RESERVED.
+            </footer>
         </>
     );
 };
