@@ -1,18 +1,37 @@
 1. node.js 설치
-- https://nodejs.org/en
-- 참고: node.js? 서버에서 동작하는 JS
+https://nodejs.org/en
+Node.js? 개발자가 서버, 웹 앱, 명령줄 도구 및 스크립트를 만들 수 있는 무료 오픈 소스 크로스 플랫폼 JavaScript 런타임 환경이다.
 
 2. path 확인
 - 시스템 속성>고급>환경변수>path: 
 -> C:\Program Files\nodejs 없으면 새로 만들기로 추가
 
 3. VSCode 터미널 작업
-- npm? node package management
-- 기존 npm Global 제거
+npm(node package manager)? Node.js를 위한 패키지 매니저로 프로젝트에서 필요로 하는 다양한 외부 패키지들의 버전과 의존성을 관리하고 편하게 설치 및 삭제를 할 수 있게 도와주는 역할을 한다.
+
+// 이전에 글로벌하게 설치한 패키지 제거
 npm uninstall -g create-react-app
-- 새로운 리액트 앱 생성
-npx create-react-app 앱이름
-- react, react-dom 설치
+
+// node 설치 및 버전 확인
+node -v
+
+// npm 버전 확인
+npm -v
+
+create-react-app은 react로 웹 앱을 개발하는데 필요한 모든 설정이 되어 있는 상태의 프로젝트를 생성해 주는 도구이다.
+
+// react, react-dom 설치
 npm i react react-dom
-- 앱 실행
+
+// 리액트 라우터 추가
+npm i -D react-router-dom
+
+// v5에서 업그레이드하는 경우 @latest 플래그를 사용한다.
+npm i -D react-router-dom@latest
+
+// 리앱트 앱 생성
+npx create-react-app 앱이름
+
+// 앱 실행
+cd 앱이름
 npm start
