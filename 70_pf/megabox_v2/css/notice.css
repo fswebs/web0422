@@ -99,14 +99,22 @@ nav.change {
     padding: 0 20px;
 }
 
-#board th:nth-of-type(4) {
-    width: 100px;
+#board th:nth-of-type(2) {
+    width: 260px;
 }
 #board td {
     padding: 8px 0;
 }
-#board td:nth-of-type(2) {
+#board td:nth-of-type(2) a {
     padding-right: 16px;
+    display: block;
+    width: 260px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+}
+#board td:nth-of-type(2) a:hover {
+    text-decoration: underline;
 }
 
 /* 
