@@ -114,16 +114,21 @@ nav.change {
 
 /* 검색 폼 */
 #notice form div {
-    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
     text-align: left;
 }
 #notice select {
+    flex: 0 0 29.5%;
     height: 40px;
     vertical-align: top;
+    border: 1px solid #ddd;
 }
 #notice [type="search"] {
+    flex: 0 0 69.5%;
     height: 40px;
     vertical-align: top;
+    border: 1px solid #ddd;
 }
 #notice [type="submit"] {
     display: block;
