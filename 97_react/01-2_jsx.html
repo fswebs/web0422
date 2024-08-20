@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- ReactDOM은 React element를 가져다가 HTML로 바꾸는 역할을 한다. -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const Span = (
+            <span>총 클릭 수: 0 </span>
+        );
+        const Button = (
+            <button style={{ background: "tomato" }} onClick={() => console.log("클릭했니!")}>클릭</button>
+        );
+
+        const container = React.createElement("div", null, [Span, Button]);
+        ReactDOM.render(container, root);
+    </script>
+</body>
+
+</html>
