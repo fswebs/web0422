@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- ReactDOM은 React element를 가져다가 HTML로 바꾸는 역할을 한다. -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function App() {
+            const [minutes, setMinutes] = React.useState(0);
+            const onChange = (event) => {
+                setMinutes(event.target.value);
+            };
+            return (
+                <div>
+                    {/* class -> className, for -> htmlFor로 표기한다. production 버전에서는 에러가 발생하지 않으나 development 버전은 에러가 발생한다. */}
+                    <h1 className="hi">단위 변환기</h1>
+                    <label htmlFor="minutes">분</label>
+                    <input
+                        onChange={onChange}
+                        value={minutes}
+                        id="minutes"
+                        type="number"
+                        placeholder="분"
+                    />
+                    <h4>{minutes}을 변환하고 싶다.</h4>
+                    <label htmlFor="hours">시간</label>
+                    <input id="hours" type="number" placeholder="시간" />
+                </div>
+            );
+        }
+        const root = document.getElementById("root");
+        ReactDOM.render(<App />, root);
+    </script>
+</body>
+
+</html>
