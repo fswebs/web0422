@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
         logoSpan.innerText = data["mtit"][1];
 
         // 글로벌 내비게이션 변경
-        gnbA.forEach((ele, idx) => (ele.innerText = data["gnb"][idx]));
+        gnbA.forEach((ele, idx) => ele.innerText = data["gnb"][idx]);
 
         // 섹션1 메인 타이틀 변경
         s1B.innerText = data["mtit"][0];
@@ -30,19 +30,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
         // 섹션의 제목 h2 변경
         sTit.forEach((ele, idx) => {
-            if (sTit[0]) return;
-            console.log(sTit[0]);
+            if (idx === 0) return;
             ele.innerText = data["stit"][idx];
         });
-
+        
         //섹션2의 아이템 제목 변경
-        section2ItemTit.forEach(
-            (ele, idx) => (ele.innerText = data["s2"]["tit"][idx])
-        );
-
+        section2ItemTit.forEach((ele, idx) => ele.innerText = data["s2"]["tit"][idx]);
+        
         // 섹션2의 아이템 이미지 변경
-        section2ItemImg.forEach((ele, idx) =>
-            ele.setAttribute("src", `${data["s2"]["img"][idx]}`)
-        );
+        section2ItemImg.forEach((ele, idx) => ele.setAttribute("src", `${data["s2"]["img"][idx]}`));
     };
 });
