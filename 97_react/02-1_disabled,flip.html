@@ -17,12 +17,16 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         function App() {
-            // useState(초기값)
+            // const [데이터, 함수] = React.useState(초기값);
+            // 함수(modifier)는 데이터를 수정한다.
             const [minutes, setMinutes] = React.useState(0);
+            const [flipped, setFlipped] = React.useState(false);
             const onChange = (event) => {
                 setMinutes(event.target.value);
             };
             const reset = () => setMinutes(0);
+            // const onFlip = () => setFlipped(!flipped);
+            const onFlip = () => setFlipped(current => !current);
             return (
                 <div>
                     {/* class -> className, for -> htmlFor로 표기한다. production 버전에서는 에러가 발생하지 않으나 development 버전은 에러가 발생한다. */}
@@ -35,6 +39,8 @@
                             type="number"
                             placeholder="분"
                             onChange={onChange}
+                            // disabled={flipped === true}
+                            disabled={flipped}
                         />
                     </div>
                     <div>
@@ -44,9 +50,12 @@
                             id="hours"
                             type="number"
                             placeholder="시간"
+                            // disabled={flipped === false}
+                            disabled={!flipped}
                         />
                     </div>
                     <button onClick={reset}>초기화</button>
+                    <button onClick={onFlip}>뒤집기</button>
                 </div>
             );
         }
