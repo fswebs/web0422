@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <!-- ReactDOM은 React element를 가져다가 HTML로 바꾸는 역할을 한다. -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- JSX로 적은 코드를 브라우저가 이해할 수 있는 형태로 바꿔준다. -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function MinutesToHours() {
+            // const [데이터, 함수] = React.useState(초기값);
+            // 함수(modifier)는 데이터를 수정한다.
+            const [amount, setAmount] = React.useState(0);
+            const [flipped, setFlipped] = React.useState(false);
+            const onChange = (event) => {
+                setAmount(event.target.value);
+            };
+            const reset = () => setAmount(0);
+            // const onFlip = () => setFlipped(!flipped);
+            const onFlip = () => {
+                reset();
+                setFlipped(current => !current);
+            }
+            return (
+                <div>
+                    {/* class -> className, for -> htmlFor로 표기한다. production 버전에서는 에러가 발생하지 않으나 development 버전은 에러가 발생한다. */}
+                    <div>
+                        <label htmlFor="minutes">분</label>
+                        <input
+                            value={flipped ? amount * 60 : amount}
+                            id="minutes"
+                            type="number"
+                            placeholder="분"
+                            onChange={onChange}
+                            // disabled={flipped === true}
+                            disabled={flipped}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="hours">시간</label>
+                        <input
+                            value={flipped ? amount : Math.round(amount / 60)}
+                            id="hours"
+                            type="number"
+                            placeholder="시간"
+                            onChange={onChange}
+                            // disabled={flipped === false}
+                            disabled={!flipped}
+                        />
+                    </div>
+                    <button onClick={reset}>초기화</button>
+                    <button onClick={onFlip}>{flipped ? "시간to분" : "분to시간"}</button>
+                </div>
+            );
+        }
+        function KmToMiles() {
+            return <h3>KM 2 M</h3>;
+        }
+        function App() {
+            const [index, setIndex] = React.useState("xx");
+            const onSelect = event => {
+                setIndex(event.target.value);
+            };
+            console.log("render w/", index);
+            return (
+                <div>
+                    <h1>단위 변환기</h1>
+                    <select value={index} onChange={onSelect}>
+                        <option value="xx">변환 종류</option>
+                        <option value="0">Minutes & Hours</option>
+                        <option value="1">Km & Miles</option>
+                    </select>
+                    <hr />
+                    {index === "xx" ? "변환 종류를 선택하세요!" : null}
+                    {index === "0" ? <MinutesToHours /> : null}
+                    {index === "1" ? <KmToMiles /> : null}
+                </div>
+            );
+        }
+        const root = document.getElementById("root");
+        ReactDOM.render(<App />, root);
+    </script>
+</body>
+
+</html>
