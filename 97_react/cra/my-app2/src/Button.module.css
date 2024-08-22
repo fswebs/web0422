@@ -1,0 +1,5 @@
+/* xx.module.css는 CSS 코드를 JS의 Object로 변환한다. */
+.btn {
+    color: white;
+    background-color: tomato;
+}
