@@ -30,9 +30,10 @@ FTP(file transfer protocol) 프로그램
 -> VScode 확장 프로그램(git): SFTP 설치
 
 [ SFTP 사용법 ]
-1. VScode에서 F1을 누른 후 검색창에 sftp를 검색한다.
-2. sftp.config 선택한다.
-3. 아래 내용으로 셋팅한다.
+1. 업로드/다운로드할 폴더를 VScode 작업영역 폴더로 지정
+2. VScode에서 F1을 누른 후 검색창에 sftp를 검색한다.
+3. sftp.config 선택한다.
+4. 아래 내용으로 셋팅한다.
 {
     "name": "닷홈서버",
     "host": "id.dothome.co.kr",
@@ -40,14 +41,16 @@ FTP(file transfer protocol) 프로그램
     "port": 21,
     "username": "id",
     "remotePath": "/html/",
-    "uploadOnSave": true,
+    "uploadOnSave": true, -> 저장하면 자동업로드
     "password": "web0422!",
     "useTempFile": false,
     "openSsh": false
 }
 
-4. 주의 사항: sftp 설정시 업로드/다운로드할 폴더를 root로 설정하여 지정한다.
-
 5. 업로드/다운로드
     가. web0422>70_pf>안의 내용 업로드
+
+6. 결과 확인
+  웹 브라우저 주소란에 개인 도메인 기록후 enter
+  도메인: id.dothome.co.kr
 
