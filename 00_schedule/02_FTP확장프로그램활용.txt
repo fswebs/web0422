@@ -1,0 +1,53 @@
+무료 호스팅 신청: 
+id: 공개, pw: web0422!
+
+http://totat21.dothome.co.kr
+http://ninkotek.dothome.co.kr
+http://seo03.dothome.co.kr
+http://yumi.dothome.co.kr
+http://moon1.dothome.co.kr
+http://zoe.dothome.co.kr
+http://jyne.dothome.co.kr
+http://hyein.dothome.co.kr
+http://pista0124.dothome.co.kr
+
+무료 호스팅(저장공간 + 무료 도메인)
+1. 6개월(184일 남음)
+2. 저장공간: 500MB
+3. 트래픽(월): 15GB -> 15000MB
+  - 15000/500 -> 30배
+
+속도(bit, 비트)
+저장용량 단위: Byte(바이트)
+KB - MB - GB - TB
+
+web0422 폴더 용량: 1.33GB -> 1330MB
+
+FTP(file transfer protocol) 프로그램
+- 파일을 서버에 업로드
+- 파일을 내컴퓨터에 다운로드
+-> 무료: 파일질라, 알FTP(기업 유료)
+-> VScode 확장 프로그램(git): SFTP 설치
+
+[ SFTP 사용법 ]
+1. VScode에서 F1을 누른 후 검색창에 sftp를 검색한다.
+2. sftp.config 선택한다.
+3. 아래 내용으로 셋팅한다.
+{
+    "name": "닷홈서버",
+    "host": "id.dothome.co.kr",
+    "protocol": "ftp",
+    "port": 21,
+    "username": "id",
+    "remotePath": "/html/",
+    "uploadOnSave": true,
+    "password": "web0422!",
+    "useTempFile": false,
+    "openSsh": false
+}
+
+4. 주의 사항: sftp 설정시 업로드/다운로드할 폴더를 root로 설정하여 지정한다.
+
+5. 업로드/다운로드
+    가. web0422>70_pf>안의 내용 업로드
+

@@ -20,7 +20,33 @@ IP: 숫자 주소, 192.168.2.26 -> 16진수 -> 2진수(0,1)
 1차 가입: id, pw - 비공개
 2차 무료 호스팅 신청: id 공개, pw: web0422!
 도메인: id.dothome.co.kr
-예) stdw.dothome.co.kr, codingand.dothome.co.kr
+http://totat21.dothome.co.kr
+http://ninkotek.dothome.co.kr
+http://seo03.dothome.co.kr
+http://yumi.dothome.co.kr
+http://moon1.dothome.co.kr
+http://zoe.dothome.co.kr
+http://jyne.dothome.co.kr
+http://hyein.dothome.co.kr
+http://pista0124.dothome.co.kr
 
-무료 호스팅(저장공간 + 무료 도메인) - 관리x, 유료에 비해 느려, 작아
+무료 호스팅(저장공간 + 무료 도메인)
+1. 6개월(184일 남음)
+2. 저장공간: 500MB
+3. 트래픽(월): 15GB -> 15000MB
+  - 15000/500 -> 30배
 
+속도(bit, 비트)
+저장용량 단위: Byte(바이트)
+KB - MB - GB - TB
+
+깃의 하나의 레파지토리에 2G
+레파지토리의 개수는 제한 없음.
+닷홈 - 한글 파일명/폴더명 절대 사용하면 안돼요!!!
+1.33GB -> 1330MB
+
+FTP(file transfer protocol) 프로그램
+- 파일을 서버에 업로드
+- 파일을 내컴퓨터에 다운로드
+-> 무료: 파일질라, 알FTP(기업 유료)
+-> VScode 확장 프로그램(git)
