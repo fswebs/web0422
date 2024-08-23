@@ -1,4 +1,5 @@
 리액트 start
+참고: https://www.w3schools.com/REACT/DEFAULT.ASP
 
 1. 서버 공간 확보
   (1) 깃의 레파지토리 -> 반복 학습  
@@ -9,16 +10,31 @@
 3. node.js 설치
   가. 다운로드: https://nodejs.org/en
   나. 설치 path 확인
+  다. VScode 터미널에서 버전 확인
+      >node -v
+      >npx -v
 
 4. node.js path 확인 방법
   가. 탐색기의 내 PC의 바로가기 메뉴에서 속성
   나. 고급 시스템 설정 -> 시스템 속성의 환경 변수
   다. 시스템 변수의 path 더블클릭
   라. C:\Program Files\nodejs\ 경로 확인
+  마. 컴퓨터를 재부팅
 
-5. 리액트 CRA(create-react-app)으로 SPA 만들기 테스트
+5. 리액트 CRA(create-react-app) 테스트
+  가. 이전에 전역으로 설치한 패키지 제거
+    >npm uninstall -g create-react-app
+  나. 리액트 앱 만들기
+    >npx create-react-app my-react-app
+  다. 앱 실행
+    >cd 폴더명 -> 해당 앱이 있는 폴더로 이동
+    >npm start
 
-6. ES6 정리
+6. 터미널 기본 명령어
+  가. 폴더 위치 이동:
+      >cd 폴더명 입력후 enter
+
+7. ES6 정리
   가. const, let -> 반복
   나. 객체+배열+함수(선언적, 익명, 화살표) -> 반복
   다. 모듈 -> 반복
@@ -29,10 +45,7 @@
   사. 클래스 -> new
   아. 스프레드 연산자 -> new
 
-참고: https://www.w3schools.com/REACT/DEFAULT.ASP
-
-
-7. 개별 실습(1시간)
+8. 개별 실습(1시간)
   - 팀 작업: 시안 완료 -> 코딩 start
 
-8. 보강수업(2시간): 2depth 내비게이션+탭 -> 반복 학습
+9. 보강수업(2시간): 2depth 내비게이션+탭 -> 반복 학습
