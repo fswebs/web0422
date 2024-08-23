@@ -1,0 +1,26 @@
+닷홈
+4도메인
+URL: https://www.dothome.co.kr/web/free/index.php
+3도메인
+https://www.google.com/코드?키=값&키=값
+
+URL(Uniform Resource Locator): 웹 주소
+www(world wide web, web)
+프로토콜://서비스.회사.기관성격.국가/폴더/폴더/파일명.확장자
+Domain: 문자 주소
+IP: 숫자 주소, 192.168.2.26 -> 16진수 -> 2진수(0,1)
+
+홈페이지
+웹페이지: 홈, 메인, 서브
+웹사이트 제작
+서브페이지
+메인페이지
+
+
+1차 가입: id, pw - 비공개
+2차 무료 호스팅 신청: id 공개, pw: web0422!
+도메인: id.dothome.co.kr
+예) stdw.dothome.co.kr, codingand.dothome.co.kr
+
+무료 호스팅(저장공간 + 무료 도메인) - 관리x, 유료에 비해 느려, 작아
+
