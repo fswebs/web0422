@@ -13,12 +13,13 @@ body {
 
 /* font의 위계 */
 /* 1depth, mainmenu */
-.main>li>a {
+/* .main>li>a { -> 메인메뉴만 */
+ .main li a { /* -> 메인과 서브 모두 */
     font-size: 1.6rem;
     color: #999;
 }
 
-.main li:hover a {
+.main li a:hover {
     color: #fff;
 }
 
