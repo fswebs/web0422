@@ -1,5 +1,4 @@
-// Card component
-import cards from "./data";
+// card.js
 
 function Card({ title, text, image }) {
     return (
