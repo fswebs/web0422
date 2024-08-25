@@ -9,14 +9,13 @@
     <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
     <!-- Babel for JSX transpiling -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <div id="root"></div>
-    <!-- Include JavaScript files -->
-    <script type="text/babel" src="data.js"></script>
-    <script type="text/babel" src="Card.js"></script>
-    <script type="module" src="App.js"></script>
+    <!-- Load the main module -->
+    <script type="text/babel" src="./src/Card.jsx"></script>
+    <script type="text/babel" src="./src/data.js"></script>
+    <script type="text/babel" src="./src/App.jsx"></script>
 </body>
 </html>

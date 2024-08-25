@@ -1,29 +1,21 @@
-import { useEffect, useState } from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Detail from "./routes/Detail";
+import Home from "./routes/Home";
 
-function App() {
-    const [toDo, setToDo] = useState("");
-    const [toDos, setToDos] = useState([]);
-    const onChange = (event) => setToDo(event.target.value);
-    const onSubmit = (event) => {
-        event.preventDefault();
-        if (toDo === "") {
-          return;
-        }
-        setToDo("");
-    };
-    return (
-        <div>
-            <form>
-                <input
-                    onChange={onChange}
-                    value={toDo}
-                    type="text"
-                    placeholder="당신의 할일을 적어주세요."
-                />
-                <button>할 일 추가</button>
-            </form>
-        </div>
-    );
+function App(props) {
+    return <Router>
+        <Switch>
+            <Route path="/hello">
+                <h1>Hello</h1>
+            </Route>
+            <Route path="/movie/:id">
+                <Detail />
+            </Route>
+            <Route path="/">
+                <Home />
+            </Route>
+        </Switch>
+    </Router>;
 }
 
 export default App;

@@ -1,6 +1,4 @@
-// app.js
-import Card from './Card';
-import cards from './data';
+// src/App.js
 
 function App() {
     return (
@@ -17,8 +15,5 @@ function App() {
     );
 }
 
-export default App;
-
 // Render the App component to the DOM
 ReactDOM.render(<App />, document.getElementById('root'));
-

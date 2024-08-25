@@ -1,9 +1,9 @@
-// card.js
+// src/Card.js
 
-function Card({ title, text, image }) {
+export function Card({ title, text, image }) {
     return (
         <div className="card">
-            <img src={image} alt={title} />
+            <img src={image} alt={title}/>
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p className="card-text">{text}</p>
@@ -14,5 +14,3 @@ function Card({ title, text, image }) {
         </div>
     );
 }
-
-export default Card;

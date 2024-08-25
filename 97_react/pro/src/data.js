@@ -1,25 +1,24 @@
-// Card data
+// src/data.js
+
 const cards = [
     {
         title: "Card 1",
         text: "This is the first card.",
-        image: "https://via.placeholder.com/300x200",
+        image: "https://via.placeholder.com/300x200"
     },
     {
         title: "Card 2",
         text: "This is the second card.",
-        image: "https://via.placeholder.com/300x200",
+        image: "https://via.placeholder.com/300x200"
     },
     {
         title: "Card 3",
         text: "This is the third card.",
-        image: "https://via.placeholder.com/300x200",
+        image: "https://via.placeholder.com/300x200"
     },
     {
         title: "Card 4",
         text: "This is the fourth card.",
-        image: "https://via.placeholder.com/300x200",
-    },
+        image: "https://via.placeholder.com/300x200"
+    }
 ];
-
-export default cards;
