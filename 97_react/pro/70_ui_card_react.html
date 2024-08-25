@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CDN Card Design</title>
+    <!-- React and ReactDOM CDN links -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel for JSX transpiling -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 300px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            padding: 16px;
+        }
+        .card-title {
+            font-size: 24px;
+            margin: 0;
+        }
+        .card-text {
+            font-size: 16px;
+            color: #555;
+        }
+        .card-footer {
+            padding: 16px;
+            background: #f9f9f9;
+            border-top: 1px solid #eee;
+        }
+        .card-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // React component for Card
+        function Card() {
+            return (
+                <div className="card">
+                    <img src="https://via.placeholder.com/300x200" alt="Card Image"/>
+                    <div className="card-body">
+                        <h2 className="card-title">Card Title</h2>
+                        <p className="card-text">This is a simple card component built using React and CDN.</p>
+                    </div>
+                    <div className="card-footer">
+                        <button className="card-button">Click Me</button>
+                    </div>
+                </div>
+            );
+        }
+
+        // Render the Card component to the DOM
+        ReactDOM.render(<Card />, document.getElementById('root'));
+    </script>
+</body>
+</html>
