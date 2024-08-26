@@ -44,25 +44,42 @@
             background: rgb(210, 86, 86);
             text-align: center;
             border-bottom: 1px solid rgb(174, 40, 40);
-            padding: 8px 0;
         }
 
         .main>li>a {
             font-size: 16px;
             color: #333;
+            display: block;
+            padding: 8px 0;
         }
 
         /* 2depth */
         .sub {
-            /* 서브 메뉴 숨기기 */
-            /* height: 0;
-            overflow: hidden; */
+            background: rgb(209, 123, 123);
+            padding: 8px 0;
         }
 
         .sub li a {
+            position: relative;
             font-size: 14px;
             color: #333;
         }
+        .sub li a::before {
+            content: "";
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            background: rgba(174, 40, 40, 0.493);
+            transform: scaleX(0);
+            transform-origin: 0 0;
+            transition: .5s;
+        }
+        .sub li a:hover::before {
+            transform: scaleX(1);
+        }
+
     </style>
 
     <!-- 제이쿼리 CDN -->
@@ -70,7 +87,7 @@
     <script>
         // $(document).ready(function(){});
         // $(function(){});
-        $(function(){
+        $(()=>{
             // 메인메뉴 하나에 마우스를 올리면 서브메뉴 전체가 열린다.
             // 메인메뉴 하나: .main>li>a
             // 마우스를 올리면: mouseenter
@@ -82,11 +99,11 @@
             
             $(".main>li").mouseenter(()=>{
                 // 서브 메뉴 전체가 열린다.
-                $(this).find(".sub").stop().slideDown();
+                $(event.currentTarget).find(".sub").stop().slideDown();
             });
             $(".main>li").mouseleave(()=>{
                 // 서브 메뉴 전체가 열린다.
-                $(this).find(".sub").stop().slideUp();
+                $(event.currentTarget).find(".sub").stop().slideUp();
             });
 
 
