@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸른마을</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            font: 15px "굴림", sans-serif;
+            line-height: 1.5;
+        }
+
+        /* header */
+        header {
+            width: 200px;
+            height: calc(400px + 200px + 250px);
+            border: 1px solid;
+            padding:16px;
+        }
+
+        /* logo */
+        .logo {
+            text-align: center;
+            margin: 30px;
+        }
+        
+        .gnb:hover::after {
+            content: "";
+            position: absolute;
+            width: calc(100% - 170px);
+            height: 166px;
+            left: 170px;
+            top: 122px;
+            background:rgba(119, 119, 119, 0.466);
+        }
+        /* 1depth */
+        .main>li {
+            padding: 8px 16px;
+            background: #333;
+            border-bottom: 1px solid #111;
+        }
+
+        .main>li:hover {
+            background: #777;
+        }
+
+        .main li a {
+            font-size: 16px;
+            color: #999;
+        }
+
+        .main li:hover a {
+            color: #fff;
+        }
+        
+        /* 2depth */
+        .sub {
+            display: flex;
+            z-index: 9999;
+            position: absolute;
+            width: calc(100% - 170px);
+            left: 170px;
+            visibility: hidden;
+            margin-top: -34px;
+        }
+        .main:hover .sub {
+            visibility: visible;
+        }
+        .sub li {
+            flex: 0 0 160px;
+            padding: 10px 24px;
+        }
+        .sub li a {
+            font-size: 14px;
+            padding: 4px 8px;
+            color: #333;
+        }
+        .sub li a:hover {
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#">LOGO</a></h1>
+        <nav class="gnb">
+            <!-- 1depth -->
+            <ul class="main">
+                <li>
+                    <a href="#">OnSale</a>
+                    <!-- 2depth -->
+                    <ul class="sub">
+                        <li><a href="#">할인행사</a></li>
+                        <li><a href="#">덤증정</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">기획전</a>
+                    <ul class="sub">
+                        <li><a href="#">봄 먹거리</a></li>
+                        <li><a href="#">여름 먹거리</a></li>
+                        <li><a href="#">가을 먹거리</a></li>
+                        <li><a href="#">겨울 먹거리</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">푸른마을 레시피</a>
+                    <ul class="sub">
+                        <li><a href="#">메인요리</a></li>
+                        <li><a href="#">밑반찬</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">브런치</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">매장안내</a>
+                    <ul class="sub">
+                        <li><a href="#">신규매장</a></li>
+                        <li><a href="#">추천매장</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
