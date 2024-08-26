@@ -7,10 +7,24 @@
     <title>아코디언 메뉴</title>
     <style>
         /* 초기값 */
-        * {box-sizing: border-box;}
-        body,ul {margin:0;}
-        ul {list-style: none; padding:0;}
-        a {text-decoration: none;}
+        * {
+            box-sizing: border-box;
+        }
+
+        body,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
         body {
             font-size: 15px;
             line-height: 1.6;
@@ -18,21 +32,80 @@
             background: #fff;
         }
 
+        header {
+            width: 200px;
+            height: 650px;
+            border: 1px solid;
+            padding: 16px;
+        }
+
         /* 1depth */
-        .main li a {
+        .main>li {
+            background: rgb(210, 86, 86);
+            text-align: center;
+            border-bottom: 1px solid rgb(174, 40, 40);
+            padding: 8px 0;
+        }
+
+        .main>li>a {
             font-size: 16px;
-            color: #999;
+            color: #333;
         }
-        .main li a:hover {
-            color: #fff;
-        }
+
         /* 2depth */
+        .sub {
+            /* 서브 메뉴 숨기기 */
+            /* height: 0;
+            overflow: hidden; */
+        }
+
         .sub li a {
             font-size: 14px;
             color: #333;
         }
-
     </style>
+
+    <!-- 제이쿼리 CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){});
+        // $(function(){});
+        $(function(){
+            // 메인메뉴 하나에 마우스를 올리면 서브메뉴 전체가 열린다.
+            // 메인메뉴 하나: .main>li>a
+            // 마우스를 올리면: mouseenter
+            // 서브메뉴 전체: .sub
+            // 열린다.
+
+            // 페이지가 열리자 마자 서브페이지 전체 닫기
+            $(".sub").hide();
+            
+            $(".main>li").mouseenter(()=>{
+                // 서브 메뉴 전체가 열린다.
+                $(this).find(".sub").stop().slideDown();
+            });
+            $(".main>li").mouseleave(()=>{
+                // 서브 메뉴 전체가 열린다.
+                $(this).find(".sub").stop().slideUp();
+            });
+
+
+            // 열린다.
+            // show() -> 즉시 열림
+            // fadeIn() -> 서서히 열림
+            // slideDown() -> 서서히 위에서 아래로 열림
+            
+            // 닫힌다
+            // hide() -> 즉시 닫힘
+            // fadeOut() -> 서서히 닫힘
+            // slideUp() -> 서서히 아래에서 위로 닫힘
+
+            // animate()
+
+        });
+
+    </script>
+
 </head>
 
 <body>

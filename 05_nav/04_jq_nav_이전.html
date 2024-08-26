@@ -18,49 +18,15 @@
             background: #fff;
         }
 
-        header {
-            width: 200px;
-            height: 650px;
-            border: 1px solid;
-            padding: 16px;
-        }
-
         /* 1depth */
-        .main>li {
-            background: rgb(210, 86, 86);
-            text-align: center;
-            border-bottom: 1px solid rgb(174, 40, 40);
-            padding: 8px 0;
-        }
-        .main>li>a {
-            position: relative;
+        .main li a {
             font-size: 16px;
-            color: #333;
-            padding-bottom: 4px;
+            color: #999;
         }
-        .main>li>a::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            left:0;
-            top:18px;
-            border-bottom: 2px solid rgb(174, 40, 40);
-            transition: .3s;
-            transform: scaleX(0);
-        }
-        .main>li>a:hover::after {
+        .main li a:hover {
             color: #fff;
-            transform: scaleX(1);
         }
         /* 2depth */
-        .sub {
-            height: 0;
-            overflow:hidden;
-            transition: .7s;
-        }
-        .main>li:hover .sub {
-            height: 150px;
-        }
         .sub li a {
             font-size: 14px;
             color: #333;
