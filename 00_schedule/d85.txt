@@ -1,0 +1,10 @@
+리액트 3일차
+참고: https://www.w3schools.com/REACT/DEFAULT.ASP
+
+1. ES6 정리
+  가. 변수: var, const, let
+  나. 함수: 선언적, 익명, 화살표
+  다. 배열: [], new Array(), push(), pop(), shift(), unshift(), splice(), slice(), join(), concat()
+
+3. 개별 실습(2시간)
+  - 팀 작업: 
