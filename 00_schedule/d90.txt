@@ -1,10 +1,7 @@
-리액트 7일차
-참고: https://www.w3schools.com/REACT/DEFAULT.ASP
-
 1. 리액트
-    가. 이벤트
-    나. 조건문
-    다. 라우터
+    가. 라우터
+    나. 이벤트
+    다. 조건문
     라. 후크: useState()
 
 2. 개별 실습(2시간)
