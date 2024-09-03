@@ -48,8 +48,9 @@ main {
 }
 
 section {
-    width: 940px;
+    /* width: 940px; */
     margin: auto;
+    border: 1px solid red;
 }
 
 h2 {
@@ -75,7 +76,8 @@ h2 {
 }
 
 .home-description {
-    width: 790px;
+    /* width: 790px; */
+    border: 1px solid blue;
 }
 
 h3 span {
