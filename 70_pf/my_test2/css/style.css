@@ -143,13 +143,30 @@ nav li {
     color: #fff;
 }
 
+/* profile move */
+#s2 .row {
+    overflow: hidden;
+}
+#s2 .move1 {
+    transform: translateY(300px);
+    transition:transform .7s .2s;
+}
+#s2 .move2 {
+    transform: translateY(500px);
+    transition:transform .7s .4s;
+}
+#s2 .move3 {
+    transform: translateY(500px);
+    transition:transform .7s .6s;
+}
+
 /* progress */
 .progress {
     height: 30px;
     font-size: 1.5rem;
     padding: 0;
 }
-.progress:nth-of-type(1) .progress-bar {
+/* .progress:nth-of-type(1) .progress-bar {
     width: 90%;
 }
 .progress:nth-of-type(2) .progress-bar {
@@ -160,7 +177,7 @@ nav li {
 }
 .progress:nth-of-type(4) .progress-bar {
     width: 75%;
-}
+} */
 
 /* counter */
 .counter {
