@@ -94,4 +94,13 @@ $(() => {
         $(location).attr({href: lb_link, target: "_blank"});
     });
 
+    // portfolio more
+    const moreBtn = $("#s3 .more");
+    const pf2row = $("#s3 .pf2row");
+
+    moreBtn.click(()=>{
+        event.preventDefault();
+        pf2row.css({display: "flex"});
+    });
+
 }); // ready end

@@ -151,6 +151,10 @@ iframe {
 #s3 .col-sm {
     margin-bottom: 12px;
 }
+#s3 .pf2row {
+    display: none;
+}
+
 
 /* section4: contact */
 #s4 input {
