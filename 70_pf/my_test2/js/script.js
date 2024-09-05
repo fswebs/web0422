@@ -85,7 +85,7 @@ $(() => {
     // counter
     const cntNum = $(".counter b");
     const initNums = [];
-    const totalCount = [2, 3, 5, 2];
+    const totalCount = [50, 70, 80, 100];
     console.log(cntNum);
     for (let i = 0; i < cntNum.length; i++) {
         initNums[i] = 0;
