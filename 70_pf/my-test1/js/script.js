@@ -1,4 +1,27 @@
 $(() => {
+    // button sound effect
+    const btn = $(".btn");
+    const snd = $(".snd audio").get(0);
+    btn.mouseenter(()=>{
+        snd.play();
+    });
+
+    // video player
+    const vidBtn = $("#s2 .vid i");
+    const vid = $("#s2 .vid video").get(0);
+    let flag = 0;
+    vidBtn.click(()=>{
+        if (flag === 0) {
+            vid.play();
+            $(event.currentTarget).attr({class: "fa-regular fa-circle-pause"});
+            flag = 1;
+        } else {
+            vid.pause();
+            $(event.currentTarget).attr({class: "fa-regular fa-circle-play"});
+            flag = 0;
+        }
+    });
+
     // progress bar & counter
     // 요소 찾기
     const cntNumEle = $(".counter b");

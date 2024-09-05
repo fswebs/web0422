@@ -37,6 +37,7 @@ video {
     max-width: 100%;
     object-fit: cover;
     height: auto;
+    vertical-align: top;
 }
 input {
     border: none;
@@ -112,10 +113,29 @@ iframe {
     transform: translateY(300px);
     transition:transform .5s .6s;
 }
+
+/* video player */
 .photo {
     transform: translateY(300px);
     transition:transform .5s .8s;
 }
+#s2 .vid {
+    position: relative;
+}
+#s2 .vid i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: .3s;
+}
+#s2 .vid:hover i {
+    opacity: 1;
+}
+
 
 /* progress */
 .progress {
