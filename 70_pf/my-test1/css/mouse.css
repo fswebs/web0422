@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+/* 마우스 포인터 */
+.mp {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.mp1 {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    /* background: url(mouse-cursor.png) no-repeat; */
+    /* ease-out을 사용! */
+    transition: 0.7s ease-out;
+}
+
+.mp2 {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    /* ease-out을 사용! */
+    transition: 0.1s ease-out;
+}
