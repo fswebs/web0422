@@ -201,6 +201,7 @@ footer {
     background: #000;
     text-align: center;
     color: #fff;
+    background: url(../assets/pattern3.png) #181818;
 }
 footer a {
     color: #fff;
@@ -220,17 +221,17 @@ footer .sns {
 .mp1 {
     width: 30px;
     height: 30px;
-    border: 1px solid black;
-    /* background: url(mouse-cursor.png) no-repeat; */
+    /* border: 1px solid black; */
+    background: url(../assets/firefly.png) no-repeat;
     /* ease-out을 사용! */
     transition: 0.7s ease-out;
 }
 
 /* 작은 원 */
 .mp2 {
-    width: 10px;
-    height: 10px;
-    background: #000;
+    width: 30px;
+    height: 30px;
+    background: url(../assets/firefly.png) no-repeat;
     /* ease-out을 사용! */
     transition: 0.1s ease-out;
 }

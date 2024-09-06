@@ -143,12 +143,19 @@ $(() => {
     // 마우스 포인터 모션 만들기
     const mp = $(".mp");
 
-    $("body").mousemove(() => {
+    /* $("body").mousemove(() => {
         // 큰원
         mm(0);
         // 작은원
         mm(1);
-    });
+    }); */
+
+    setInterval(firefly, 3000);
+
+    function firefly(){
+        mm(0);
+        mm(1);
+    }
 
     function mm(i) {
 
@@ -164,9 +171,43 @@ $(() => {
                 innerWidth(), innerHeight() -> 패딩만 포함
         */
 
-        let x = event.pageX - mp.eq(i).outerWidth() / 2;
-        let y = event.pageY - mp.eq(i).outerWidth() / 2;
+        // Math.floor() -> 내림
+        // Math.ceil() -> 올림
+        // Math.round() -> 반올림
+        // x: 50 ~ 1870 -> 랜덤(불규칙) -> Math.random()
+        // y: 100 ~ 800
+        // 0 <= Math.random() < 1
+        // 0 * 10 <= Math.random() * 10 < 1 * 10
+
+        // 1 ~ 6 사이 정수 출력
+        // 0 + 1 <= Math.floor(Math.random() * 6) + 1 < 6 + 1
+        // 0 ~ 2 사이 정수 출력
+        // 0 <= Math.floor(Math.random() * 3) < 3
+
+        // 1 <= Math.floor(Math.random() * 10) + 1 < 11
+        // 50 <= Math.floor(Math.random() * 1800) + 50 < 1920
+        
+        let x = Math.floor(Math.random() * 1800) + 50 - mp.eq(i).outerWidth() / 2;
+        let y = Math.floor(Math.random() * 800) + 50 - mp.eq(i).outerWidth() / 2;
+        // let x = event.pageX - mp.eq(i).outerWidth() / 2;
+        // let y = event.pageY - mp.eq(i).outerWidth() / 2;
 
         mp.eq(i).css({left: x + "px", top: y + "px"});
     }
+
+    // 푸터 배경색 랜덤하게 바꾸기
+    const btnEle = $(".btn");
+    const colors = ["#cf38b6", "#ff4393", "#ff6c71"];
+   
+    setInterval(bgcolor, 5000);
+    
+    function bgcolor(){
+        let color = colors[Math.floor(Math.random() * 3)];
+        btnEle.css({
+            backgroundColor: color, 
+            transition: "2s", 
+            border: "none"
+        });
+    }
+
 }); // ready end
