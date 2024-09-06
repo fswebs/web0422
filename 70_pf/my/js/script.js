@@ -1,4 +1,39 @@
 $(() => {
+    // video player
+    /* 
+        비디오 가져오기: 객체.get(0)
+        비디오 플레이: 객체.play()
+        비디오 일시정지: 객체.pause()
+        비디오 정지: 객체.load()
+    */
+
+    const vid = $("#s2 .vid video").get(0);
+    const vidBtn = $("#s2 .vid i");
+
+    // toggle 동작 만들기
+    // 하나의 버튼으로 두 개의 상태를 만든다.
+    let flag = 0;
+
+    vidBtn.click((e) => {
+        if (flag === 0) {
+            vid.play();
+            $(e.currentTarget).attr({ class: "fa-regular fa-circle-pause" });
+            flag = 1;
+        } else {
+            vid.pause();
+            $(e.currentTarget).attr({ class: "fa-regular fa-circle-play" });
+            flag = 0;
+        }
+    });
+
+    // audio button effect
+    const btn = $(".btn");
+    const snd = $(".snd").get(0);
+
+    btn.mouseenter(() => {
+        snd.play();
+    });
+
     // progress bar & counter
     // 요소 찾기
     const cntNumEle = $(".counter b");
@@ -88,19 +123,91 @@ $(() => {
 
     // lightbox2 link
     const lb_caption = $(".lb-caption");
-    lb_caption.css({cursor: "pointer"});
+    lb_caption.css({ cursor: "pointer" });
     lb_caption.click(() => {
         const lb_link = $(event.currentTarget).text();
-        $(location).attr({href: lb_link, target: "_blank"});
+        $(location).attr({ href: lb_link, target: "_blank" });
     });
 
     // portfolio more
     const moreBtn = $("#s3 .more");
     const pf2row = $("#s3 .pf2row");
 
-    moreBtn.click(()=>{
-        event.preventDefault();
-        pf2row.css({display: "flex"});
+    moreBtn.click((e) => {
+        // <a href="#"> -> a태그를 클릭하면 현재 페이지의 상단으로 올라간다.
+        // 기본 이벤트 방지
+        e.preventDefault();
+        pf2row.css({ display: "flex" });
     });
+
+    // 마우스 포인터 모션 만들기
+    const mp = $(".mp");
+
+    /* $("body").mousemove(() => {
+        // 큰원
+        mm(0);
+        // 작은원
+        mm(1);
+    }); */
+
+    setInterval(firefly, 3000);
+
+    function firefly(){
+        mm(0);
+        mm(1);
+    }
+
+    function mm(i) {
+
+        /* 
+            event.pageX -> 마우스 x좌표
+            event.pageY -> 마우스 y좌표
+
+            Vanilla JS의 속성
+                offsetWidth, offsetHeight -> 패딩과 테두리 포함
+                clientWidth, clientHeight -> 패딩만 포함
+            jQuery 메서드
+                outerWidth(), outerHeight() -> 패딩과 테두리 포함
+                innerWidth(), innerHeight() -> 패딩만 포함
+        */
+
+        // Math.floor() -> 내림
+        // Math.ceil() -> 올림
+        // Math.round() -> 반올림
+        // x: 50 ~ 1870 -> 랜덤(불규칙) -> Math.random()
+        // y: 100 ~ 800
+        // 0 <= Math.random() < 1
+        // 0 * 10 <= Math.random() * 10 < 1 * 10
+
+        // 1 ~ 6 사이 정수 출력
+        // 0 + 1 <= Math.floor(Math.random() * 6) + 1 < 6 + 1
+        // 0 ~ 2 사이 정수 출력
+        // 0 <= Math.floor(Math.random() * 3) < 3
+
+        // 1 <= Math.floor(Math.random() * 10) + 1 < 11
+        // 50 <= Math.floor(Math.random() * 1800) + 50 < 1920
+        
+        let x = Math.floor(Math.random() * 1800) + 50 - mp.eq(i).outerWidth() / 2;
+        let y = Math.floor(Math.random() * 800) + 50 - mp.eq(i).outerWidth() / 2;
+        // let x = event.pageX - mp.eq(i).outerWidth() / 2;
+        // let y = event.pageY - mp.eq(i).outerWidth() / 2;
+
+        mp.eq(i).css({left: x + "px", top: y + "px"});
+    }
+
+    // 푸터 배경색 랜덤하게 바꾸기
+    const btnEle = $(".btn");
+    const colors = ["#cf38b6", "#ff4393", "#ff6c71"];
+   
+    setInterval(bgcolor, 5000);
+    
+    function bgcolor(){
+        let color = colors[Math.floor(Math.random() * 3)];
+        btnEle.css({
+            backgroundColor: color, 
+            transition: "2s", 
+            border: "none"
+        });
+    }
 
 }); // ready end

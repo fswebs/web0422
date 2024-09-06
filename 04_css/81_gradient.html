@@ -6,12 +6,38 @@
     <title>Document</title>
     <style>
         /* 
-            Gradient(그라디언트)
-                (1) Linear
-                (2) Radial
-                (3) Conic
+            https://www.w3schools.com/css/css3_gradients.asp
 
+            background-image: 값;
+
+                값은 6가지
+                (1) linear-gradient()
+                (2) radial-gradient()
+                (3) conic-gradient()
+                (4) repeating-linear-gradient()
+                (5) repeating-radial-gradient()
+                (6) repeating-conic-gradient()
+ 
+
+            선형 그라디언트(Linear Gradient)
+                linear-gradient([to 방향 방향], 색 [위치], 색 [위치], ...);
+                linear-gradient([각도], 색, 색, ...);
+                repeating-linear-gradient([to 방향 방향], 색 위치, 색 위치, ...);
             
+            원형 그라디언트(Radial Gradient)
+                radial-gradient([모양] [크기 at 위치], 색 [위치], 색 [위치], ...);
+                모양은 circle(원), 모양을 생략하면 타원
+                크기는 
+                    closest-side -> 가장 가까운 사이드
+                    farthest-side -> 가장 먼 사이드
+                    closest-corner -> 가장 가까운 모서리
+                    farthest-corner -> 가장 먼 모서리
+                위치는
+                    at x위치 y위치 -> 원(타원)의 중심 좌표
+
+            코닉 그라디언트(Conic Gradient)
+                conic-gradient([from 각도] [at 위치,] 색 [정도], 색 [정도], ...);
+
         */
 
         /* common */
