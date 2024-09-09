@@ -37,6 +37,15 @@
             background: #06070E;
             border-bottom: 1px solid rgba(136, 136, 136, 0.5);
         }
+        header .subbar {
+            display: none;
+            position: absolute;
+            bottom: -47px;
+            width: 100vw;
+            height: 45px;
+            text-indent: -9999em;
+            background: #06070E;
+        }
         .container {
             /* position: relative; */
             width: 1100px;
@@ -113,22 +122,9 @@
             top:20px;
             left:50%;
             transform: translateX(-30%);
-            padding-top: 50px;
+            padding-top: 32px;
             width: 350px;
             font-size: 1.5rem;
-        }
-        .gnb .main>li:hover .sub::after {
-            /* display: none; */
-            content: "";
-            bottom:-3px;
-            z-index: -1;
-            position: absolute;
-            left:0%;
-            width: 100vw;
-            margin: 0;
-            height: 45px;
-            background: #06070E;
-            background: red;
         }
         .gnb .sub li {
             display: inline-block;
@@ -150,18 +146,22 @@
 
             mainMenuList.mouseenter((e)=>{
                 $(e.currentTarget).find(".sub").show();
+                subbar.show();
             });
             subMenu.mouseenter((e)=>{
                 $(e.currentTarget).show();
             });
             mainMenuList.mouseleave((e)=>{
                 $(e.currentTarget).find(".sub").hide();
+                subbar.hide();
             });
         });
     </script>
 </head>
 <body>
+    <!-- https://www.megabox.co.kr/ -->
     <header>
+        <div class="subbar">subbar</div>
         <div class="container">
             <!-- top link -->
             <div class="tlink">
