@@ -29,17 +29,21 @@
 1팀: 호텔신라(강유식, 김나은, 김은지)
 강유식: https://ninkotek.github.io/web0422/70_pf/team/
 김은지: https://oceanflavorstarcandy.github.io/web0422/70_pf/team/index.html
+김나은: http://kne.dothome.co.kr/team/
 
 2팀: 컴포즈커피(박서현, 이소영, 이희진, 조은영)
 이희진: http://heejinn.dothome.co.kr/team/
 조은영: http://zoe.dothome.co.kr/team/index.html
+박서현: https://parkk129.github.io/web0422/70_pf/team2/index.html
 
 3팀: 진에어(마유미, 문서영, 장민경, 최혜인)
 마유미: http://yumi.dothome.co.kr/team
+장민경: http://totat21.dothome.co.kr/portfolio_site/team/index.html
 
 2차
 1팀: 설빙(강유식, 김나은, 김은지, 장민경)
 장민경: https://12alsrud12.github.io/web0422/70_pf/team2/index.html
+강유식: https://ninkotek.github.io/web0422/70_pf/team2/
 
 2팀: 써브웨이(마유미, 문서영, 박서현)
 마유미: https://mayummi.github.io/web0422/70_pf/team2/index.html
