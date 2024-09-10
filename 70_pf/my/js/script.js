@@ -1,4 +1,18 @@
 $(() => {
+    const nav1 = $(".gnb1");
+    const nav2 = $(".gnb2");
+
+    $(window).scroll(() => {
+        let st = $(this).scrollTop();
+        if (st > 100) {
+            nav1.css({ opacity: 0 });
+            nav2.addClass("down");
+        } else {
+            nav1.css({ opacity: 1 });
+            nav2.removeClass("down");
+        }
+    });
+
     // video player
     /* 
         비디오 가져오기: 객체.get(0)
@@ -152,13 +166,12 @@ $(() => {
 
     setInterval(firefly, 3000);
 
-    function firefly(){
+    function firefly() {
         mm(0);
         mm(1);
     }
 
     function mm(i) {
-
         /* 
             event.pageX -> 마우스 x좌표
             event.pageY -> 마우스 y좌표
@@ -186,28 +199,29 @@ $(() => {
 
         // 1 <= Math.floor(Math.random() * 10) + 1 < 11
         // 50 <= Math.floor(Math.random() * 1800) + 50 < 1920
-        
-        let x = Math.floor(Math.random() * 1800) + 50 - mp.eq(i).outerWidth() / 2;
-        let y = Math.floor(Math.random() * 800) + 50 - mp.eq(i).outerWidth() / 2;
+
+        let x =
+            Math.floor(Math.random() * 1800) + 50 - mp.eq(i).outerWidth() / 2;
+        let y =
+            Math.floor(Math.random() * 800) + 50 - mp.eq(i).outerWidth() / 2;
         // let x = event.pageX - mp.eq(i).outerWidth() / 2;
         // let y = event.pageY - mp.eq(i).outerWidth() / 2;
 
-        mp.eq(i).css({left: x + "px", top: y + "px"});
+        mp.eq(i).css({ left: x + "px", top: y + "px" });
     }
 
     // 푸터 배경색 랜덤하게 바꾸기
     const btnEle = $(".btn");
     const colors = ["#cf38b6", "#ff4393", "#ff6c71"];
-   
+
     setInterval(bgcolor, 5000);
-    
-    function bgcolor(){
+
+    function bgcolor() {
         let color = colors[Math.floor(Math.random() * 3)];
         btnEle.css({
-            backgroundColor: color, 
-            transition: "2s", 
-            border: "none"
+            backgroundColor: color,
+            transition: "2s",
+            border: "none",
         });
     }
-
 }); // ready end
