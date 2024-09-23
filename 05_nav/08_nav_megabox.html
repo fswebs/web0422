@@ -16,7 +16,7 @@
         body {
             font-family: "Nanum Barun Gothic", sans-serif;
             font-size: 1.5rem;
-            background: #000;
+            background: #0778a2;
         }
         ul {
             padding: 0;
@@ -47,7 +47,6 @@
             background: #06070E;
         }
         .container {
-            /* position: relative; */
             width: 1100px;
             margin: 0 auto;
             height: 90px;
@@ -101,6 +100,7 @@
         .gnb .main>li {
             position: relative;
         }
+        /* 메인메뉴 아래 흰색 바 만들기 */
         .gnb .main>li:hover::after {
             content: "";
             position: absolute;
@@ -128,7 +128,6 @@
         }
         .gnb .sub li {
             display: inline-block;
-            /* width: auto; */
             margin: 0 12px;
         }
         .gnb .sub li a:hover {
@@ -140,10 +139,22 @@
         $(()=>{
             const subbar = $("header .subbar");
             const gnb = $(".gnb");
+            // find()는 부모 요소 안에 자식 요소 찾기
             const mainMenu = gnb.find(".main");
             const mainMenuList = gnb.find(".main>li");
             const subMenu = gnb.find(".sub");
 
+            // mouseenter는 요소 안에 마우스가 들어감
+            /* 
+                제이쿼리 effect 메소드
+                    (1) hide() -> 숨기기
+                    (2) show() -> 보이기
+                    (3) fadeIn() -> 서서히 보이기
+                    (4) fadeOut() -> 서서히 숨기기
+                    (5) slideDown() -> 위에서 아래로 서서히 나타남
+                    (6) slideUp() -> 아래서 위로 서서히 사라짐
+                    (7) animate() -> 애니메이션
+            */
             mainMenuList.mouseenter((e)=>{
                 $(e.currentTarget).find(".sub").show();
                 subbar.show();
@@ -162,6 +173,7 @@
     <!-- https://www.megabox.co.kr/ -->
     <header>
         <div class="subbar">subbar</div>
+        <!-- 전체 콘텐츠 박스: width:1100px; -->
         <div class="container">
             <!-- top link -->
             <div class="tlink">
